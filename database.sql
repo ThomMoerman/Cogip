@@ -1,3 +1,5 @@
+-- Commande pour démarrer le serveur php : php -S localhost:8000 -t public
+
 -- Création de la base de données
 CREATE DATABASE IF NOT EXISTS CogipDB;
 
@@ -183,3 +185,4 @@ INSERT INTO roles_permission (permission_id, role_id) VALUES
 (8, 8),
 (9, 9),
 (10, 10);
+
