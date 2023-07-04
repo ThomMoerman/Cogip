@@ -6,8 +6,7 @@ class DatabaseConnection {
 
     private static $instance;
 
-    public static function getInstance()
-    {
+    public static function getInstance() {
         if (!self::$instance) {
             $dbHost = 'localhost';
             $dbName = 'cogipdb';
