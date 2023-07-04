@@ -1,0 +1,23 @@
+header {
+  background-color: rgb(143, 188, 60);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header h1, header .nav, header .log {
+  padding: 10px;
+}
+header .header__title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2em;
+}
+
+.btn {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 0.6em;
+  color: rgb(48, 51, 52);
+  border-radius: 20px;
+  background: rgb(143, 188, 60);
+  border-width: 3px;
+  width: 65px;
+}/*# sourceMappingURL=header.css.map */

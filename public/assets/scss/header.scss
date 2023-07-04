@@ -1,0 +1,30 @@
+//mixins
+@mixin button_parameter($rgb-font,$rgb-background) {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.6em;
+    color: $rgb-font;
+    border-radius: 20px;
+    background: $rgb-background;
+    border-width: 3px;
+    width: 65px;
+}
+@mixin header_element_spacing{
+ padding: 10px;
+}
+//scss
+header{
+    background-color: rgb(143, 188, 60);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1,.nav,.log{
+@include header_element_spacing();
+    }; 
+    .header__title{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 2em;
+    }
+}
+.btn{
+    @include button_parameter(rgb(48,51,52), rgb(143,188,60));
+}
