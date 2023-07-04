@@ -1,0 +1,77 @@
+@import 'mixin_footer.scss'; 
+@import'variables_footer.scss'; 
+
+body{
+    margin: auto 0;
+    footer{
+        background-color: $grey;
+        // background-color: yellow;
+        color: #ffffff;
+        padding: 20px;
+        .footer__top{
+            display: flex; 
+            flex-direction: column;
+            .top__site{
+                p{
+                    @include cogip;
+                    text-align: center;
+                }
+            }
+            .top__information{
+                margin-bottom: 20px;
+                .information__data{
+                    color: #ffffff; 
+                    .data__adress{
+                        display: flex;
+                        flex-direction: row;
+                        img{
+                            padding-right: 10px; 
+                            @include icons; 
+                        }
+                    }
+                    .data__number__phone, .data__number__printer{
+                        display: flex;
+                        flex-direction: row;
+                        img{
+                            padding-right: 10px;
+                            @include icons;
+                        }
+                    }
+                }
+                .information__social__media{
+                    p{
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                    .social__media__list{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        li{
+                            @include socialMedia;
+                            :hover{
+                                filter: invert(52%) sepia(8%) saturate(2870%) hue-rotate(91deg) brightness(102%) contrast(84%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer__bottom{
+            .navbar__list{
+                flex-direction: column;
+                margin: 20px 0 10px 0 ;
+                    color: #ffffff;
+                li{
+                    @include contactList; 
+                }
+            }
+            .bottom__copyright{
+                justify-content: center;
+                text-align: center;
+                font-size: 12px;
+                margin-top: 20px;
+            }
+        }
+    }
+}

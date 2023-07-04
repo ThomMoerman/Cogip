@@ -1,0 +1,34 @@
+@import'variables_footer.scss'; 
+
+@mixin cogip {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+    border: $blue solid 4px;
+    font-size: 30px;
+    padding: 6px;
+}
+
+@mixin contactList {
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 14px;
+    margin : 5px 0 5px 0 ; 
+    text-align: center;
+    line-height: 1.5;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@mixin socialMedia{
+    color: #ffffff;
+    list-style-type: none;
+    @include icons; 
+    text-align: center;
+}
+
+@mixin icons{
+    filter: invert(100);
+    margin: 0 5px 0 5px;
+}
