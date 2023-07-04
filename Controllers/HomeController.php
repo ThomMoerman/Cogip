@@ -1,23 +1,28 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Core\Controller;
-use App\Core\DatabaseConnection;
-use PDO;
+use App\Models\Invoice;
+use App\Models\Company;
+use App\Models\Contact;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        // Création des instances des modèles
+        $invoiceModel = new Invoice();
+        $companyModel = new Company();
+        $contactModel = new Contact();
+
         // Récupérer les 5 derniers enregistrements de la table 'invoices'
-        $invoices = $this->getLatestRecords('invoices', 5);
+        $invoices = $invoice->getLatestInvoices(5);
 
         // Récupérer les 5 derniers enregistrements de la table 'companies'
-        $companies = $this->getLatestRecords('companies', 5);
+        $companies = $company->getLatestCompanies(5);
 
         // Récupérer les 5 derniers enregistrements de la table 'contacts'
-        $contacts = $this->getLatestRecords('contacts', 5);
+        $contacts = $contact->getLatestContacts(5);
 
         // Passer les données aux vues correspondantes
         return $this->view('welcome', [
@@ -26,17 +31,5 @@ class HomeController extends Controller
             'companies' => $companies,
             'contacts' => $contacts
         ]);
-    }
-
-    protected function getLatestRecords($table, $limit)
-    {
-        $pdo = DatabaseConnection::getInstance();
-
-        $query = "SELECT * FROM $table ORDER BY created_at DESC LIMIT $limit";
-        $statement = $pdo->prepare($query);
-        $statement->execute();
-        $records = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-        return $records;
     }
 }
