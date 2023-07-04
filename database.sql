@@ -87,3 +87,99 @@ CREATE TABLE IF NOT EXISTS roles_permission (
     FOREIGN KEY (permission_id) REFERENCES permissions(id),
     FOREIGN KEY (role_id) REFERENCES roles(id)
 ) ENGINE=InnoDB;
+
+INSERT INTO types (name, created_at, updated_at) VALUES
+('Type 1', NOW(), NOW()),
+('Type 2', NOW(), NOW()),
+('Type 3', NOW(), NOW()),
+('Type 4', NOW(), NOW()),
+('Type 5', NOW(), NOW()),
+('Type 6', NOW(), NOW()),
+('Type 7', NOW(), NOW()),
+('Type 8', NOW(), NOW()),
+('Type 9', NOW(), NOW()),
+('Type 10', NOW(), NOW());
+
+INSERT INTO companies (name, type_id, country, tva, created_at, updated_at) VALUES
+('Company 1', 1, 'Country 1', 'TVA 1', NOW(), NOW()),
+('Company 2', 2, 'Country 2', 'TVA 2', NOW(), NOW()),
+('Company 3', 3, 'Country 3', 'TVA 3', NOW(), NOW()),
+('Company 4', 4, 'Country 4', 'TVA 4', NOW(), NOW()),
+('Company 5', 5, 'Country 5', 'TVA 5', NOW(), NOW()),
+('Company 6', 6, 'Country 6', 'TVA 6', NOW(), NOW()),
+('Company 7', 7, 'Country 7', 'TVA 7', NOW(), NOW()),
+('Company 8', 8, 'Country 8', 'TVA 8', NOW(), NOW()),
+('Company 9', 9, 'Country 9', 'TVA 9', NOW(), NOW()),
+('Company 10', 10, 'Country 10', 'TVA 10', NOW(), NOW());
+
+INSERT INTO invoices (ref, id_company, created_at, updated_at) VALUES
+('Invoice 1', 1, NOW(), NOW()),
+('Invoice 2', 2, NOW(), NOW()),
+('Invoice 3', 3, NOW(), NOW()),
+('Invoice 4', 4, NOW(), NOW()),
+('Invoice 5', 5, NOW(), NOW()),
+('Invoice 6', 6, NOW(), NOW()),
+('Invoice 7', 7, NOW(), NOW()),
+('Invoice 8', 8, NOW(), NOW()),
+('Invoice 9', 9, NOW(), NOW()),
+('Invoice 10', 10, NOW(), NOW());
+
+INSERT INTO contacts (name, company_id, email, phone, created_at, updated_at) VALUES
+('Contact 1', 1, 'contact1@example.com', '1234567890', NOW(), NOW()),
+('Contact 2', 2, 'contact2@example.com', '2345678901', NOW(), NOW()),
+('Contact 3', 3, 'contact3@example.com', '3456789012', NOW(), NOW()),
+('Contact 4', 4, 'contact4@example.com', '4567890123', NOW(), NOW()),
+('Contact 5', 5, 'contact5@example.com', '5678901234', NOW(), NOW()),
+('Contact 6', 6, 'contact6@example.com', '6789012345', NOW(), NOW()),
+('Contact 7', 7, 'contact7@example.com', '7890123456', NOW(), NOW()),
+('Contact 8', 8, 'contact8@example.com', '8901234567', NOW(), NOW()),
+('Contact 9', 9, 'contact9@example.com', '9012345678', NOW(), NOW()),
+('Contact 10', 10, 'contact10@example.com', '0123456789', NOW(), NOW());
+
+INSERT INTO roles (name, created_at, updated_at) VALUES
+('Role 1', NOW(), NOW()),
+('Role 2', NOW(), NOW()),
+('Role 3', NOW(), NOW()),
+('Role 4', NOW(), NOW()),
+('Role 5', NOW(), NOW()),
+('Role 6', NOW(), NOW()),
+('Role 7', NOW(), NOW()),
+('Role 8', NOW(), NOW()),
+('Role 9', NOW(), NOW()),
+('Role 10', NOW(), NOW());
+
+INSERT INTO users (first_name, role_id, last_name, email, password, created_at, updated_at) VALUES
+('John', 1, 'Doe', 'john.doe@example.com', 'password1', NOW(), NOW()),
+('Jane', 2, 'Smith', 'jane.smith@example.com', 'password2', NOW(), NOW()),
+('David', 3, 'Johnson', 'david.johnson@example.com', 'password3', NOW(), NOW()),
+('Sarah', 4, 'Williams', 'sarah.williams@example.com', 'password4', NOW(), NOW()),
+('Michael', 5, 'Brown', 'michael.brown@example.com', 'password5', NOW(), NOW()),
+('Emily', 6, 'Jones', 'emily.jones@example.com', 'password6', NOW(), NOW()),
+('Daniel', 7, 'Miller', 'daniel.miller@example.com', 'password7', NOW(), NOW()),
+('Olivia', 8, 'Davis', 'olivia.davis@example.com', 'password8', NOW(), NOW()),
+('William', 9, 'Wilson', 'william.wilson@example.com', 'password9', NOW(), NOW()),
+('Sophia', 10, 'Taylor', 'sophia.taylor@example.com', 'password10', NOW(), NOW());
+
+INSERT INTO permissions (name, created_at, updated_at) VALUES
+('Permission 1', NOW(), NOW()),
+('Permission 2', NOW(), NOW()),
+('Permission 3', NOW(), NOW()),
+('Permission 4', NOW(), NOW()),
+('Permission 5', NOW(), NOW()),
+('Permission 6', NOW(), NOW()),
+('Permission 7', NOW(), NOW()),
+('Permission 8', NOW(), NOW()),
+('Permission 9', NOW(), NOW()),
+('Permission 10', NOW(), NOW());
+
+INSERT INTO roles_permission (permission_id, role_id) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
