@@ -6,16 +6,16 @@
         <div class="top__information">
             <div class="information__data">
                 <div class="data__adress">
-                    <img src="../../public/assets/img/geo-alt-fill.svg" alt="location icon" class="data__adress__icon">
+                    <img src="assets/img/geo-alt-fill.svg" alt="location icon" class="data__adress__icon">
                     <p class="data__adress__name">Square des Martyrs, 6000 Charleroi</p>
                 </div>
                 <div class="data__number">
                     <div class="data__number__phone">
-                        <img src="../../public/assets/img/telephone-fill.svg" alt="phone icon">
+                        <img src="assets/img/telephone-fill.svg" alt="phone icon">
                         <p>(123) 456-7890</p>
                     </div>
                     <div class="data__number__printer">
-                        <img src="../../public/assets/img/printer-fill.svg" alt="printer icon">
+                        <img src="assets/img/printer-fill.svg" alt="printer icon">
                         <p>(123) 456-7890</p>
                     </div>
                 </div>
@@ -23,14 +23,14 @@
             <div class="information__social__media">
                 <p>Social media</p>
                 <ul class="social__media__list">
-                    <li><img src="../../public/assets/img/facebook.svg" alt="facebook icon"></li>
-                    <li><img src="../../public/assets/img/twitter.svg" alt="twitter icon"></li>
-                    <li><img src="../../public/assets/img/linkedin.svg" alt="linkedin icon"></li>
-                    <li><img src="../../public/assets/img/youtube.svg" alt="youtube icon"></li>
-                    <li><img src="../../public/assets/img/instagram.svg" alt="instagram icon"></li>
-                    <li><img src="../../public/assets/img/google.svg" alt="google icon"></li>
-                    <li><img src="../../public/assets/img/pinterest.svg" alt="pinterest icon"></li>
-                    <li><img src="../../public/assets/img/wifi.svg" alt="wifi icon"></li>
+                    <li><img src="assets/img/facebook.svg" alt="facebook icon"></li>
+                    <li><img src="assets/img/twitter.svg" alt="twitter icon"></li>
+                    <li><img src="assets/img/linkedin.svg" alt="linkedin icon"></li>
+                    <li><img src="assets/img/youtube.svg" alt="youtube icon"></li>
+                    <li><img src="assets/img/instagram.svg" alt="instagram icon"></li>
+                    <li><img src="assets/img/google.svg" alt="google icon"></li>
+                    <li><img src="assets/img/pinterest.svg" alt="pinterest icon"></li>
+                    <li><img src="assets/img/wifi.svg" alt="wifi icon"></li>
                 </ul>
             </div>
         </div>
