@@ -58,5 +58,9 @@ header{
     }
     &:hover {
       @include button_parameter(rgb(60, 188, 130), rgb(48, 51, 52));
+      @media (min-width:600px) {
+        font-size: 1em;
+        width:100px;
+    }
     }
   }
