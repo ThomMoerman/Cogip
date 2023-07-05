@@ -1,18 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
     <title>Cogip - Welcome</title>
+    <link rel="stylesheet" type="text/css" href="../../public/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../public/assets/css/header.css">
 </head>
 <body>
-    <main>
        <section class="container">
         <img 
-                src="assets/img/Illustration.png" 
+                src="public/assets/img/Illustration.png" 
                 alt="cogip logo"
                 class="illustration">
             <h1>Welcome to <?php echo $name ?></h1>
@@ -24,6 +24,9 @@
                 <li>redirect() function</li>
             </ul>
        </section>
-    </main>
+    </main> 
+    <?php
+    require '../Include/footer.php'; 
+    ?>
 </body>
 </html>
