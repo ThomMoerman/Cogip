@@ -5,25 +5,27 @@ body{
     margin: auto 0;
     footer{
         background-color: $grey;
-        // background-color: yellow;
         color: #ffffff;
         padding: 20px;
         .footer__top{
             display: flex; 
             flex-direction: column;
             .top__site{
+                display: flex;
+                justify-content: center;
                 p{
                     @include cogip;
-                    text-align: center;
+                    width: min-content;
                 }
             }
             .top__information{
-                margin-bottom: 20px;
+                margin: 30px 0 20px 0;
                 .information__data{
-                    color: #ffffff; 
+                    color: #ffffff;
                     .data__adress{
                         display: flex;
                         flex-direction: row;
+                        margin: 15px 0 15px 0;
                         img{
                             padding-right: 10px; 
                             @include icons; 
@@ -32,6 +34,7 @@ body{
                     .data__number__phone, .data__number__printer{
                         display: flex;
                         flex-direction: row;
+                        margin: 15px 0 15px 0;
                         img{
                             padding-right: 10px;
                             @include icons;
@@ -41,7 +44,7 @@ body{
                 .information__social__media{
                     p{
                         text-align: center;
-                        margin-bottom: 20px;
+                        margin: 40px 0 20px 0;
                     }
                     .social__media__list{
                         display: flex;
@@ -49,8 +52,8 @@ body{
                         justify-content: center;
                         li{
                             @include socialMedia;
-                            :hover{
-                                filter: invert(52%) sepia(8%) saturate(2870%) hue-rotate(91deg) brightness(102%) contrast(84%);
+                            &:hover{
+                                @include hover; 
                             }
                         }
                     }
@@ -63,7 +66,10 @@ body{
                 margin: 20px 0 10px 0 ;
                     color: #ffffff;
                 li{
-                    @include contactList; 
+                    @include contactList;
+                    &:hover{
+                        @include hover; 
+                    }
                 }
             }
             .bottom__copyright{

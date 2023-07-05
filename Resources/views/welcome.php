@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../../public/assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../public/assets/css/footer.css">
     <title>Cogip - Welcome</title>
 </head>
 <body>
-    <main>
+    <!-- <main>
        <section class="container">
         <img 
                 src="assets/img/Illustration.png" 
@@ -24,6 +24,9 @@
                 <li>redirect() function</li>
             </ul>
        </section>
-    </main>
+    </main> -->
+    <?php
+    require '../Include/footer.php'; 
+    ?>
 </body>
 </html>

@@ -32,3 +32,8 @@
     filter: invert(100);
     margin: 0 5px 0 5px;
 }
+
+@mixin hover {
+    filter: invert(35%) sepia(92%) saturate(4116%) hue-rotate(138deg) brightness(95%) contrast(94%);
+    cursor: pointer;
+}
