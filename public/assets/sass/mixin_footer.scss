@@ -18,7 +18,6 @@
     text-align: center;
     line-height: 1.5;
     padding: 0px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 @mixin socialMedia{
@@ -29,11 +28,11 @@
 }
 
 @mixin icons{
-    filter: invert(100);
+    filter: invert(65%) sepia(27%) saturate(966%) hue-rotate(121deg) brightness(93%) contrast(101%);
     margin: 0 5px 0 5px;
 }
 
-@mixin hover {
-    filter: invert(35%) sepia(92%) saturate(4116%) hue-rotate(138deg) brightness(95%) contrast(94%);
+@mixin hoverNav {
+    filter: invert(23%) sepia(68%) saturate(4688%) hue-rotate(295deg) brightness(90%) contrast(87%); 
     cursor: pointer;
 }

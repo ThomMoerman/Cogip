@@ -7,15 +7,29 @@ body{
         background-color: $grey;
         color: #ffffff;
         padding: 20px;
+        @media (min-width: 900px){
+            padding: 0 100px 0 100px;
+        }
         .footer__top{
             display: flex; 
             flex-direction: column;
+            font-family: $text;
+            @media (min-width: 900px){
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 80px 100px 80px;
+            }
             .top__site{
                 display: flex;
                 justify-content: center;
                 p{
                     @include cogip;
                     width: min-content;
+                    @media (min-width: 900px){
+                        font-size: 50px;
+                        height: min-content;
+                        align-self: center;
+                    }
                 }
             }
             .top__information{
@@ -31,20 +45,42 @@ body{
                             @include icons; 
                         }
                     }
-                    .data__number__phone, .data__number__printer{
-                        display: flex;
-                        flex-direction: row;
-                        margin: 15px 0 15px 0;
-                        img{
-                            padding-right: 10px;
-                            @include icons;
+                    .data__number{
+                        @media (min-width: 900px){
+                            display: flex;
+                            flex-direction: row;
+                        }
+                        .data__number__phone, .data__number__printer{
+                            display: flex;
+                            flex-direction: row;
+                            margin: 15px 0 15px 0;
+                            img{
+                                padding-right: 10px;
+                                @include icons;
+                                :hover{
+                                    @include hoverNav; 
+                                }
+                            }
+                        }
+                        .data__number__phone{
+                            @media (min-width: 900px){
+                                margin-right: 60px;
+                            }
                         }
                     }
                 }
                 .information__social__media{
+                    @media (min-width: 900px){
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 35px;
+                    }
                     p{
                         text-align: center;
                         margin: 40px 0 20px 0;
+                        @media (min-width: 900px){
+                            margin: 0 10px 0 0; 
+                        }
                     }
                     .social__media__list{
                         display: flex;
@@ -53,7 +89,10 @@ body{
                         li{
                             @include socialMedia;
                             &:hover{
-                                @include hover; 
+                                @include hoverNav; 
+                            }
+                            @media (min-width: 900px){
+                                margin: 0 18px 0 18px;
                             }
                         }
                     }
@@ -61,14 +100,26 @@ body{
             }
         }
         .footer__bottom{
+            font-family: $text;
+            @media (min-width: 900px){
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 50px;
+            }
             .navbar__list{
-                flex-direction: column;
                 margin: 20px 0 10px 0 ;
                     color: #ffffff;
+                    @media (min-width: 900px){
+                        display: flex;
+                        flex-direction: row;
+                    }
                 li{
                     @include contactList;
                     &:hover{
-                        @include hover; 
+                        @include hoverNav; 
+                    }
+                    @media (min-width: 900px){
+                        margin: 0 20px 0 20px;
                     }
                 }
             }
@@ -77,6 +128,9 @@ body{
                 text-align: center;
                 font-size: 12px;
                 margin-top: 20px;
+                @media (min-width: 900px){
+                    margin-right: 20px ;
+                }
             }
         }
     }
