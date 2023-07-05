@@ -16,13 +16,13 @@ class HomeController extends Controller
         $contactModel = new Contact();
 
         // Récupérer les 5 derniers enregistrements de la table 'invoices'
-        $invoices = $invoice->getLatestInvoices(5);
+        $invoices = $invoiceModel->getLatestInvoices(5);
 
         // Récupérer les 5 derniers enregistrements de la table 'companies'
-        $companies = $company->getLatestCompanies(5);
+        $companies = $companyModel->getLatestCompanies(5);
 
         // Récupérer les 5 derniers enregistrements de la table 'contacts'
-        $contacts = $contact->getLatestContacts(5);
+        $contacts = $contactModel->getLatestContacts(5);
 
         // Passer les données aux vues correspondantes
         return $this->view('welcome', [
