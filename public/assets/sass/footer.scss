@@ -24,6 +24,7 @@ body{
                 justify-content: center;
                 p{
                     @include cogip;
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                     width: min-content;
                     @media (min-width: 900px){
                         font-size: 50px;

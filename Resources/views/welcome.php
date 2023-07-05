@@ -8,12 +8,30 @@
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/header.css" rel="stylesheet" type="text/css">
     <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/home_table.js"defer></script>
     <title>Cogip - Welcome</title>
 </head>
 <body>
     <?php
         require '../Resources/Include/header.php'
     ?>
+
+    <main>
+        <article class="section invoices__table_section">
+        </article>
+        <article class="section contacts__table_section">
+        </article>
+        <article class="section companies__table_section">
+
+        </article>
+    </main>
+
+    <?php
+          require '../Resources/Include/footer.php'
+    ?>
+</body>
+</html>
+
    <!--  <main>
        <section class="container">
             <h1>Welcome to <?php echo $name ?></h1>
@@ -26,8 +44,3 @@
             </ul>
        </section>
     </main> -->
-    <?php
-          require '../Resources/Include/footer.php'
-    ?>
-</body>
-</html>

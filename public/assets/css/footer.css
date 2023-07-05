@@ -29,12 +29,12 @@ body footer .footer__top .top__site {
 }
 body footer .footer__top .top__site p {
   text-transform: uppercase;
-  font-weight: 700;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: #ffffff;
   border: rgb(7, 149, 128) solid 4px;
   font-size: 30px;
   padding: 6px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   width: min-content;
 }
 @media (min-width: 900px) {

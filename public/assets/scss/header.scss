@@ -43,9 +43,11 @@ header{
     .header__title{
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 2.5em;
+        border: white solid 4px;
+        padding: 6px;
         @media(min-width:600px){
             font-size: 4em;
-            padding-left: 50px;
+           margin-left: 50px;
         };
         color:rgb(7, 149, 128);
     }
