@@ -10,12 +10,6 @@
     <link rel="stylesheet" type="text/css" href="../../public/assets/css/header.css">
 </head>
 <body>
-<?php
-require '../Include/header.php';
-?>
-</body>
-</html>
- <!--  <main>
        <section class="container">
         <img 
                 src="public/assets/img/Illustration.png" 
@@ -30,4 +24,9 @@ require '../Include/header.php';
                 <li>redirect() function</li>
             </ul>
        </section>
-    </main> -->
+    </main> 
+    <?php
+    require '../Include/footer.php'; 
+    ?>
+</body>
+</html>
