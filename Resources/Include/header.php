@@ -10,4 +10,9 @@
         <button type="button" class="btn log__signup_btn signup_link">SIGN UP</button>
         <button type="button" class="btn log__login_btn login_link">LOGIN</button>
     </div>
+   
 </header>
+<!-- <img 
+                src="assets/img/Illustration.png" 
+                alt="cogip logo"
+                class="illustration"> -->

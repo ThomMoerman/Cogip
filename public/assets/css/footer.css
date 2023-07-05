@@ -2,7 +2,7 @@ body {
   margin: auto 0;
 }
 body footer {
-  background-color: rgb(52, 57, 56);
+  background-color: rgb(48, 51, 52);
   color: #ffffff;
   padding: 20px;
 }
@@ -150,7 +150,6 @@ body footer .footer__bottom .navbar__list li {
   text-align: center;
   line-height: 1.5;
   padding: 0px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 body footer .footer__bottom .navbar__list li:hover {
   filter: invert(23%) sepia(68%) saturate(4688%) hue-rotate(295deg) brightness(90%) contrast(87%);
