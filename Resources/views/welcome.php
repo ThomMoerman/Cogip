@@ -26,7 +26,7 @@
        </section>
     </main> 
     <?php
-    require '../Include/footer.php'; 
+    require '../Resources/Include/footer.php'; 
     ?>
 </body>
 </html>
