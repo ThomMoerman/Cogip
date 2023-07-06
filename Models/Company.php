@@ -22,6 +22,14 @@ class Company
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function getCompanies()
+    {
+        $query = "SELECT * FROM companies ORDER BY created_at DESC";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
 
 ?>

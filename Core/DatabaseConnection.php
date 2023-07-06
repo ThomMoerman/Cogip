@@ -13,7 +13,7 @@ class DatabaseConnection {
             $dbHost = 'localhost';
             $dbName = 'cogipdb';
             $dbUser = 'root';
-            $dbPass = '';
+            $dbPass = 'password';
 
             self::$instance = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
         }
