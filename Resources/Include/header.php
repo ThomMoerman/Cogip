@@ -12,7 +12,3 @@
     </div>
    
 </header>
-<!-- <img 
-                src="assets/img/Illustration.png" 
-                alt="cogip logo"
-                class="illustration"> -->
