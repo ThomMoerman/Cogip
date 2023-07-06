@@ -9,7 +9,7 @@
     <link href="assets/css/header.css" rel="stylesheet" type="text/css">
     <link href="assets/css/welcome.css" rel="stylesheet" type="text/css">
     <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-    <script src="assets/js/home_table.js"defer></script>
+    <link href="assets/css/table.css" rel="stylesheet" type="text/css">
     <title>Cogip - Welcome</title>
 </head>
 <body>
