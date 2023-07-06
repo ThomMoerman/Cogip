@@ -1,0 +1,36 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 50px 80px 50px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+main article {
+  align-self: center;
+  margin: 50px 0 50px 0;
+  width: 900px;
+}
+main article h3 {
+  color: #ffffff;
+  font-size: 45px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 30px 0 30px 0;
+}
+main article table th {
+  background-color: rgb(48, 51, 52);
+  color: #ffffff;
+  text-align: left;
+  padding: 10px;
+  width: 900px;
+}
+main article table tr {
+  background-color: rgb(153, 214, 205);
+}
+main article table tr td {
+  color: rgb(48, 51, 52);
+  padding: 5px 10px 5px 10px;
+}
+main article table tr:nth-child(even) {
+  background-color: #e0fbff;
+}
+
+/*# sourceMappingURL=table.css.map */
