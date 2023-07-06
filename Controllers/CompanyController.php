@@ -21,16 +21,17 @@ class CompanyController extends Controller
         ]);
     }
 
-    public function show($id) {
+    public function show($id)
+    {
         // Récupérez les informations de l'entreprise depuis la base de données en utilisant l'ID
         $companyModel = new Company();
         $company = $companyModel->find($id);
-    
+
         // Vérifiez si l'entreprise existe
         if (!$company) {
-            alert('The choosen company doesn\'t exists');
+            // alert('The choosen company doesn\'t exists');
         }
-    
+
         // Préparez les données à envoyer à la vue
         $data = [
             'name' => $company->name,
@@ -38,7 +39,7 @@ class CompanyController extends Controller
             'country' => $company->country,
             'type' => $company->type
         ];
-    
+
         // Renvoyez les données à la vue appropriée pour l'affichage
         $this->view('show_company', $data);
     }
