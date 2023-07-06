@@ -20,7 +20,6 @@ class DatabaseConnection {
 
         return self::$instance;
     }
-
 }
 
 ?>
