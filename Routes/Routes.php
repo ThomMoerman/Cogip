@@ -12,9 +12,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-
 $router = new Router();
-// $routerCompany = new Router();
 
 $router->get('/', function () {
     (new HomeController)->index();
@@ -24,13 +22,16 @@ $router->get('/companies', function () {
     (new CompanyController)->index();
 });
 
-$router->get('/contacts', function () {
+$router->get('/contacts', function(){
     (new ContactController)->index();
 });
 
-$router->get('/invoices', function () {
+$router->get('/invoices', function (){
     (new InvoiceController)->index();
 });
 
+$router->get('/companies/{id}', function ($id) {
+    (new CompanyController)->show($id);
+});
+
 $router->run();
-// $routerCompany->run();
