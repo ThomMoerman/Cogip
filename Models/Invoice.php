@@ -31,4 +31,14 @@ class Invoice
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+
+    public function find($id)
+    {
+        $query = "SELECT * FROM invoices WHERE id = :id";
+        $statement = $this->db->prepare($query);
+        $statement->bindValue(':id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetch(\PDO::FETCH_ASSOC);
+    }
 }

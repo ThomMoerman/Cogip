@@ -19,4 +19,25 @@ class InvoiceController extends Controller
             'invoices' => $invoices,
         ]);
     }
+
+    public function show($id) {
+        // Récupérez les informations de l'entreprise depuis la base de données en utilisant l'ID
+        $invoiceModel = new Invoice();
+        $invoice = $invoiceModel->find($id);
+    
+        // Vérifiez si l'entreprise existe
+        if (!$invoice) {
+            alert('The choosen invoice doesn\'t exists');
+        }
+    
+        // Préparez les données à envoyer à la vue
+        $data = [
+            'ref' => $invoice->ref,
+            'company' => $invoice->company,
+            'created_at' => $invoice->created_at
+        ];
+    
+        // Renvoyez les données à la vue appropriée pour l'affichage
+        return $this->view('show_invoice', $data);
+    }
 }
