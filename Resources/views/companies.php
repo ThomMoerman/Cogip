@@ -7,6 +7,7 @@
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/header.css" rel="stylesheet" type="text/css">
     <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/table.css" rel="stylesheet" type="text/css">
     <title>Companies</title>
 </head>
 
