@@ -22,4 +22,12 @@ class Contact
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function getContacts()
+    {
+        $query = "SELECT * FROM contacts ORDER BY created_at DESC";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
