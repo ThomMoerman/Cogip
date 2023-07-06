@@ -17,23 +17,54 @@
     ?>
 
     <main>
+        <?php require 'table_function.php'; ?>
         <article class="section invoices__table_section">
+            <h3>Last invoices</h3>
+            <table>
+                <th>Invoice number</th>
+                <th>Dates due</th>
+                <th>Company</th>
+                <th>Created at</th>
+                <?php
+                    tableInvoices($invoices); 
+                ?>
+            </table>
         </article>
         <article class="section contacts__table_section">
+            <h3>Last contacts</h3>
+                <table>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Mail</th>
+                    <th>Company</th>
+                    <th>Created at</th>
+                    <?php
+                        tableContacts($contacts); 
+                    ?>
+                </table>
         </article>
         <article class="section companies__table_section">
-
+            <h3>Last companies</h3>
+                    <table>
+                        <th>Name</th>
+                        <th>TVA</th>
+                        <th>Country</th>
+                        <th>Type</th>
+                        <th>Created at</th>
+                        <?php
+                            tableCompanies($companies); 
+                        ?>
+                    </table>
         </article>
     </main>
-
     <?php
-          require '../Resources/Include/footer.php'
+        require '../Resources/Include/footer.php'
     ?>
 </body>
 </html>
 
-   <!--  <main>
-       <section class="container">
+<!--  <main>
+    <section class="container">
             <h1>Welcome to <?php echo $name ?></h1>
             <p>This base project is provided by BeCode</p>
             <ul>
