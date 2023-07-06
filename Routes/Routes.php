@@ -21,5 +21,13 @@ $router->get('/companies', function () {
     (new CompanyController)->index();
 });
 
+$router->get('/contacts', function(){
+    (new ContactController)->index();
+});
+
+$router->get('/invoices', function (){
+    (new InvoicesController)->index();
+});
+
 $router->run();
 // $routerCompany->run();

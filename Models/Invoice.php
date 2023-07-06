@@ -22,4 +22,13 @@ class Invoice
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+
+    public function getInvoices()
+    {
+        $query = "SELECT * FROM invoices ORDER BY created_at DESC";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
