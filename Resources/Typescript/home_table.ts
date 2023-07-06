@@ -1,8 +1,8 @@
 const tableName = document.createElement('h3') as HTMLHeadingElement
 
-const tableSection = document.getElementsByClassName('section') as unknown as HTMLBodyElement
+const tableSection = document.querySelectorAll('article') as unknown as HTMLBodyElement
 
-console.log(tableSection)
+
 
 class TableRow {
     constructor(

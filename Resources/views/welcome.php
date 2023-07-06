@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/header.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/welcome.css" rel="stylesheet" type="text/css">
     <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
     <script src="assets/js/home_table.js"defer></script>
     <title>Cogip - Welcome</title>
@@ -15,13 +16,21 @@
     <?php
         require '../Resources/Include/header.php'
     ?>
-
+    <div id="headline">
+    <img            src="assets/img/background_effect_hp.svg" 
+                alt="background_effect"
+                class="headline_bg">
+        <h2 class="headline_text">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h2>
+        <img            src="assets/img/Illustration.png" 
+                alt="cogip logo"
+                class="headline_illustration">
+    </div>
     <main>
-        <article class="section invoices__table_section">
+        <article class="section invoices__table_section" id="invoices_list">
         </article>
-        <article class="section contacts__table_section">
+        <article class="section contacts__table_section" id="companies_list">
         </article>
-        <article class="section companies__table_section">
+        <article class="section companies__table_section" id="contacts_list">
 
         </article>
     </main>

@@ -1,6 +1,6 @@
 "use strict";
 const tableName = document.createElement('h3');
-const tableSection = document.getElementsByClassName('section');
+const tableSection = document.getElementById('invoices_list');
 console.log(tableSection);
 class TableRow {
     constructor(invoiceNumber, dueDate, company, createdAt) {
