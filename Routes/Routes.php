@@ -34,4 +34,12 @@ $router->get('/companies/{id}', function ($id) {
     (new CompanyController)->show($id);
 });
 
+$router->get('/invoices/{id}', function ($id) {
+    (new InvoiceController)->show($id);
+});
+
+$router->get('/contacts/{id}', function ($id) {
+    (new ContactController)->show($id);
+});
+
 $router->run();
