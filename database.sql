@@ -113,6 +113,26 @@ INSERT INTO companies (name, type_id, country, tva, created_at, updated_at) VALU
 ('Company 8', 8, 'Country 8', 'TVA 8', NOW(), NOW()),
 ('Company 9', 9, 'Country 9', 'TVA 9', NOW(), NOW()),
 ('Company 10', 10, 'Country 10', 'TVA 10', NOW(), NOW());
+('Company 11', 1, 'Country 11', 'TVA 11', NOW(), NOW()),
+('Company 12', 2, 'Country 12', 'TVA 12', NOW(), NOW()),
+('Company 13', 3, 'Country 13', 'TVA 13', NOW(), NOW()),
+('Company 14', 4, 'Country 14', 'TVA 14', NOW(), NOW()),
+('Company 15', 5, 'Country 15', 'TVA 15', NOW(), NOW()),
+('Company 16', 6, 'Country 16', 'TVA 16', NOW(), NOW()),
+('Company 17', 7, 'Country 17', 'TVA 17', NOW(), NOW()),
+('Company 18', 8, 'Country 18', 'TVA 18', NOW(), NOW()),
+('Company 19', 9, 'Country 19', 'TVA 19', NOW(), NOW()),
+('Company 20', 10, 'Country 20', 'TVA 20', NOW(), NOW()),
+('Company 21', 1, 'Country 21', 'TVA 21', NOW(), NOW()),
+('Company 22', 2, 'Country 22', 'TVA 22', NOW(), NOW()),
+('Company 23', 3, 'Country 23', 'TVA 23', NOW(), NOW()),
+('Company 24', 4, 'Country 24', 'TVA 24', NOW(), NOW()),
+('Company 25', 5, 'Country 25', 'TVA 25', NOW(), NOW()),
+('Company 26', 6, 'Country 26', 'TVA 26', NOW(), NOW()),
+('Company 27', 7, 'Country 27', 'TVA 27', NOW(), NOW()),
+('Company 28', 8, 'Country 28', 'TVA 28', NOW(), NOW()),
+('Company 29', 9, 'Country 29', 'TVA 29', NOW(), NOW()),
+('Company 30', 10, 'Country 30', 'TVA 30', NOW(), NOW());
 
 INSERT INTO invoices (ref, id_company, created_at, updated_at) VALUES
 ('Invoice 1', 1, NOW(), NOW()),
