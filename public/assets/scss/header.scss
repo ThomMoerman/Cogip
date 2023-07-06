@@ -18,11 +18,11 @@
 }
 //scss
 
-body{background-color:rgb(48,51,52);}
+body{background-color:rgb(7, 149, 128);}
 
 header{
-    background-color: rgb(60, 188, 130);
-    border-radius: 0% 0% 50% 50%;
+    background-color: rgb(48, 51, 52);
+   // border-radius: 0% 0% 50% 50%;
     padding-top: 5vh;
     padding-bottom: 100px;
     display: flex;
@@ -43,24 +43,27 @@ header{
     .header__title{
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 2.5em;
+        border: white solid 4px;
+        padding: 6px;
         @media(min-width:600px){
             font-size: 4em;
-            padding-left: 50px;
+           margin-left: 50px;
         };
-        color: rgb(48,51,52);
+        color:rgb(7, 149, 128);
     }
 }
 .btn {
-    @include button_parameter(rgb(48, 51, 52), rgb(60, 188, 130));
+    @include button_parameter(rgb(7, 149, 128), rgb(48, 51, 52));
     @media (min-width:600px) {
         font-size: 1em;
         width:100px;
     }
     &:hover {
-      @include button_parameter(rgb(60, 188, 130), rgb(48, 51, 52));
+      @include button_parameter(rgb(48, 51, 52),rgb(7, 149, 128));
       @media (min-width:600px) {
         font-size: 1em;
         width:100px;
     }
     }
   }
+
