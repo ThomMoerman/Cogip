@@ -23,7 +23,8 @@ class CompanyController extends Controller
 
     public function show($id) {
         // Récupérez les informations de l'entreprise depuis la base de données en utilisant l'ID
-        $company = Company::find($id);
+        $companyModel = new Invoice();
+        $company = $companyModel->find($id);
     
         // Vérifiez si l'entreprise existe
         if (!$company) {
