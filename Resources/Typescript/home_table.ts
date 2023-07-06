@@ -1,4 +1,4 @@
-const tableName = document.createElement('h3') as HTMLHeadingElement
+/* const tableName = document.createElement('h3') as HTMLHeadingElement
 
 const tableSection = document.querySelectorAll('article') as unknown as HTMLBodyElement
 
@@ -28,7 +28,7 @@ function generateTable(){
 }   
 
 generateTable()
-
+ */
 
 /* class TableRow {
     constructor(
