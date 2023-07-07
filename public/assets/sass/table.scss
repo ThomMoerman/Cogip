@@ -1,14 +1,20 @@
 @import'./variables_footer.scss';
+@import'./mixin_footer.scss'; 
 
 main{
     display: flex;
     flex-direction: column;
-    margin: 50px 50px 80px 50px;
+    margin: 50px 30px 80px 30px;
+    @media (min-width : 900px){
+        margin: 50px 50px 80px 50px;
+    }
     font-family: $text;
-    article{
+    .section{
         align-self: center;
-        margin: 50px 0 50px 0 ;
-        width: 900px;
+        margin: 40px 0 40px 0 ;
+        @media (min-width : 900px){
+            width: 900px;
+        }
         h3{
             color: #ffffff; 
             font-size: 45px;
@@ -25,14 +31,42 @@ main{
             }
             tr{
                 background-color: rgb(153, 214, 205);
-                // border: $grey solid 1px;
+                font-size: 12px;
+                @media (min-width : 900px){
+                    font-size: 14px;
+                }
                 td{
                     color : $grey;
                     padding: 5px 10px 5px 10px;
+                    max-width: 40px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
             tr:nth-child(even){
                 background-color: #e0fbff;
+            }
+        }
+        .contacts__table_section{
+            max-width: 300px;
+            margin: 0 20px 0 20px;
+        }
+        .pagination{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            a{
+                @include pagination; 
+                &:hover{
+                    color : $page; 
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+            .current-page{
+                font-weight: 700;
+                color:#ffffff; 
             }
         }
     }

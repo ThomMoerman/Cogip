@@ -18,6 +18,9 @@ body{
                 flex-direction: row;
                 justify-content: space-between;
                 margin: 0 80px 100px 80px;
+                @media (min-width: 900px) {
+                    margin: 20px 80px 60px 80px;
+                }
             }
             .top__site{
                 display: flex;
