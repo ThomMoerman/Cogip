@@ -31,6 +31,4 @@ main article table tr td {
 }
 main article table tr:nth-child(even) {
   background-color: #e0fbff;
-}
-
-/*# sourceMappingURL=table.css.map */
+}/*# sourceMappingURL=table.css.map */

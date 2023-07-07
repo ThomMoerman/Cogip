@@ -8,6 +8,7 @@
     <link href="assets/css/header.css" rel="stylesheet" type="text/css">
     <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
     <link href="assets/css/table.css" rel="stylesheet" type="text/css">
+    <script rel='javascript' src="assets/js/searchfilter.js" defer  ></script>
     <title>Companies</title>
 </head>
 
@@ -16,9 +17,9 @@
         require '../Resources/Include/header.php'
     ?>
     <main>
-        <section class="container">
+        <section class="container section">
             <!-- Afficher le tableau des entreprises -->
-            <table>
+            <table id='list_table'>
                 <!-- En-têtes de colonne -->
                 <thead>
                     <tr>
