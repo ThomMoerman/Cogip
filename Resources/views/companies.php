@@ -33,7 +33,7 @@
                     <?php foreach ($companies as $company) : ?>
                     <tr>
                         <td><?php echo $company['id']; ?></td>
-                        <td><?php echo $company['name']; ?></td>
+                        <td><a href="/companies/<?php echo $company['id']; ?>"><?php echo $company['name']; ?></a></td>
                         <td>
                             <?php echo $company['country']; ?>
                         </td>
