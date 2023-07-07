@@ -1,10 +1,11 @@
 "use strict";
-const core_table = document.getElementsByClassName('container');
-console.log(core_table);
+const coreTable = document.querySelector('section');
+console.log(coreTable);
 const searchBar = document.createElement('input');
 searchBar.setAttribute('id', 'search_filter');
-searchBar.setAttribute('onkeyup', 'searchFilter');
-searchBar.setAttribute('Placeholder', 'search by names');
+searchBar.setAttribute('onkeyup', 'searchFilter()');
+searchBar.setAttribute('placeholder', 'Search by names');
+coreTable.appendChild(searchBar);
 function searchFilter() {
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("search_filter");
