@@ -18,6 +18,9 @@
     ?>
     <main>
         <section class="container section">
+
+            <h3>All companies</h3>
+
             <!-- Afficher le tableau des entreprises -->
             <table id='list_table'>
                 <!-- En-têtes de colonne -->
@@ -69,7 +72,7 @@
         </section>
     </main>
     <?php
-          require '../Resources/Include/footer.php'
+        require '../Resources/Include/footer.php'
     ?>
 </body>
 
