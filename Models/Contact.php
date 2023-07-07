@@ -32,7 +32,10 @@ class Contact
     }
     public function find($id)
     {
-        $query = "SELECT * FROM contacts WHERE id = :id";
+        $query = "SELECT contacts.*, companies.name AS company_name 
+        FROM contacts
+        LEFT JOIN companies ON contacts.company_id = companies.id
+        WHERE contacts.id = :id";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':id', $id, \PDO::PARAM_INT);
         $statement->execute();

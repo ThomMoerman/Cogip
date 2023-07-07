@@ -206,3 +206,9 @@ INSERT INTO roles_permission (permission_id, role_id) VALUES
 (9, 9),
 (10, 10);
 
+
+ALTER TABLE invoices
+ADD COLUMN due_date DATE AFTER ref;
+
+UPDATE invoices
+SET due_date = CURDATE();

@@ -61,7 +61,8 @@ class CompanyController extends Controller
             'name' => $company['name'],
             'tva' => $company['tva'],
             'country' => $company['country'],
-            'type' => $company['type_name']
+            'type' => $company['type_name'],
+            'created_at' => $company['created_at']
         ];
 
         // Renvoyez les données à la vue appropriée pour l'affichage

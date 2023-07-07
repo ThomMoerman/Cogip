@@ -34,7 +34,9 @@ class Invoice
 
     public function find($id)
     {
-        $query = "SELECT * FROM invoices WHERE id = :id";
+        $query = "SELECT invoices.*, companies.name AS company_name FROM invoices 
+        LEFT JOIN companies ON invoices.id_company = companies.id 
+        WHERE invoices.id = :id";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':id', $id, \PDO::PARAM_INT);
         $statement->execute();

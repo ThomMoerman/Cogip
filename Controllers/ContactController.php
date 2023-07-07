@@ -45,24 +45,26 @@ class ContactController extends Controller
         ]);
     }
     public function show($id)
-    {
-        // Récupérez les informations de l'entreprise depuis la base de données en utilisant l'ID
-        $ContactModel = new Contact();
-        $Contact = $ContactModel->find($id);
+{
+    // Récupérez les informations du contact depuis la base de données en utilisant l'ID
+    $contactModel = new Contact();
+    $contact = $contactModel->find($id);
 
-        // Vérifiez si l'entreprise existe
-        if (!$Contact) {
-            // alert('The choosen Contact doesn\'t exists');
-        }
-
-        // Préparez les données à envoyer à la vue
-        $data = [
-            'ref' => $Contact->ref,
-            'Contact' => $Contact->Contact,
-            'created_at' => $Contact->created_at
-        ];
-
-        // Renvoyez les données à la vue appropriée pour l'affichage
-        return $this->view('show_Contact', $data);
+    // Vérifiez si le contact existe
+    if (!$contact) {
+        // alert('The chosen contact doesn\'t exist');
     }
+
+    // Préparez les données à envoyer à la vue
+    $data = [
+        'name' => $contact['name'],
+        'phone' => $contact['phone'],
+        'mail' => $contact['email'],
+        'company_name' => $contact['company_name'],
+        'created_at' => $contact['created_at']
+    ];
+
+    // Renvoyez les données à la vue appropriée pour l'affichage
+    return $this->view('show_contact', $data);
+}
 }
