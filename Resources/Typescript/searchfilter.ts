@@ -1,10 +1,15 @@
-const core_table = document.getElementsByClassName('container') as HTMLCollectionOf<Element>
-console.log(core_table)
 
-const searchBar = document.createElement('input') as HTMLInputElement
-searchBar.setAttribute('id','search_filter')
-searchBar.setAttribute('onkeyup','searchFilter')
-searchBar.setAttribute('Placeholder','search by names')
+  const coreTable = document.querySelector('section') as HTMLBodyElement
+  
+  console.log(coreTable)
+
+    const searchBar = document.createElement('input') as HTMLInputElement
+    searchBar.setAttribute('id', 'search_filter');
+    searchBar.setAttribute('onkeyup', 'searchFilter()');
+    searchBar.setAttribute('placeholder', 'Search by names');
+
+    coreTable.appendChild(searchBar);
+
 
 function searchFilter () {
   var input, filter, table, tr, td, i, txtValue
@@ -24,6 +29,7 @@ for (i = 0; i < tr.length; i++) {
       tr[i].style.display = "none";
     }
   }
-}
+} 
 }
 searchFilter()
+

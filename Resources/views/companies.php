@@ -17,7 +17,7 @@
     require '../Resources/Include/header.php'
         ?>
     <main>
-        <section class="container section">
+        <section class="container section" id="info_table">
 
             <h3>All companies</h3>
 

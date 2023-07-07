@@ -159,6 +159,9 @@ body footer .footer__bottom .navbar__list li:hover {
   filter: invert(23%) sepia(68%) saturate(4688%) hue-rotate(295deg) brightness(90%) contrast(87%);
   cursor: pointer;
 }
+body footer .footer__bottom .navbar__list li:visited {
+  color: #ffffff;
+}
 @media (min-width: 900px) {
   body footer .footer__bottom .navbar__list li {
     margin: 0 20px 0 20px;
