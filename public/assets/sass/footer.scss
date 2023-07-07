@@ -122,6 +122,9 @@ body{
                     &:hover{
                         @include hoverNav; 
                     }
+                    &:visited{
+                        color: #ffffff;
+                    }
                     @media (min-width: 900px){
                         margin: 0 20px 0 20px;
                     }
