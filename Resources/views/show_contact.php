@@ -17,12 +17,12 @@
     ?>
     <main>     
             <section id="contact_profile">
-            <h2 class="contact__head"></h2>
+            <h2 class="contact__head"><?php echo $data['name'] ?></h2>
                 <div class="contact_info">
-                    <p>Contact: </p>
-                    <p>Phone: </p>
-                    <p>Mail: </p>
-                    <p>Company: </p>
+                    <p>Contact: <?php echo $data['name'] ?></p>
+                    <p>Phone: <?php echo $data['phone'] ?></p>
+                    <p>Mail: <?php echo $data['mail'] ?></p>
+                    <p>Company: <?php echo $data['company_name'] ?></p>
                 </div>
         </section>
     </main>
