@@ -8,7 +8,7 @@
     <link href="assets/css/header.css" rel="stylesheet" type="text/css">
     <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
     <link href="assets/css/table.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/companies.css" rel="stylesheet" type="text/css">
+    <script rel='javascript' src="assets/js/searchfilter.js" defer  ></script>
     <title>Companies</title>
 </head>
 
@@ -18,9 +18,11 @@
     ?>
     <main>
         <section class="container section">
+
             <h3>All companies</h3>
+
             <!-- Afficher le tableau des entreprises -->
-            <table>
+            <table id='list_table'>
                 <!-- En-têtes de colonne -->
                 <thead>
                     <tr>
