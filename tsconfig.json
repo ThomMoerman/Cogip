@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "outDir": "public/assets/js",
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "strict": true,
-    "skipLibCheck": true
-  },
-  "include": [
-    "Resources/TypeScript"
-  ]
-}
+    "compilerOptions": {
+      "target": "es2016",
+      "module": "commonjs",
+      "outDir": "public/assets/js",
+      "forceConsistentCasingInFileNames": true,
+      "esModuleInterop": true,
+      "strict": true,
+      "skipLibCheck": true
+    },
+    "include": [
+      "Resources/TypeScript"
+    ]
+  }

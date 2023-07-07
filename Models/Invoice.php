@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Models;
 
@@ -40,5 +40,28 @@ class Invoice
         $statement->execute();
 
         return $statement->fetch(\PDO::FETCH_ASSOC);
+    }
+    public function getTotalInvoiceCount()
+    {
+        $query = "SELECT COUNT(*) as total FROM invoices";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+
+        $result = $statement->fetch(\PDO::FETCH_ASSOC);
+
+        return $result['total'];
+    }
+    public function getPaginatedInvoices($offset, $perPage)
+    {
+        $query = "SELECT invoices.*, types.name AS type_name FROM invoices 
+        LEFT JOIN types ON invoices.id_company = types.id 
+        ORDER BY invoices.id ASC 
+        LIMIT :offset, :perPage";
+        $statement = $this->db->prepare($query);
+        $statement->bindValue(':offset', $offset, \PDO::PARAM_INT);
+        $statement->bindValue(':perPage', $perPage, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
 }

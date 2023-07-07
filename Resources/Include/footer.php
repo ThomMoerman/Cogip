@@ -39,10 +39,18 @@
     <section class="footer__bottom">
         <nav class="bottom__navbar">
             <ul class="navbar__list">
-                <li class="navbar__list__element home_link">home</li>
-                <li class="navbar__list__element invoices_link">invoices</li>
-                <li class="navbar__list__element companies_link">companies</li>
-                <li class="navbar__list__element contacts_link">contacts</li>
+                <a href="/">
+                    <li class="navbar__list__element home_link">home</li>
+                </a>
+                <a href="/invoices">
+                    <li class="navbar__list__element invoices_link">invoices</li>
+                </a>
+                <a href="/companies">
+                    <li class="navbar__list__element companies_link">companies</li>
+                </a>
+                <a href="/contacts">
+                    <li class="navbar__list__element contacts_link">contacts</li>
+                </a>
                 <li class="navbar__list__element privacy_link">privacy policy</li>
             </ul>
         </nav>

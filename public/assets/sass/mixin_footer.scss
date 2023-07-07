@@ -1,5 +1,13 @@
 @import'variables_footer.scss'; 
 
+
+@mixin title {
+    color: #ffffff; 
+    font-size: 45px;
+    font-family: $impact;
+    margin: 20px 0 20px 0;
+}
+
 @mixin cogip {
     text-transform: uppercase;
     //font-weight: 700;
@@ -34,4 +42,11 @@
 @mixin hoverNav {
     filter: invert(23%) sepia(68%) saturate(4688%) hue-rotate(295deg) brightness(90%) contrast(87%); 
     cursor: pointer;
+}
+
+@mixin pagination {
+    margin: 0 5px 0 5px;
+    color: $grey;
+    font-family: $text;
+    text-decoration: none;
 }

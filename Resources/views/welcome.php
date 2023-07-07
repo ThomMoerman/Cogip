@@ -26,7 +26,7 @@
                 class="headline_illustration">
     </div>
     <main>
-       <?php require 'table_function.php'; ?>
+    <?php require 'table_function.php'; ?>
         <article class="section invoices__table_section">
             <h3>Last invoices</h3>
             <table>
@@ -63,7 +63,7 @@
                         <?php
                             tableCompanies($companies); 
                         ?>
-          </table>
+            </table>
         </article>
     </main>
     <?php
@@ -82,5 +82,10 @@
                 <li>dd() function</li>
                 <li>redirect() function</li>
             </ul>
-       </section>
-    </main> -->
+        </section>
+    </main>
+    <?php
+        require '../Resources/Include/footer.php'
+    ?>
+</body>
+</html>

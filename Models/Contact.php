@@ -39,4 +39,27 @@ class Contact
 
         return $statement->fetch(\PDO::FETCH_ASSOC);
     }
+    public function getTotalContactCount()
+    {
+        $query = "SELECT COUNT(*) as total FROM contacts";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+
+        $result = $statement->fetch(\PDO::FETCH_ASSOC);
+
+        return $result['total'];
+    }
+    public function getPaginatedContacts($offset, $perPage)
+    {
+        $query = "SELECT contacts.*, companies.name AS company_name FROM contacts
+        LEFT JOIN companies ON contacts.company_id = companies.id
+        ORDER BY contacts.id ASC 
+        LIMIT :offset, :perPage";
+        $statement = $this->db->prepare($query);
+        $statement->bindValue(':offset', $offset, \PDO::PARAM_INT);
+        $statement->bindValue(':perPage', $perPage, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
