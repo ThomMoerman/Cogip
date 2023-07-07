@@ -50,7 +50,6 @@ main .section table tr td {
 }
 main .section table tr:nth-child(even) {
   background-color: #e0fbff;
-  
 }
 main .section .contacts__table_section {
   max-width: 300px;
@@ -75,5 +74,4 @@ main .section .pagination a:hover {
 main .section .pagination .current-page {
   font-weight: 700;
   color: #ffffff;
-
 }/*# sourceMappingURL=table.css.map */
