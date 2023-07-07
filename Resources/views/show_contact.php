@@ -7,7 +7,6 @@
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/header.css" rel="stylesheet" type="text/css">
     <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/table.css" rel="stylesheet" type="text/css">
     <script rel='javascript' src="assets/js/searchfilter.js" defer  ></script>
     <title>Contact</title>
 </head>
@@ -18,12 +17,12 @@
     ?>
     <main>     
             <section id="contact_profile">
-                <h2 class="contact__head"><?php $contact['name']?></h2>
+            <h2 class="contact__head"></h2>
                 <div class="contact_info">
-                    <p>Contact:<?php $contact['name']?> </p>
-                    <p>Phone:<?php $contact['phone']?> </p>
-                    <p>Mail:<?php $contact['email']?> </p>
-                    <p>Company:<?php $contact['company_id']?> </p>
+                    <p>Contact: </p>
+                    <p>Phone: </p>
+                    <p>Mail: </p>
+                    <p>Company: </p>
                 </div>
         </section>
     </main>
