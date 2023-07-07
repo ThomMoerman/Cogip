@@ -24,6 +24,6 @@ for (i = 0; i < tr.length; i++) {
       tr[i].style.display = "none";
     }
   }
-}
+} 
 }
 searchFilter()
