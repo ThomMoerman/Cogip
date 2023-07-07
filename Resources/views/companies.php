@@ -8,6 +8,7 @@
     <link href="assets/css/header.css" rel="stylesheet" type="text/css">
     <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
     <link href="assets/css/table.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/companies.css" rel="stylesheet" type="text/css">
     <title>Companies</title>
 </head>
 
@@ -16,7 +17,8 @@
         require '../Resources/Include/header.php'
     ?>
     <main>
-        <section class="container">
+        <section class="container section">
+            <h3>All companies</h3>
             <!-- Afficher le tableau des entreprises -->
             <table>
                 <!-- En-têtes de colonne -->
@@ -68,7 +70,7 @@
         </section>
     </main>
     <?php
-          require '../Resources/Include/footer.php'
+        require '../Resources/Include/footer.php'
     ?>
 </body>
 

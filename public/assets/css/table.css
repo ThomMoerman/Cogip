@@ -1,36 +1,77 @@
 main {
   display: flex;
   flex-direction: column;
-  margin: 50px 50px 80px 50px;
+  margin: 50px 30px 80px 30px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-main article {
-  align-self: center;
-  margin: 50px 0 50px 0;
-  width: 900px;
+@media (min-width: 900px) {
+  main {
+    margin: 50px 50px 80px 50px;
+  }
 }
-main article h3 {
+main .section {
+  align-self: center;
+  margin: 40px 0 40px 0;
+}
+@media (min-width: 900px) {
+  main .section {
+    width: 900px;
+  }
+}
+main .section h3 {
   color: #ffffff;
   font-size: 45px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   margin: 30px 0 30px 0;
 }
-main article table th {
+main .section table th {
   background-color: rgb(48, 51, 52);
   color: #ffffff;
   text-align: left;
   padding: 10px;
   width: 900px;
 }
-main article table tr {
+main .section table tr {
   background-color: rgb(153, 214, 205);
+  font-size: 12px;
 }
-main article table tr td {
+@media (min-width: 900px) {
+  main .section table tr {
+    font-size: 14px;
+  }
+}
+main .section table tr td {
   color: rgb(48, 51, 52);
   padding: 5px 10px 5px 10px;
+  max-width: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-main article table tr:nth-child(even) {
+main .section table tr:nth-child(even) {
   background-color: #e0fbff;
 }
-
-/*# sourceMappingURL=table.css.map */
+main .section .contacts__table_section {
+  max-width: 300px;
+  margin: 0 20px 0 20px;
+}
+main .section .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+main .section .pagination a {
+  margin: 0 5px 0 5px;
+  color: rgb(48, 51, 52);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+}
+main .section .pagination a:hover {
+  color: rgb(124, 3, 140);
+  cursor: pointer;
+  text-decoration: underline;
+}
+main .section .pagination .current-page {
+  font-weight: 700;
+  color: #ffffff;
+}/*# sourceMappingURL=table.css.map */
