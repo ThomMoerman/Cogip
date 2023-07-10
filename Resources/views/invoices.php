@@ -17,7 +17,7 @@
     <main>
         <section class="section invoices_table_section">
             <h3>All invoices</h3>
-            <table class="invoices_table">
+            <table class="invoices_table" id='list_table'>
                 <thead>
                     <th>Invoice number</th>
                     <th>Due dates</th>
