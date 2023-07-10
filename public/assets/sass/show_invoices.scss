@@ -2,7 +2,6 @@
 @import'./mixin_footer.scss'; 
 
 main{
-    // background-color: yellowgreen;
     .section__client{
         color: #ffffff;
         margin-bottom: 50px;
@@ -54,12 +53,22 @@ main{
                 font-size: 20px;
                 @media (min-width: 900px){
                     margin-right: 150px;
+                    display: flex;
+                    flex-direction: row;
+                    @include person_card; 
                 }
                 img{
                     max-width: 100px;
                     @media (min-width: 900px){
                         max-width: 100%;
-                        margin-bottom: 15px;
+                        padding: 20px;
+                        margin: 0;
+                    }
+                }
+                p{
+                    @media (min-width: 900px){
+                        align-self: center;
+                        padding: 20px;
                     }
                 }
             }

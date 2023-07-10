@@ -60,6 +60,9 @@ main .section table tr td a:hover {
 main .section table tr:nth-child(even) {
   background-color: #e0fbff;
 }
+main .section .invoices_table {
+  margin-bottom: 20px;
+}
 main .section .contacts__table_section {
   max-width: 300px;
   margin: 0 20px 0 20px;

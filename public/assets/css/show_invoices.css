@@ -60,6 +60,7 @@ main .section__contact .contact__identity .person {
 @media (min-width: 900px) {
   main .section__contact .contact__identity .person {
     margin-right: 150px;
+
   }
 }
 main .section__contact .contact__identity .person img {
@@ -68,6 +69,5 @@ main .section__contact .contact__identity .person img {
 @media (min-width: 900px) {
   main .section__contact .contact__identity .person img {
     max-width: 100%;
-    margin-bottom: 15px;
   }
 }/*# sourceMappingURL=show_invoices.css.map */
