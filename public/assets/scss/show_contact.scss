@@ -20,9 +20,10 @@
        @include default_spacing(50px);
        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
        @include font_size(2em);
+       color: white;
     }
     .head__background{
-        background-color: aquamarine;
+        background-color: rgb(48, 51, 52);;
         width: 90px;
         height: 25px;
         position: absolute;
@@ -44,7 +45,7 @@
             position: absolute;
             z-index: -2;
             top: 300px;
-            right: 200px;;
+            left: 65vw;
         }
         width: 120px;
     }
@@ -53,6 +54,7 @@
 .page_info{
     background-color: rgba($color: #074a5b, $alpha: 0.1);
     border-radius: 20px;
+    color: white;
     box-shadow:7px 7px 5px rgba(0, 0, 0, 0.341);
     padding: 20px 55px 5px 0;
     @media (min-width:600px) {
@@ -68,8 +70,7 @@
     margin-bottom: 20px;
     display: flex;
     .info_title{
-        font-weight: 700;
-        text-decoration: underline;
+        font-weight: 900;
     }
     .info_element{
         margin-left: 15px;
@@ -77,3 +78,6 @@
     }
 }
 
+p h2{
+    
+}

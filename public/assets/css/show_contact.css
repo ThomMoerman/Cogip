@@ -14,9 +14,10 @@
   margin-bottom: 50px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2em;
+  color: white;
 }
 #page_profile .head__background {
-  background-color: aquamarine;
+  background-color: rgb(48, 51, 52);
   width: 90px;
   height: 25px;
   position: absolute;
@@ -42,13 +43,14 @@
     position: absolute;
     z-index: -2;
     top: 300px;
-    right: 200px;
+    left: 65vw;
   }
 }
 
 .page_info {
   background-color: rgba(7, 74, 91, 0.1);
   border-radius: 20px;
+  color: white;
   box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.341);
   padding: 20px 55px 5px 0;
 }
@@ -67,8 +69,7 @@
   display: flex;
 }
 .info .info_title {
-  font-weight: 700;
-  text-decoration: underline;
+  font-weight: 900;
 }
 .info .info_element {
   margin-left: 15px;
