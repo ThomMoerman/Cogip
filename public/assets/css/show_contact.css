@@ -1,0 +1,53 @@
+#contact_profile {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 250px;
+  padding: 50px 0;
+}
+#contact_profile h2 {
+  margin-bottom: 50px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2em;
+}
+#contact_profile .head__background {
+  background-color: aquamarine;
+  width: 90px;
+  height: 25px;
+  position: absolute;
+  z-index: -1;
+  top: 305px;
+  left: 50vw;
+}
+@media (min-width: 600px) {
+  #contact_profile .head__background {
+    top: 280px;
+  }
+}
+#contact_profile img {
+  margin-bottom: 50px;
+  width: 120px;
+}
+
+.contact_info {
+  background-color: rgba(7, 74, 91, 0.1);
+  border-radius: 20px;
+  padding: 20px 55px 5px 0;
+}
+
+.info {
+  text-align: justify;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 10px;
+  padding-left: 10%;
+  margin-bottom: 20px;
+  display: flex;
+}
+.info .info_title {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.info .info_element {
+  margin-left: 15px;
+  text-align: justify;
+}/*# sourceMappingURL=show_contact.css.map */
