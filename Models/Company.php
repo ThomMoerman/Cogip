@@ -67,6 +67,15 @@ class Company
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function getLatestInvoicesByCompany($limit, $id)
+    {
+        $query = "SELECT * FROM invoices LEFT JOIN companies ON invoices.id_company = companies.id where id_company = $id ORDER BY invoices.created_at DESC LIMIT :limit";
+        $statement = $this->db->prepare($query);
+        $statement->bindValue(':limit', $limit, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
 
 ?>

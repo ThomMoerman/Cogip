@@ -36,6 +36,7 @@ class InvoiceController extends Controller
         // Récupérer les enregistrements pour la page demandée
         $invoices = $invoiceModel->getPaginatedInvoices($offset, $perPage);
 
+
         // Passer les données aux vues correspondantes
         return $this->view('invoices', [
             'name' => 'Cogip',
@@ -61,8 +62,8 @@ class InvoiceController extends Controller
             'ref' => $invoice['ref'],
             'due_date' => $invoice['due_date'],
             'company_name' => $invoice['company_name'],
-            'created_at' => $invoice['created_at'] 
-              ];
+            'created_at' => $invoice['created_at']
+        ];
 
         // Renvoyez les données à la vue appropriée pour l'affichage
         return $this->view('show_invoice', $data);
