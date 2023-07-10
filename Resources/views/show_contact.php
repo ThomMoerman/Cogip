@@ -7,7 +7,7 @@
     <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/footer.css" rel="stylesheet" type="text/css">
-    <script rel='../javascript' src="assets/js/searchfilter.js" defer  ></script>
+    <link href="../assets/css/show_contact.css" rel="stylesheet" type="text/css">
     <title>Contact</title>
 </head>
 
@@ -16,13 +16,22 @@
         require '../Resources/Include/header.php'
     ?>
     <main>     
-            <section id="contact_profile">
-            <h2 class="contact__head"><?php echo $data['name'] ?></h2>
-                <div class="contact_info">
-                    <p>Contact: <?php echo $data['name'] ?></p>
-                    <p>Phone: <?php echo $data['phone'] ?></p>
-                    <p>Mail: <?php echo $data['mail'] ?></p>
-                    <p>Company: <?php echo $data['company_name'] ?></p>
+            <section id="page_profile">
+            <h2 class="page__head"><?php echo $data['name'] ?></h2>
+            <div class="head__background"></div>
+            <img src="../assets/img/Avatar_One.svg" alt="avatar_pic">    
+            <div class="page_info">
+                <div class="info">               
+                    <p class="info_title">Contact:  </p> <p class="info_element name"> <?php echo $data['name'] ?></p>
+                </div> 
+                <div class="info"> 
+                    <p class="info_title">Phone: </p> <p class="info_element phone"><?php echo $data['phone'] ?></p>
+                </div>
+                <div class="info">    
+                    <p class="info_title">Mail: </p> <p class="info_element mail"><?php echo $data['mail'] ?></p>
+                </div>
+                <div class="info">   
+                    <p class="info_title">Company: </p> <p class="info_element company"><?php echo $data['company_name'] ?></p>
                 </div>
         </section>
     </main>

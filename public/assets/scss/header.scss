@@ -52,11 +52,12 @@ header{
         color:rgb(7, 149, 128);
     }
 }
-.btn {
+
+ .btn {
     @include button_parameter(rgb(7, 149, 128), rgb(48, 51, 52));
     @media (min-width:600px) {
         font-size: 1em;
-        width:100px;
+        max-width:100px;
     }
     &:hover {
       @include button_parameter(rgb(48, 51, 52),rgb(7, 149, 128));
