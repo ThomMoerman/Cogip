@@ -51,7 +51,9 @@
                 <a href="/contacts">
                     <li class="navbar__list__element contacts_link">contacts</li>
                 </a>
+                <a href="">
                 <li class="navbar__list__element privacy_link">privacy policy</li>
+                </a>
             </ul>
         </nav>
         <div class="bottom__copyright">

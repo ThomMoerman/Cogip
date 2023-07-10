@@ -14,8 +14,8 @@
 
 <body>
     <?php
-    require '../Resources/Include/header.php'
-        ?>
+        require '../Resources/Include/header.php'
+    ?>
     <main>
         <section class="container section" id="info_table">
 
@@ -78,8 +78,8 @@
         </section>
     </main>
     <?php
-    require '../Resources/Include/footer.php'
-        ?>
+        require '../Resources/Include/footer.php'
+    ?>
 </body>
 
 </html>
