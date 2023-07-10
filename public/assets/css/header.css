@@ -10,21 +10,19 @@ header {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 }
-header h1, header .nav, header .log {
-  padding-top: 5px;
-  padding-bottom: 5px;
+header div {
+  margin-top: 25px;
 }
-@media (min-width: 600px) {
-  header h1, header .nav, header .log {
-    margin-left: 25px;
-    margin-right: 25px;
+@media (min-width: 900px) {
+  header div {
+    margin-top: 0;
   }
 }
 header .header__title {
@@ -34,7 +32,7 @@ header .header__title {
   padding: 6px;
   color: rgb(7, 149, 128);
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   header .header__title {
     font-size: 4em;
     margin-left: 50px;
@@ -43,14 +41,18 @@ header .header__title {
 
 .btn {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-size: 0.45em;
+  font-size: 0.7em;
   -webkit-text-stroke-width: 1px;
   color: rgb(7, 149, 128);
   border-radius: 20px;
   border: 3px solid rgb(7, 149, 128);
   background: rgb(48, 51, 52);
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
-  width: 55px;
+  padding: 3px 10px;
+  text-decoration: none;
+}
+.btn :hover {
+  cursor: pointer;
 }
 @media (min-width: 600px) {
   .btn {
@@ -60,18 +62,28 @@ header .header__title {
 }
 .btn:hover {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-size: 0.45em;
+  font-size: 0.7em;
   -webkit-text-stroke-width: 1px;
   color: rgb(48, 51, 52);
   border-radius: 20px;
   border: 3px solid rgb(48, 51, 52);
   background: rgb(7, 149, 128);
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
-  width: 55px;
+  padding: 3px 10px;
+  text-decoration: none;
+}
+.btn:hover :hover {
+  cursor: pointer;
 }
 @media (min-width: 600px) {
   .btn:hover {
     font-size: 1em;
     width: 100px;
+  }
+}
+
+@media (min-width: 900px) {
+  .log {
+    margin-right: 5vw;
   }
 }/*# sourceMappingURL=header.css.map */
