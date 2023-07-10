@@ -35,6 +35,30 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <!-- Pagination  -->
+            <div class="pagination">
+                <?php if ($currentPage > 1): ?> <!-- Si $currentPage plus grand que 1, nous ne sommes pas sur la 1ère page -->
+                    <!-- Affichage de la flèche précédente si la page ACTUELLE n'est pas la première page -->
+                    <a href="/invoices?page=<?php echo ($currentPage - 1); ?>" class="arrow">← Previous</a><!-- Création d'un lien vers la page précédente > ($currentPage - 1) indique le numéro de page dans le lien '/invoices?page='-->
+                <?php endif; ?><!-- endif = fin de la structure conditionnelle -->
+
+                <?php for ($i = 1; $i <= $totalPages; $i++): ?><!-- Itération à travers les numéros de page, à chaque itération $i = numéro page en cours -->
+                    <?php if ($i == $currentPage): ?><!-- vérification si $i = page actuelle...-->
+                        <!-- ... affichage de la page courante en gras... -->
+                        <span class="current-page">
+                            <?php echo $i; ?>
+                        </span>
+                    <?php else: ?>
+                        <!-- ... sinon, affichage des autres pages comme des liens -->
+                        <a href="/invoices?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                    <?php endif; ?>
+                <?php endfor; ?><!-- fin des 2 structures conditionnelles -->
+
+                <?php if ($currentPage < $totalPages): ?>
+                    <a href="/invoices?page=<?php echo ($currentPage + 1); ?>" class="arrow">Next →</a>
+                <?php endif; ?>
+                <!-- Si la page actuelle est < au nombre total de page, donc que ce n'est pas la dernière page, création d'un lien vers la page suivante -->
+            </div>
         </section>
     </main>
     <?php
