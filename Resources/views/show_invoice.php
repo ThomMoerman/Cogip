@@ -7,7 +7,7 @@
     <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/footer.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/show_contact.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/show_contact_invoice.css" rel="stylesheet" type="text/css">
     <title>Invoice</title>
 </head>
 
@@ -18,7 +18,8 @@
     <main>     
             <section id="page_profile">
             <h2 class="page__head"><?php echo $data['ref'] ?></h2>
-            <div class="head__background"></div>
+            <div class="color__band"></div>
+            <div class="page_info">
                 <div class="info">               
                     <p class="info_title">Invoice N°:  </p> <p class="info_element ref"> <?php echo $data['ref'] ?></p>
                 </div> 
@@ -30,6 +31,7 @@
                 </div>
                 <div class="info">   
                     <p class="info_title">Created at: </p> <p class="info_element company"><?php echo $data['created_at'] ?></p>
+                </div>
                 </div>
         </section>
     </main>

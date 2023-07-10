@@ -1,0 +1,62 @@
+main .section__contact {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+@media (min-width: 900px) {
+  main .section__contact {
+    align-self: flex-start;
+    justify-content: space-between;
+    margin: 40px 0 40px 0;
+  }
+}
+@media (min-width: 900px) {
+  main .section__contact .contact__identity {
+    display: flex;
+    justify-content: start;
+  }
+}
+main .section__contact .contact__identity .person {
+  margin: 15px 0 40px 0;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+}
+@media (min-width: 900px) {
+  main .section__contact .contact__identity .person {
+    margin-right: 150px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(48, 51, 52, 0.7);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 0px rgba(182, 252, 244, 0.4);
+    border: rgb(48, 51, 52) solid 1px;
+  }
+}
+main .section__contact .contact__identity .person img {
+  max-width: 100px;
+}
+@media (min-width: 900px) {
+  main .section__contact .contact__identity .person img {
+    max-width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+}
+@media (min-width: 900px) {
+  main .section__contact .contact__identity .person p {
+    align-self: center;
+    padding: 20px;
+  }
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 45px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 20px 0 20px 0;
+  font-size: 35px;
+  margin-bottom: 25px;
+}/*# sourceMappingURL=show_company.css.map */

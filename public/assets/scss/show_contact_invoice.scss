@@ -1,3 +1,6 @@
+
+
+
 @mixin default_spacing($spacing){
     margin-bottom: $spacing;
 }
@@ -6,37 +9,47 @@
     font-size: $size;
 }
 
+
+.color__band{
+    background-color: rgb(48, 51, 52);
+    width: 150px;
+    transform: translate(150px, -65px);
+    @media (min-width:600px) {
+        width: 280px;
+        transform: translate(20px, -65px);
+    }
+    height: 25px;
+    position: absolute;
+    z-index: -1;
+    
+}
 #page_profile{
     margin-left: auto;
     margin-right: auto;
-    text-align:center;
+    padding-left: 25px;
+    justify-content: center;
     @media (min-width:600px) {
-        margin-left: 20vw;
+        margin-left: 2vw;
        
     }
-    width: 250px;
+  
+    //width: 250px;
     padding: 50px 0;
-    h2{
+    .page__head{
+       text-align: center;
+       @media (min-width:600px) {
+        text-align: unset;
+       }
        @include default_spacing(50px);
        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
        @include font_size(2em);
        color: white;
+       text-transform: uppercase;
     }
-    .head__background{
-        background-color: rgb(48, 51, 52);;
-        width: 90px;
-        height: 25px;
-        position: absolute;
-        z-index: -1;
-        top: 320px;
-        @media (min-width:600px) {
-            top:290px;
-            left:30%;
-        }
-        left: 50vw;
-    }
+    
     img{
         @include default_spacing(50px);
+        padding-left: 40vw;
         @media (min-width:600px) {
             @include default_spacing(0);
             width: 200px;
@@ -46,6 +59,7 @@
             z-index: -2;
             top: 300px;
             left: 65vw;
+            padding-left: unset;
         }
         width: 120px;
     }
@@ -56,9 +70,9 @@
     border-radius: 20px;
     color: white;
     box-shadow:7px 7px 5px rgba(0, 0, 0, 0.341);
-    padding: 20px 55px 5px 0;
+    padding: 20px 55px 5px 20px;
     @media (min-width:600px) {
-        max-width: 500px;
+        width: fit-content;
     }
 }
 
@@ -78,6 +92,6 @@
     }
 }
 
-p h2{
-    
+p{
+    margin-bottom: 5px;
 }
