@@ -1,37 +1,55 @@
-#contact_profile {
+#page_profile {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   width: 250px;
   padding: 50px 0;
 }
-#contact_profile h2 {
+@media (min-width: 600px) {
+  #page_profile {
+    margin-left: 20vw;
+  }
+}
+#page_profile h2 {
   margin-bottom: 50px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 2em;
 }
-#contact_profile .head__background {
+#page_profile .head__background {
   background-color: aquamarine;
   width: 90px;
   height: 25px;
   position: absolute;
   z-index: -1;
-  top: 305px;
+  top: 320px;
   left: 50vw;
 }
 @media (min-width: 600px) {
-  #contact_profile .head__background {
-    top: 280px;
+  #page_profile .head__background {
+    top: 290px;
+    left: 30%;
   }
 }
-#contact_profile img {
+#page_profile img {
   margin-bottom: 50px;
   width: 120px;
 }
+@media (min-width: 600px) {
+  #page_profile img {
+    margin-bottom: 0;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: -2;
+    top: 300px;
+    right: 200px;
+  }
+}
 
-.contact_info {
+.page_info {
   background-color: rgba(7, 74, 91, 0.1);
   border-radius: 20px;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.341);
   padding: 20px 55px 5px 0;
 }
 

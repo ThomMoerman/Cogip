@@ -16,11 +16,11 @@
         require '../Resources/Include/header.php'
     ?>
     <main>     
-            <section id="contact_profile">
-            <h2 class="contact__head"><?php echo $data['name'] ?></h2>
+            <section id="page_profile">
+            <h2 class="page__head"><?php echo $data['name'] ?></h2>
             <div class="head__background"></div>
             <img src="../assets/img/Avatar_One.svg" alt="avatar_pic">    
-            <div class="contact_info">
+            <div class="page_info">
                 <div class="info">               
                     <p class="info_title">Contact:  </p> <p class="info_element name"> <?php echo $data['name'] ?></p>
                 </div> 

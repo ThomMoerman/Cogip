@@ -6,10 +6,14 @@
     font-size: $size;
 }
 
-#contact_profile{
+#page_profile{
     margin-left: auto;
     margin-right: auto;
     text-align:center;
+    @media (min-width:600px) {
+        margin-left: 20vw;
+       
+    }
     width: 250px;
     padding: 50px 0;
     h2{
@@ -23,21 +27,33 @@
         height: 25px;
         position: absolute;
         z-index: -1;
-        top: 305px;
+        top: 320px;
         @media (min-width:600px) {
-            top:280px;
+            top:290px;
+            left:30%;
         }
         left: 50vw;
     }
     img{
         @include default_spacing(50px);
+        @media (min-width:600px) {
+            @include default_spacing(0);
+            width: 200px;
+          //  margin-right: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: -2;
+            top: 300px;
+            right: 200px;;
+        }
         width: 120px;
     }
 }
 
-.contact_info{
+.page_info{
     background-color: rgba($color: #074a5b, $alpha: 0.1);
     border-radius: 20px;
+    box-shadow:7px 7px 5px rgba(0, 0, 0, 0.341);
     padding: 20px 55px 5px 0;
 }
 
