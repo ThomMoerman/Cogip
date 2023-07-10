@@ -146,7 +146,11 @@ body footer .footer__bottom .navbar__list {
     flex-direction: row;
   }
 }
-body footer .footer__bottom .navbar__list li {
+body footer .footer__bottom .navbar__list a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body footer .footer__bottom .navbar__list a li {
   text-transform: uppercase;
   list-style-type: none;
   font-size: 14px;
@@ -155,15 +159,15 @@ body footer .footer__bottom .navbar__list li {
   line-height: 1.5;
   padding: 0px;
 }
-body footer .footer__bottom .navbar__list li:hover {
+body footer .footer__bottom .navbar__list a li:hover {
   filter: invert(23%) sepia(68%) saturate(4688%) hue-rotate(295deg) brightness(90%) contrast(87%);
   cursor: pointer;
 }
-body footer .footer__bottom .navbar__list li:visited {
+body footer .footer__bottom .navbar__list a li:visited {
   color: #ffffff;
 }
 @media (min-width: 900px) {
-  body footer .footer__bottom .navbar__list li {
+  body footer .footer__bottom .navbar__list a li {
     margin: 0 20px 0 20px;
   }
 }

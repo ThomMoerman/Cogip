@@ -42,11 +42,23 @@ main{
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    a{
+                        text-decoration: none;
+                        color: $grey;
+                        font-style: italic;
+                        &:hover{
+                            color: $hover;
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
             tr:nth-child(even){
                 background-color: #e0fbff;
             }
+        }
+        .invoices_table{
+            margin-bottom: 20px;
         }
         .contacts__table_section{
             max-width: 300px;

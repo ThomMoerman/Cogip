@@ -48,8 +48,20 @@ main .section table tr td {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+main .section table tr td a {
+  text-decoration: none;
+  color: rgb(48, 51, 52);
+  font-style: italic;
+}
+main .section table tr td a:hover {
+  color: rgb(3, 172, 51);
+  cursor: pointer;
+}
 main .section table tr:nth-child(even) {
   background-color: #e0fbff;
+}
+main .section .invoices_table {
+  margin-bottom: 20px;
 }
 main .section .contacts__table_section {
   max-width: 300px;
