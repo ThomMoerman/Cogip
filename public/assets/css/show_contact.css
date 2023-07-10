@@ -52,6 +52,11 @@
   box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.341);
   padding: 20px 55px 5px 0;
 }
+@media (min-width: 600px) {
+  .page_info {
+    max-width: 500px;
+  }
+}
 
 .info {
   text-align: justify;
