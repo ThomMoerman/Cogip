@@ -1,41 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/welcome.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/footer.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/show_contact.css" rel="stylesheet" type="text/css">
-    <title>Invoice</title>
+    <link href="../assets/css/table.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/invoices.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/show_invoices.css" rel="stylesheet" type="text/css">
+    <title>Cogip - Show Invoice</title>
 </head>
-
 <body>
     <?php
         require '../Resources/Include/header.php'
     ?>
-    <main>     
-            <section id="page_profile">
-            <h2 class="page__head"><?php echo $invoice['ref'] ?></h2>
-            <div class="head__background"></div>
-                <div class="info">               
-                    <p class="info_title">Invoice N°:  </p> <p class="info_element ref"> <?php echo $invoice['ref'] ?></p>
-                </div> 
-                <div class="info"> 
-                    <p class="info_title">Due date: </p> <p class="info_element due_date"><?php echo $invoice['due_date'] ?></p>
+    <main>
+        <section class="section__client">
+            <div class="client__name">
+                <h3 class="name__display">pied pipper</h3>
+            <div class="color__band"></div>
+            </div>
+            <div class="client__information">
+                <p class="information__label"><b>Name:</b> Pied Pipper</p>
+                <p class="information__label">TVA: BE87 876 767 565</p>
+                <p class="information__label">Country: Belgium</p>
+                <p class="information__label">Type: Supplier</p>
+            </div>
+        </section>
+        <section>
+            <hr>
+        </section>
+        <section class="section__contact">
+            <div>
+                <h3>Contact people</h3>
+            </div>
+            <div class="contact__identity">
+                <div class="person">
+                    <img src="../assets/img/Avatar_one.svg" alt="picture of contact people">
+                    <p>Bertram Gilfoyle</p>
                 </div>
-                <div class="info">    
-                    <p class="info_title">Company: </p> <p class="info_element mail"><?php echo $invoice['company_name'] ?></p>
+                <div class="person">
+                    <img src="../assets/img/Avatar_two.svg" alt="picture of contact people">
+                    <p>Henry George</p>
                 </div>
-                <div class="info">   
-                    <p class="info_title">Created at: </p> <p class="info_element company"><?php echo $invoice['created_at'] ?></p>
-                </div>
+            </div>
+        </section>
+        <section>
+            <hr>
+        </section>
+        <section class="section table_show_invoice">
+            <h3>Last invoices</h3>    
+        <table id='list_table'>
+        <!-- En-têtes de colonne -->
+        <thead>
+            <tr>
+                <th>Invoice Number</th>
+                <th>Dates</th>
+                <th>Company</th>
+                <th>Created at</th>
+            </tr>
+        </thead>
+        <!-- Données -->
+        <tbody>
+            <?php foreach ($lastinvoices as $invoice): ?>
+                <tr>
+                    <td>
+                        <?php echo $invoice['ref']; ?>
+                    </td>
+                    <td>
+                        <?php echo $invoice['due_date']; ?>
+                    </td>
+                    <td>
+                        <?php echo $invoice['name']; ?>
+                    </td>
+                    <td>
+                        <?php echo $invoice['created_at']; ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
         </section>
     </main>
     <?php
         require '../Resources/Include/footer.php'
     ?>
 </body>
-
 </html>

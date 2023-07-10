@@ -27,7 +27,7 @@
                 <tbody>
                     <?php foreach ($invoices as $invoice_data): ?>
                         <tr>
-                            <td><?php echo $invoice_data['ref'] ?></td>
+                            <td><a href="/invoices/<?php echo $invoice_data['id']; ?>"><?php echo $invoice_data['ref']; ?></a></td>
                             <td><?php echo $invoice_data['due_date'] ?></td>
                             <td><?php echo $invoice_data['id_company'] ?></td>
                             <td><?php echo $invoice_data['created_at'] ?></td>
