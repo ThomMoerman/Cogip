@@ -10,6 +10,7 @@
 #headline h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 4em;
+  color: whitesmoke;
   max-width: 500px;
 }
 @media (max-width: 600px) {

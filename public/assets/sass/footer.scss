@@ -117,18 +117,22 @@ body{
                         display: flex;
                         flex-direction: row;
                     }
-                li{
-                    @include contactList;
-                    &:hover{
-                        @include hoverNav; 
-                    }
-                    &:visited{
+                    a{
+                        text-decoration: none;
                         color: #ffffff;
+                        li{
+                            @include contactList;
+                            &:hover{
+                                @include hoverNav; 
+                            }
+                            &:visited{
+                                color: #ffffff;
+                            }
+                            @media (min-width: 900px){
+                                margin: 0 20px 0 20px;
+                            }
+                        }
                     }
-                    @media (min-width: 900px){
-                        margin: 0 20px 0 20px;
-                    }
-                }
             }
             .bottom__copyright{
                 justify-content: center;

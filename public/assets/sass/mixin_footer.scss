@@ -50,3 +50,10 @@
     font-family: $text;
     text-decoration: none;
 }
+
+@mixin person_card {
+    background-color: $grey_transparence;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 0px rgba(182,252,244,0.4);
+    border: $grey solid 1px;
+}

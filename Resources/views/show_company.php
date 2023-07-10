@@ -1,39 +1,41 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-?>
-<section class="container section" id="info_table">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/show_contact.css" rel="stylesheet" type="text/css">
+    <title>Invoice</title>
+</head>
 
-    <h3>All companies</h3>
+<body>
+    <?php
+        require '../Resources/Include/header.php'
+    ?>
+    <main>     
+            <section id="page_profile">
+            <h2 class="page__head"><?php echo $invoice['ref'] ?></h2>
+            <div class="head__background"></div>
+                <div class="info">               
+                    <p class="info_title">Invoice N°:  </p> <p class="info_element ref"> <?php echo $invoice['ref'] ?></p>
+                </div> 
+                <div class="info"> 
+                    <p class="info_title">Due date: </p> <p class="info_element due_date"><?php echo $invoice['due_date'] ?></p>
+                </div>
+                <div class="info">    
+                    <p class="info_title">Company: </p> <p class="info_element mail"><?php echo $invoice['company_name'] ?></p>
+                </div>
+                <div class="info">   
+                    <p class="info_title">Created at: </p> <p class="info_element company"><?php echo $invoice['created_at'] ?></p>
+                </div>
+        </section>
+    </main>
+    <?php
+        require '../Resources/Include/footer.php'
+    ?>
+</body>
 
-    <!-- Afficher le tableau des entreprises -->
-    <table id='list_table'>
-        <!-- En-têtes de colonne -->
-        <thead>
-            <tr>
-                <th>Invoice Number</th>
-                <th>Dates</th>
-                <th>Company</th>
-                <th>Created at</th>
-            </tr>
-        </thead>
-        <!-- Données -->
-        <tbody>
-            <?php foreach ($lastinvoices as $invoice): ?>
-                <tr>
-                    <td>
-                        <?php echo $invoice['ref']; ?>
-                    </td>
-                    <td>
-                        <?php echo $invoice['due_date']; ?>
-                    </td>
-                    <td>
-                        <?php echo $invoice['name']; ?>
-                    </td>
-                    <td>
-                        <?php echo $invoice['created_at']; ?>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</section>
+</html>

@@ -55,7 +55,7 @@ header .header__title {
 @media (min-width: 600px) {
   .btn {
     font-size: 1em;
-    width: 100px;
+    max-width: 100px;
   }
 }
 .btn:hover {
