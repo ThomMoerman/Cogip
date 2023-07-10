@@ -10,6 +10,7 @@
     <link href="../assets/css/footer.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/table.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/invoices.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/show_invoices.css" rel="stylesheet" type="text/css">
     <title>Cogip - Show Invoice</title>
 </head>
 <body>

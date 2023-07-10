@@ -60,6 +60,11 @@ main .section__contact .contact__identity .person {
 @media (min-width: 900px) {
   main .section__contact .contact__identity .person {
     margin-right: 150px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(48, 51, 52);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 0px rgba(182, 252, 244, 0.5);
   }
 }
 main .section__contact .contact__identity .person img {
@@ -68,6 +73,13 @@ main .section__contact .contact__identity .person img {
 @media (min-width: 900px) {
   main .section__contact .contact__identity .person img {
     max-width: 100%;
-    margin-bottom: 15px;
+    padding: 20px;
+    margin: 0;
+  }
+}
+@media (min-width: 900px) {
+  main .section__contact .contact__identity .person p {
+    align-self: center;
+    padding: 20px;
   }
 }/*# sourceMappingURL=show_invoices.css.map */

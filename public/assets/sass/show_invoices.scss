@@ -54,12 +54,24 @@ main{
                 font-size: 20px;
                 @media (min-width: 900px){
                     margin-right: 150px;
+                    display: flex;
+                    flex-direction: row;
+                    background-color: $grey;
+                    border-radius: 15px;
+                    box-shadow: 5px 5px 5px 0px rgba(182,252,244,0.5);
                 }
                 img{
                     max-width: 100px;
                     @media (min-width: 900px){
                         max-width: 100%;
-                        margin-bottom: 15px;
+                        padding: 20px;
+                        margin: 0;
+                    }
+                }
+                p{
+                    @media (min-width: 900px){
+                        align-self: center;
+                        padding: 20px;
                     }
                 }
             }
