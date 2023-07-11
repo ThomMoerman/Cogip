@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/header.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="assets/css/welcome.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
     <link href="assets/css/table.css" rel="stylesheet" type="text/css">
     <title>Cogip - Welcome</title>
 </head>

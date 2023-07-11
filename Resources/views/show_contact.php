@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/show_contact_invoice.css" rel="stylesheet" type="text/css">
     <title>Contact</title>
 </head>
