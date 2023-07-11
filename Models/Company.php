@@ -76,6 +76,27 @@ class Company
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function newCompany($name, $type_id, $country, $tva)
+    {
+        $query = "INSERT INTO companies (name, type_id, country, tva, created_at, updated_at) VALUES
+        ($name,$type_id,$country,$tva,now(),now())";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+    }
+    public function deleteCompany($id)
+    {
+        $query = "DELETE from companies WHERE id = $id;
+              DELETE from contacts WHERE id_company = $id;
+              DELETE from invoices WHERE company_id = $id";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+    }
+    public function editCompany($id, $name, $type_id, $country, $tva)
+    {
+        $query = "UPDATE contacts set name = $name, type_id=$type_id, country=$country, tva=$tva,updated_at = now() where id = $id";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+    }
 }
 
 ?>

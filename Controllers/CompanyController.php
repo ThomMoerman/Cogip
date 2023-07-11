@@ -71,4 +71,16 @@ class CompanyController extends Controller
         $this->view('show_company', $data);
 
     }
+    public function delete($id)
+    {
+        // Créez une instance du modèle Contact
+        $contactModel = new Company();
+
+        // Appelez la méthode deleteContact pour supprimer le contact spécifié par l'ID
+        $contactModel->deleteCompany($id);
+
+        // Redirigez vers la page index des contacts après la suppression
+        header('Location: /companies');
+        exit();
+    }
 }

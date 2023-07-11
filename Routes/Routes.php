@@ -4,6 +4,7 @@ namespace App\Routes;
 use App\Controllers\CompanyController;
 use App\Controllers\ContactController;
 use App\Controllers\InvoiceController;
+use App\Models\Contact;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
 use App\Controllers\AuthentificationController;
@@ -43,6 +44,7 @@ $router->get('/invoices/{id}', function ($id) {
 $router->get('/contacts/{id}', function ($id) {
     (new ContactController)->show($id);
 });
+
 
 // Route pour afficher le formulaire de connexion
 $router->get('/login', function () {

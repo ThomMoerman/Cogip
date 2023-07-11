@@ -45,26 +45,37 @@ class ContactController extends Controller
         ]);
     }
     public function show($id)
-{
-    // Récupérez les informations du contact depuis la base de données en utilisant l'ID
-    $contactModel = new Contact();
-    $contact = $contactModel->find($id);
+    {
+        // Récupérez les informations du contact depuis la base de données en utilisant l'ID
+        $contactModel = new Contact();
+        $contact = $contactModel->find($id);
 
-    // Vérifiez si le contact existe
-    if (!$contact) {
-        // alert('The chosen contact doesn\'t exist');
+        // Vérifiez si le contact existe
+        if (!$contact) {
+            // alert('The chosen contact doesn\'t exist');
+        }
+
+        // Préparez les données à envoyer à la vue
+        $data = [
+            'name' => isset($contact['name']) ? $contact['name'] : '',
+            'phone' => isset($contact['phone']) ? $contact['phone'] : '',
+            'mail' => isset($contact['email']) ? $contact['email'] : '',
+            'company_name' => isset($contact['company_name']) ? $contact['company_name'] : '',
+            'created_at' => isset($contact['created_at']) ? $contact['created_at'] : ''
+        ];
+
+        // Renvoyez les données à la vue appropriée pour l'affichage
+        return $this->view('show_contact', $data);
     }
+    public function delete($id)
+    {
+        // Créez une instance du modèle Contact
+        $contactModel = new Contact();
 
-    // Préparez les données à envoyer à la vue
-    $data = [
-        'name' => $contact['name'],
-        'phone' => $contact['phone'],
-        'mail' => $contact['email'],
-        'company_name' => $contact['company_name'],
-        'created_at' => $contact['created_at']
-    ];
+        // Appelez la méthode deleteContact pour supprimer le contact spécifié par l'ID
+        $contactModel->deleteContact($id);
 
-    // Renvoyez les données à la vue appropriée pour l'affichage
-    return $this->view('show_contact', $data);
-}
+        // Redirigez vers la page index des contacts après la suppression
+        return $this->view('delete');
+    }
 }

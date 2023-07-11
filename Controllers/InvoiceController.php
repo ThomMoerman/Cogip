@@ -68,4 +68,16 @@ class InvoiceController extends Controller
         // Renvoyez les données à la vue appropriée pour l'affichage
         return $this->view('show_invoice', $data);
     }
+    public function delete($id)
+    {
+        // Créez une instance du modèle Contact
+        $contactModel = new Invoice();
+
+        // Appelez la méthode deleteContact pour supprimer le contact spécifié par l'ID
+        $contactModel->deleteInvoice($id);
+
+        // Redirigez vers la page index des contacts après la suppression
+        header('Location: /contacts');
+        exit();
+    }
 }
