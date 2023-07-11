@@ -53,13 +53,17 @@
         @media (min-width:600px) {
             @include default_spacing(0);
             width: 200px;
-          //  margin-right: 200px;
+        
             height: 200px;
             position: absolute;
             z-index: -2;
-            top: 300px;
-            left: 65vw;
+            top: 350px;
+            left: 55vw;
             padding-left: unset;
+        }
+        @media (min-width:900px){
+            top: 300px;
+            left:35vw;
         }
         width: 120px;
     }
