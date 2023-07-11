@@ -35,7 +35,7 @@
                     <?php foreach ($contacts as $contact): ?>
                         <tr>
                             <td>
-                            <a href="/contacts/<?php echo $contact['id']; ?>"><?php echo $contact['name']; ?></a>
+                                <a href="/contacts/<?php echo $contact['id']; ?>"><?php echo $contact['name']; ?></a>
                             </td>
                             <td>
                                 <?php echo $contact['phone']; ?>
