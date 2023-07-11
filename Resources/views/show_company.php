@@ -4,13 +4,9 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/welcome.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/table.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/invoices.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/show_invoices.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/show_company.css" rel="stylesheet" type="text/css">
     <title>Cogip - Show Invoice</title>
 </head>
 <body>
@@ -18,16 +14,16 @@
         require '../Resources/Include/header.php'
     ?>
     <main>
-        <section class="section__client">
-            <div class="client__name">
-                <h3 class="name__display">pied pipper</h3>
-            <div class="color__band"></div>
-            </div>
-            <div class="client__information">
-                <p class="information__label"><b>Name:</b> Pied Pipper</p>
-                <p class="information__label">TVA: BE87 876 767 565</p>
-                <p class="information__label">Country: Belgium</p>
-                <p class="information__label">Type: Supplier</p>
+            <section id="page_profile">
+                <h2 class="page__head">
+                <?php echo $data['name'];?>
+                </h2>
+                <div class="color__band"></div>
+            <div class="page_info">
+                <p class="information__label"><b>Name:</b><?php echo $data['name']; ?></p>
+                <p class="information__label">TVA: <?php echo $data['tva']; ?></p>
+                <p class="information__label">Country: <?php echo $data['country']; ?></p>
+                <p class="information__label">Type: <?php echo $data['type']; ?></p>
             </div>
         </section>
         <section>
@@ -35,7 +31,7 @@
         </section>
         <section class="section__contact">
             <div>
-                <h3>Contact people</h3>
+                <h2>Contact people</h2>
             </div>
             <div class="contact__identity">
                 <div class="person">
@@ -52,7 +48,7 @@
             <hr>
         </section>
         <section class="section table_show_invoice">
-            <h3>Last invoices</h3>    
+            <h2>Last invoices</h2>    
         <table id='list_table'>
         <!-- En-têtes de colonne -->
         <thead>

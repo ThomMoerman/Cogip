@@ -4,8 +4,10 @@ namespace App\Routes;
 use App\Controllers\CompanyController;
 use App\Controllers\ContactController;
 use App\Controllers\InvoiceController;
+use App\Models\Contact;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
+use App\Controllers\AuthController;
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -40,6 +42,22 @@ $router->get('/invoices/{id}', function ($id) {
 
 $router->get('/contacts/{id}', function ($id) {
     (new ContactController)->show($id);
+});
+
+$router->get('/login' , function() {
+    (new AuthController)->showForm();
+});
+
+$router->post('/login' , function() {
+    (new AuthController)->login();
+});
+
+$router->get('/logout' , function() {
+    (new AuthController)->logout();
+});
+
+$router->get('/dashboard', function (){
+    (new AuthController)->dashboardAccess();
 });
 
 $router->run();

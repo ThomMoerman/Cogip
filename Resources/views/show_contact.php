@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/footer.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/show_contact.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/default.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/show_contact_invoice.css" rel="stylesheet" type="text/css">
     <title>Contact</title>
 </head>
 
@@ -18,7 +16,7 @@
     <main>     
             <section id="page_profile">
             <h2 class="page__head"><?php echo $data['name'] ?></h2>
-            <div class="head__background"></div>
+            <div class="color__band"></div>
             <img src="../assets/img/Avatar_One.svg" alt="avatar_pic">    
             <div class="page_info">
                 <div class="info">               

@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/header.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="assets/css/table.css" rel="stylesheet" type="text/css">
     <script rel='javascript' src="assets/js/searchfilter.js" defer></script>
     <title>Companies</title>
@@ -26,8 +24,8 @@
                 <!-- En-têtes de colonne -->
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Nom</th>
+                        <th>ID</th>
                         <th>Pays</th>
                         <th>Type</th>
                     </tr>
@@ -37,9 +35,9 @@
                     <?php foreach ($companies as $company): ?>
                         <tr>
                             <td>
-                                <?php echo $company['id']; ?>
+                               <a href="/companies/<?php echo $company['id']; ?>"><?php echo $company['name']; ?></a>
                             </td>
-                            <td><a href="/companies/<?php echo $company['id']; ?>"><?php echo $company['name']; ?></a></td>
+                            <td> <?php echo $company['id']; ?></td>
                             <td>
                                 <?php echo $company['country']; ?>
                             </td>
