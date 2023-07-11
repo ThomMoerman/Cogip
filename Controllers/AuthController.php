@@ -70,9 +70,6 @@ class AuthController extends Controller
     {
         // Récupérez les données du formulaire d'inscription
         $firstName = $_POST['firstName'];
-        if ($firstName != [a-zA-Z]){
-            echo "nom invalide";
-        }
         $lastName = $_POST['lastName'];
         $email = $_POST['email'];
         $password = $_POST['password'];
