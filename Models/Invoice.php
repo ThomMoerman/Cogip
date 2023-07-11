@@ -66,5 +66,23 @@ class Invoice
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
-
+    public function newInvoice($ref, $id_company)
+    {
+        $query = "INSERT INTO invoices (ref, id_company, created_at, updated_at) VALUES
+        ($ref,$id_company,now(),now()";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+    }
+    public function deleteInvoice($id)
+    {
+        $query = "DELETE from invoices WHERE id = $id";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+    }
+    public function editInvoice($ref, $id_company, $id)
+    {
+        $query = "UPDATE contacts set ref=$ref, id_company=$id_company,updated_at = now() where id = $id";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+    }
 }

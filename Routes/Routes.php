@@ -4,6 +4,7 @@ namespace App\Routes;
 use App\Controllers\CompanyController;
 use App\Controllers\ContactController;
 use App\Controllers\InvoiceController;
+use App\Models\Contact;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
 use App\Controllers\AuthController;

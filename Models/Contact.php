@@ -65,4 +65,26 @@ class Contact
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function newContact($name, $company_id, $email, $phone)
+    {
+        $query = "INSERT INTO contacts (name, company_id, email, phone, created_at, updated_at) VALUES
+        ($name,$company_id, $email, $phone,now(),now()";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
+    public function deleteContact($id)
+    {
+        $query = "DELETE from contacts WHERE id = $id";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
+    public function editContact($id, $name, $company_id, $email, $phone)
+    {
+        $query = "UPDATE contacts set name = $name, company_id=$company_id, email=$email, phone=$phone,updated_at = now() where id = $id";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
