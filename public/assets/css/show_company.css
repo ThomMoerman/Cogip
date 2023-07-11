@@ -29,10 +29,9 @@ main .section__contact .contact__identity .person {
     margin-right: 150px;
     display: flex;
     flex-direction: row;
-    background-color: rgb(7, 149, 128);
+    background-color: rgba(7, 74, 91, 0.1);
     border-radius: 15px;
-    box-shadow: 5px 5px 5px 0px rgb(36, 36, 36);
-    border: rgb(48, 51, 52) solid 1px;
+    box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.341);
   }
 }
 main .section__contact .contact__identity .person img {
