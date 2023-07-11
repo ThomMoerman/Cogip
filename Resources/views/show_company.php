@@ -18,13 +18,15 @@
     ?>
     <main>
             <section id="page_profile">
-                <h2 class="page__head">pied pipper</h2>
+                <h2 class="page__head">
+                <?php echo $data['name'];?>
+                </h2>
                 <div class="color__band"></div>
             <div class="page_info">
-                <p class="information__label"><b>Name:</b> Pied Pipper</p>
-                <p class="information__label">TVA: BE87 876 767 565</p>
-                <p class="information__label">Country: Belgium</p>
-                <p class="information__label">Type: Supplier</p>
+                <p class="information__label"><b>Name:</b><?php echo $data['name']; ?></p>
+                <p class="information__label">TVA: <?php echo $data['tva']; ?></p>
+                <p class="information__label">Country: <?php echo $data['country']; ?></p>
+                <p class="information__label">Type: <?php echo $data['type']; ?></p>
             </div>
         </section>
         <section>

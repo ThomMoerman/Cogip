@@ -18,6 +18,7 @@
         ?>
     <main>
         <section class="container section">
+            <h3>All contacts</h3>
             <!-- Afficher le tableau des entreprises -->
             <table id='list_table'>
                 <!-- En-têtes de colonne -->
