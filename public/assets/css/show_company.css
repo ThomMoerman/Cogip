@@ -29,9 +29,9 @@ main .section__contact .contact__identity .person {
     margin-right: 150px;
     display: flex;
     flex-direction: row;
-    background-color: rgba(48, 51, 52, 0.7);
+    background-color: rgb(7, 149, 128);
     border-radius: 15px;
-    box-shadow: 5px 5px 5px 0px rgba(182, 252, 244, 0.4);
+    box-shadow: 5px 5px 5px 0px rgb(36, 36, 36);
     border: rgb(48, 51, 52) solid 1px;
   }
 }
