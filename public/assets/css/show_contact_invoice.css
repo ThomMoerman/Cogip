@@ -50,9 +50,15 @@
     height: 200px;
     position: absolute;
     z-index: -2;
-    top: 300px;
-    left: 65vw;
+    top: 350px;
+    left: 55vw;
     padding-left: unset;
+  }
+}
+@media (min-width: 900px) {
+  #page_profile img {
+    top: 300px;
+    left: 35vw;
   }
 }
 
