@@ -6,6 +6,8 @@ use App\Controllers\ContactController;
 use App\Controllers\InvoiceController;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
+use App\Controllers\AuthentificationController;
+
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -40,6 +42,26 @@ $router->get('/invoices/{id}', function ($id) {
 
 $router->get('/contacts/{id}', function ($id) {
     (new ContactController)->show($id);
+});
+
+// Route pour afficher le formulaire de connexion
+$router->get('/login', function () {
+    (new AuthentificationController($router))->showLoginForm();
+});
+
+// Route pour traiter la soumission du formulaire de connexion
+$router->post('/login', function () {
+    (new AuthentificationController($router))->login();
+});
+
+// Route pour afficher le formulaire d'inscription
+$router->get('/register', function () {
+    (new AuthentificationController($router))->showRegistrationForm();
+});
+
+// Route pour traiter la soumission du formulaire d'inscription
+$router->post('/register', function () {
+    (new AuthentificationController($router))->register();
 });
 
 $router->run();

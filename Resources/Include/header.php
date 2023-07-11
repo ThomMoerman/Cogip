@@ -8,7 +8,7 @@
     </div>
     <div class="log header__log">
         <a type="link"  class="btn log__signup_btn signup_link">SIGN UP</a>
-        <a type="link" class="btn log__login_btn login_link">LOGIN</a>
+        <a type="link" href="/login" class="btn log__login_btn login_link">LOGIN</a>
     </div>
 
 </header>
