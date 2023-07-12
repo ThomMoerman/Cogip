@@ -29,8 +29,8 @@
 }
 
 @mixin socialMedia{
-    color: #ffffff;
-    // color:$title_color; 
+    // color: #ffffff;
+    color:$title_color; 
     list-style-type: none;
     @include icons; 
     text-align: center;
