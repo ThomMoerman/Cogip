@@ -1,5 +1,5 @@
 <header>
-<section class="header_top">
+    <section class="header_top">
         <div class="header_top_left">
             <div class="nav header__logo">
                 <h1 class="header__title">COGIP</h1>
@@ -34,5 +34,15 @@
                 }
             ?>
             </div>
+    </section>
+    <section class="header_bottom">
+        <div id="headline">
+            <img src="assets/img/background_effect_hp.svg" alt="background_effect" class="headline_bg">
+            <h2 class="headline_text">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h2>
+            <img src="assets/img/header_illustration.svg" alt="cogip logo" class="headline_illustration">
+        </div>
+        <div id="white_rectangle">
+            <img src="./assets/img/rectangle_header.svg" alt="white rectangle">
+        </div>
     </section>
 </header>
