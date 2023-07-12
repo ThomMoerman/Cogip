@@ -1,4 +1,4 @@
-export const dataBlock = document.getElementById('3') as HTMLSelectElement
+export const dataBlock = document.querySelector('.dashboard__data') as HTMLSelectElement
 
 
 const statBlock = document.createElement('article') as HTMLElement

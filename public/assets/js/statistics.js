@@ -1,4 +1,4 @@
-export const dataBlock = document.getElementById('3');
+export const dataBlock = document.querySelector('.dashboard__data');
 const statBlock = document.createElement('article');
 statBlock.classList.add('data');
 statBlock.setAttribute("id", "statistics");

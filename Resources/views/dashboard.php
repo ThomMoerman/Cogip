@@ -34,17 +34,7 @@
             <img src="" alt="">
             </div>
             </div>
-            <section class="dashboard__data" id="3">
-                
-                <article class="data_table" id="invoices">
-                    <h4>Last Invoices</h4>
-                </article>
-                <article class="data_table" id="contacts">
-                    <h4>Last Contacts</h4>
-                </article>
-                <article class="data_table" id="companies">
-                    <h4>Last Companies</h4>
-                </article>
+            <section class="dashboard__data">
             </section>
     </main>
     
