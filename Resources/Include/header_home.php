@@ -19,8 +19,12 @@
                     // Vérifier le rôle de l'utilisateur (supposons que le rôle 2 correspond à un utilisateur connecté)
                     if ($_SESSION['user_role'] == 1) {
                         // Afficher le lien de déconnexion
-                        echo '<a href="/dashboard" class="btn log__logout_btn logout_link">Dashboard</a>';
-                        echo '<a href="/logout" class="btn log__logout_btn logout_link">LOGOUT</a>';
+                        echo '
+                        <div class="section container">
+                            <a href="/dashboard" class="btn log__logout_btn logout_link">Dashboard</a>
+                            <a href="/logout" class="btn log__logout_btn logout_link">Logout</a>
+                        </div>
+                        ';
                     } elseif($_SESSION['user_role'] == 2){
                         echo '<a href="/logout" class="btn log__logout_btn logout_link">LOGOUT</a>';
                     }
@@ -28,8 +32,8 @@
                     // Afficher le bloc de connexion
                     echo '
                     <div class="log header__log">
-                        <a type="link"  class="btn log__signup_btn signup_link">SIGN UP</a>
-                        <a type="link" href="/login" class="btn log__login_btn login_link">LOGIN</a>
+                        <a type="link"  class="btn log__signup_btn signup_link">Sign up</a>
+                        <a type="link" href="/login" class="btn log__login_btn login_link">Login</a>
                     </div>';
                 }
             ?>
@@ -37,7 +41,7 @@
     </section>
     <section class="header_bottom">
         <div id="headline">
-            <img src="assets/img/background_effect_hp.svg" alt="background_effect" class="headline_bg">
+            <!-- <img src="assets/img/background_effect_hp.svg" alt="background_effect" class="headline_bg"> -->
             <h2 class="headline_text">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h2>
             <img src="assets/img/header_illustration.svg" alt="cogip logo" class="headline_illustration">
         </div>

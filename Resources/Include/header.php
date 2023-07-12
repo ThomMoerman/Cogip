@@ -35,4 +35,9 @@
             ?>
             </div>
     </section>
+    <section class="header_bottom">
+        <div id="white_rectangle">
+            <img src="./assets/img/rectangle_header.svg" alt="white rectangle">
+        </div>
+    </section>
 </header>
