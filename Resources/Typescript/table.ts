@@ -9,6 +9,7 @@ export function generateTableArticle($id:string,$element:string, $data1: string,
     //create an article, with it's ID parametrable
     const tableBlock = document.createElement('article') as HTMLElement
           tableBlock.classList.add('data_table_section')
+          tableBlock.classList.add('section')
           tableBlock.setAttribute('id',$id)
 
     //create a head with parametrable title      
@@ -26,7 +27,9 @@ export function generateTableArticle($id:string,$element:string, $data1: string,
     tableBlock.appendChild(tableTitle)    
     
     tableBlock.appendChild(table)
-            
+
+    const tableHead = document.createElement('thead') as HTMLTableCaptionElement
+    const tableRow = document.createElement('tr') as HTMLTableRowElement     
     //generate 3 tableheads tags, which content is paramable            
     let tableHead1 = document.createElement('th') as HTMLTableCellElement
         tableHead1.textContent = $data1    
@@ -38,16 +41,18 @@ export function generateTableArticle($id:string,$element:string, $data1: string,
         tableHead3.textContent = $data3 
     
     //Nesting the table    
-    table.appendChild(tableHead1)
-    table.appendChild(tableHead2)
-    table.appendChild(tableHead3)
+    tableRow.appendChild(tableHead1)
+    tableRow.appendChild(tableHead2)
+    tableRow.appendChild(tableHead3)
+    tableHead.appendChild(tableRow)
+    table.appendChild(tableHead)
 }
 
 //This function complete the tables by using parameters
 export function rowInfo($id: string, $value1: string, $value2: string, $value3: string){
     //Establish the proper article by using an id parameter
     let tableContainer = document.getElementById($id) as HTMLElement
-    const table = tableContainer.lastChild as HTMLTableElement    
+    const table = tableContainer.lastChild?.firstChild?.firstChild as HTMLTableElement    
     console.log(tableContainer?.id)
 
     //Creating a constant for each table head
@@ -57,19 +62,25 @@ export function rowInfo($id: string, $value1: string, $value2: string, $value3: 
     
     console.log(tableElement1.textContent ,tableElement2.textContent ,tableElement3.textContent)
     
+    const tableBody = document.createElement('tbody') as HTMLTableCaptionElement
+   
+    
+    const tableElement = tableContainer.lastChild as HTMLTableElement
+    tableElement.appendChild(tableBody)
     //Using a for loop to generate the cells content using a parameter
     for(let i=0 ; i < 6 ; i++){
-       
+    const tableRow  = document.createElement('tr') as HTMLTableRowElement
+    tableBody.appendChild(tableRow)
     let tableCell1 = document.createElement('td') as HTMLTableCellElement
         tableCell1.textContent = $value1
-        tableElement1.appendChild(tableCell1)
+        tableRow.appendChild(tableCell1)
 
     let tableCell2 = document.createElement('td') as HTMLTableCellElement    
         tableCell2.textContent = $value2
-        tableElement2.appendChild(tableCell2)
+        tableRow.appendChild(tableCell2)
     
     let tableCell3 = document.createElement('td') as HTMLTableCellElement  
         tableCell3.textContent = $value3
-        tableElement3.appendChild(tableCell3)
+        tableRow.appendChild(tableCell3)
     } 
 } 
