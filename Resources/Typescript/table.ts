@@ -63,10 +63,10 @@ export function rowInfo($id: string, $value1: string, $value2: string, $value3: 
     console.log(tableElement1.textContent ,tableElement2.textContent ,tableElement3.textContent)
     
     const tableBody = document.createElement('tbody') as HTMLTableCaptionElement
-   
-    
     const tableElement = tableContainer.lastChild as HTMLTableElement
+    
     tableElement.appendChild(tableBody)
+
     //Using a for loop to generate the cells content using a parameter
     for(let i=0 ; i < 6 ; i++){
     const tableRow  = document.createElement('tr') as HTMLTableRowElement
