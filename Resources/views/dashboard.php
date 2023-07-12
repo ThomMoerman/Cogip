@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dashboard_nav.css" rel="stylesheet" type="text/css">
+    <script type="module" rel='javascript' src="assets/js/dashboard.js"></script>
     <title>Dashboard</title>
     
 </head>
@@ -33,13 +34,8 @@
             <img src="" alt="">
             </div>
             </div>
-            <section class="dashboard__data">
-                <article class="data" id="statistics">
-                    <h4>Statistics</h4>
-                    <p class="stat total_invoices">245 Invoices</p>
-                    <p class="stat total_contacts">245 Contacts</p>
-                    <p class="stat total_companies">245 Companies</p>
-                </article>
+            <section class="dashboard__data" id="3">
+                
                 <article class="data_table" id="invoices">
                     <h4>Last Invoices</h4>
                 </article>
