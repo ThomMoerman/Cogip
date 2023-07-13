@@ -11,7 +11,7 @@
         <input type="text" id="name" name="name" required value="<?php echo $_GET['name'] ?>"><br><br>
 
         <label for='type_id'>Type:</label>
-        <input type="text" id="type_id" name="type_id" required value="<?php echo $_GET['type_id'] ?>">
+        <input type="number" id="type_id" name="type_id" required value="<?php echo $_GET['type_id'] ?>">
         <input type="submit" name="send" value="send">
     </form>
 </body>
