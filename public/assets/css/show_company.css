@@ -126,9 +126,8 @@ main .section__contact .contact__identity .person {
     margin-right: 150px;
     display: flex;
     flex-direction: row;
-    background-color: rgba(7, 74, 91, 0.1);
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 15px;
-    box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.341);
   }
 }
 main .section__contact .contact__identity .person img {
