@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-0.447288,0.735117)">
+        <path d="M44.151,9.403C44.151,7.283 42.43,5.561 40.309,5.561L10.586,5.561C8.465,5.561 6.743,7.283 6.743,9.403L6.743,39.127C6.743,41.247 8.465,42.969 10.586,42.969L40.309,42.969C42.43,42.969 44.151,41.247 44.151,39.127L44.151,9.403Z" style="fill:none;stroke:rgb(150,152,214);stroke-width:0.5px;"/>
+    </g>
+    <g id="contacts">
+        <g transform="matrix(1.07412,0,0,1.07412,-1.51289,-1.87039)">
+            <path d="M13.647,27.735L13.647,38.767L35.81,38.767L35.81,27.534C35.81,27.534 28.187,30.242 25,30.242C21.813,30.242 13.647,27.735 13.647,27.735Z" style="fill:none;stroke:rgb(150,152,214);stroke-width:0.47px;"/>
+        </g>
+        <g transform="matrix(1.18258,0,0,1.18258,-5.03643,-3.81703)">
+            <circle cx="25.656" cy="21.392" r="7.697" style="fill:none;stroke:rgb(150,152,214);stroke-width:0.42px;"/>
+        </g>
+    </g>
+</svg>

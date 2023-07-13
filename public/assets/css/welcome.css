@@ -26,4 +26,48 @@
   #headline .headline_illustration {
     max-width: 350px;
   }
+}
+
+body main .bottom__section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  body main .bottom__section {
+    justify-content: space-between;
+  }
+}
+body main .bottom__section .section__illustration {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  transform: translateY(80px);
+}
+body main .bottom__section .section__illustration p {
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  font-size: 34px;
+  position: relative;
+  transform: translateY(100px);
+}
+@media (min-width: 900px) {
+  body main .bottom__section .section__illustration p {
+    font-size: 68px;
+    text-align: left;
+  }
+}
+body main .bottom__section .section__illustration img {
+  align-self: center;
+}
+body main .bottom__section .section__illustration .illustration__drawkit {
+  max-width: 300px;
+  position: relative;
+  transform: translateY(150px);
+}
+body .illustration__rectangle {
+  width: 375px;
 }/*# sourceMappingURL=welcome.css.map */

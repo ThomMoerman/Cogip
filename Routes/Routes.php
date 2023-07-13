@@ -8,6 +8,7 @@ use App\Models\Contact;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
 use App\Controllers\AuthController;
+use App\Core\Controller;
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -44,8 +45,8 @@ $router->get('/contacts/{id}', function ($id) {
     (new ContactController)->show($id);
 });
 
-$router->get('/login', function () {
-    (new AuthController)->showForm();
+$router->get('/login' , function() {
+    (new AuthController)->showLoginForm();
 });
 
 $router->post('/login', function () {
@@ -61,6 +62,14 @@ $router->get('/dashboard', function () {
 });
 $router->post('/contacts/{id}', function ($id) {
     (new ContactController)->delete($id);
+});
+
+$router->get('/register', function () {
+    (new AuthController)->showRegisterForm();
+});
+
+$router->post('/register', function () {
+    (new AuthController)->register();
 });
 
 $router->run();
