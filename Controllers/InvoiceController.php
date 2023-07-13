@@ -80,16 +80,18 @@ class InvoiceController extends Controller
         header('Location: /invoices');
         exit();
     }
-    public function update($ref, $id_company, $id)
+    public function update($id)
     {
         // Créez une instance du modèle Contact
         $invoiceModel = new Invoice();
+        $ref = $_POST['ref'];
+        $id_company = $_POST['id_company'];
 
         // Appelez la méthode deleteinvoice pour supprimer le invoice spécifié par l'ID
         $invoiceModel->editInvoice($ref, $id_company, $id);
 
         // Redirigez vers la page index des contacts après la suppression
-        return $this->view('edit');
+        header('Location: /dashboard');
     }
     public function add($ref, $id_company)
     {

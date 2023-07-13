@@ -85,8 +85,12 @@ class Invoice
     }
     public function editInvoice($ref, $id_company, $id)
     {
-        $query = "UPDATE contacts set ref=$ref, id_company=$id_company,updated_at = now() where id = $id";
+        $query = "UPDATE invoices SET ref = :ref, id_company = :id_company, updated_at = NOW() WHERE id = :id";
         $statement = $this->db->prepare($query);
+        $statement->bindValue(':ref', $ref, \PDO::PARAM_STR);
+        $statement->bindValue(':id_company', $id_company, \PDO::PARAM_INT);
+        $statement->bindValue(':id', $id, \PDO::PARAM_INT);
         $statement->execute();
     }
+
 }

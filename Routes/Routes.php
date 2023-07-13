@@ -46,7 +46,7 @@ $router->get('/contacts/{id}', function ($id) {
     (new ContactController)->show($id);
 });
 
-$router->get('/login' , function() {
+$router->get('/login', function () {
     (new AuthController)->showLoginForm();
 });
 
@@ -60,6 +60,14 @@ $router->get('/logout', function () {
 
 $router->get('/dashboard', function () {
     (new DashboardController)->index();
+});
+
+$router->get('/edit-invoice/{id}', function () {
+    (new DashboardController)->editIndex();
+});
+
+$router->post('/edit-invoice/{id}', function ($id) {
+    (new InvoiceController)->update($id);
 });
 
 $router->post('/contacts/{id}', function ($id) {

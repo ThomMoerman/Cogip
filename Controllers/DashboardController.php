@@ -13,7 +13,7 @@ class DashboardController extends Controller
     {
         $invoiceModel = new Invoice();
         $invoices = $invoiceModel->getLatestInvoices(5);
-        
+
         $companyModel = new Company();
         $companies = $companyModel->getLatestCompanies(5);
 
@@ -25,5 +25,9 @@ class DashboardController extends Controller
             'companies' => $companies,
             'contacts' => $contacts
         ]);
+    }
+    public function editIndex()
+    {
+        return $this->view('edit-invoice');
     }
 }
