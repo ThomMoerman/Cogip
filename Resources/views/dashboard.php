@@ -7,7 +7,6 @@
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dashboard_nav.css" rel="stylesheet" type="text/css">
     <link href="assets/css/table.css" rel="stylesheet" type="text/css">
-    <script type="module" rel='javascript' src="assets/js/dashboard.js"></script>
     <title>Dashboard</title>
 </head>
 
@@ -69,7 +68,8 @@
                         </tr>
                         <?php foreach ($companies as $company): ?>
                             <tr>
-                                <td><a href="/edit-company.php?id=<?php echo $company['id']; ?>"><?php echo $company['name']; ?></a></td>
+                                <td><a
+                                        href="/edit-company/<?php echo $company['id']; ?>?id=<?php echo $company['id']; ?>&name=<?php echo $company['name']; ?>&type_id=<?php echo $company['type_id']; ?>"><?php echo $company['name']; ?></a></td>
                                 <td>
                                     <?php echo $company['company_type']; ?>
                                 </td>
@@ -89,14 +89,16 @@
                         </tr>
                         <?php foreach ($contacts as $contact): ?>
                             <tr>
-                                <td><a href="/edit-contact.php?id=<?php echo $contact['id']; ?>"><?php echo $contact['name']; ?></a></td>
+                                <td><a
+                                        href="/edit-contact/<?php echo $contact['id']; ?>?id=<?php echo $contact['id']; ?>&name=<?php echo $contact['name']; ?>&company_id=<?php echo $contact['company_id']; ?>&email=<?php echo $contact['email']; ?>&phone=<?php echo $contact['phone']; ?>"><?php echo $contact['name']; ?></a></td>
                                 <td>
                                     <?php echo $contact['phone']; ?>
                                 </td>
                                 <td>
                                     <?php echo $contact['email']; ?>
                                 </td>
-                                <td><a href="/edit-company.php?id=<?php echo $contact['company_id']; ?>"><?php echo $contact['company_name']; ?></a></td>
+                                <td><a
+                                        href="/edit-contact/<?php echo $contact['id']; ?>?id=<?php echo $contact['id']; ?>&name=<?php echo $contact['name']; ?>&company_id=<?php echo $contact['company_id']; ?>&email=<?php echo $contact['email']; ?>&phone=<?php echo $contact['phone']; ?>"><?php echo $contact['company_name']; ?></a></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>

@@ -63,7 +63,22 @@ $router->get('/dashboard', function () {
 });
 
 $router->get('/edit-invoice/{id}', function () {
-    (new DashboardController)->editIndex();
+    (new DashboardController)->editInvoiceIndex();
+});
+$router->get('/edit-company/{id}', function () {
+    (new DashboardController)->editCompanyIndex();
+});
+
+$router->get('/edit-contact/{id}', function () {
+    (new DashboardController)->editContactIndex();
+});
+
+$router->post('/edit-company/{id}', function ($id) {
+    (new CompanyController)->update($id);
+});
+
+$router->post('/edit-contact/{id}', function ($id) {
+    (new ContactController)->update($id);
 });
 
 $router->post('/edit-invoice/{id}', function ($id) {

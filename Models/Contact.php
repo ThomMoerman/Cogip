@@ -86,8 +86,13 @@ class Contact
     }
     public function editContact($id, $name, $company_id, $email, $phone)
     {
-        $query = "UPDATE contacts set name = $name, company_id=$company_id, email=$email, phone=$phone,updated_at = now() where id = $id";
+        $query = "UPDATE contacts set name = :name, company_id= :company_id, email= :email, phone= :phone,updated_at = now() where id = :id";
         $statement = $this->db->prepare($query);
+        $statement->bindValue(':name', $name, \PDO::PARAM_STR);
+        $statement->bindValue(':company_id', $company_id, \PDO::PARAM_INT);
+        $statement->bindValue(':email', $email, \PDO::PARAM_STR);
+        $statement->bindValue(':phone', $phone, \PDO::PARAM_INT);
+        $statement->bindValue(':id', $id, \PDO::PARAM_INT);
         $statement->execute();
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }

@@ -26,8 +26,16 @@ class DashboardController extends Controller
             'contacts' => $contacts
         ]);
     }
-    public function editIndex()
+    public function editInvoiceIndex()
     {
         return $this->view('edit-invoice');
+    }
+    public function editCompanyIndex()
+    {
+        return $this->view('edit-company');
+    }
+    public function editContactIndex()
+    {
+        return $this->view('edit-contact');
     }
 }

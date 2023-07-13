@@ -95,10 +95,12 @@ class Company
         $statement = $this->db->prepare($query);
         $statement->execute();
     }
-    public function editCompany($id, $name, $type_id, $country, $tva)
+    public function editCompany($id, $name, $type_id)
     {
-        $query = "UPDATE contacts set name = $name, type_id=$type_id, country=$country, tva=$tva,updated_at = now() where id = $id";
+        $query = "UPDATE companies set name = :name, type_id=:type_id,updated_at = now() where id = $id";
         $statement = $this->db->prepare($query);
+        $statement->bindValue(':name', $name, \PDO::PARAM_STR);
+        $statement->bindValue(':type_id', $type_id, \PDO::PARAM_STR);
         $statement->execute();
     }
 }

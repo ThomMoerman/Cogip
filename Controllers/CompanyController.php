@@ -83,16 +83,19 @@ class CompanyController extends Controller
         header('Location: /companies');
         exit();
     }
-    public function update($id, $name, $type_id, $country, $tva)
+    public function update($id)
     {
         // Créez une instance du modèle Contact
         $companyModel = new Company();
 
+        $name = $_POST['name'];
+        $type_id = $_POST['type_id'];
+
         // Appelez la méthode deletecompany pour supprimer le company spécifié par l'ID
-        $companyModel->editCompany($id, $name, $type_id, $country, $tva);
+        $companyModel->editCompany($id, $name, $type_id);
 
         // Redirigez vers la page index des contacts après la suppression
-        return $this->view('edit');
+        header('Location: /dashboard');
     }
     public function add($name, $type_id, $country, $tva)
     {
