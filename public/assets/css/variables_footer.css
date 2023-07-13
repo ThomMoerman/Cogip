@@ -1,1 +1,8 @@
-/*# sourceMappingURL=variables_footer.css.map */
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}/*# sourceMappingURL=variables_footer.css.map */

@@ -8,6 +8,7 @@ use App\Models\Contact;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
 use App\Controllers\AuthController;
+use App\Controllers\DashboardController;
 use App\Core\Controller;
 
 ini_set('display_errors', 1);
@@ -45,7 +46,7 @@ $router->get('/contacts/{id}', function ($id) {
     (new ContactController)->show($id);
 });
 
-$router->get('/login' , function() {
+$router->get('/login', function () {
     (new AuthController)->showLoginForm();
 });
 
@@ -58,8 +59,32 @@ $router->get('/logout', function () {
 });
 
 $router->get('/dashboard', function () {
-    (new AuthController)->dashboardAccess();
+    (new DashboardController)->index();
 });
+
+$router->get('/edit-invoice/{id}', function () {
+    (new DashboardController)->editInvoiceIndex();
+});
+$router->get('/edit-company/{id}', function () {
+    (new DashboardController)->editCompanyIndex();
+});
+
+$router->get('/edit-contact/{id}', function () {
+    (new DashboardController)->editContactIndex();
+});
+
+$router->post('/edit-company/{id}', function ($id) {
+    (new CompanyController)->update($id);
+});
+
+$router->post('/edit-contact/{id}', function ($id) {
+    (new ContactController)->update($id);
+});
+
+$router->post('/edit-invoice/{id}', function ($id) {
+    (new InvoiceController)->update($id);
+});
+
 $router->post('/contacts/{id}', function ($id) {
     (new ContactController)->delete($id);
 });

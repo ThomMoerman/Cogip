@@ -15,7 +15,11 @@ class Company
 
     public function getLatestCompanies($limit)
     {
-        $query = "SELECT * FROM companies ORDER BY created_at DESC LIMIT :limit";
+        $query = "SELECT companies.*, types.name AS company_type 
+        FROM companies
+        INNER JOIN types ON companies.type_id = types.id 
+        ORDER BY companies.created_at DESC 
+        LIMIT :limit";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':limit', $limit, \PDO::PARAM_INT);
         $statement->execute();
@@ -91,10 +95,12 @@ class Company
         $statement = $this->db->prepare($query);
         $statement->execute();
     }
-    public function editCompany($id, $name, $type_id, $country, $tva)
+    public function editCompany($id, $name, $type_id)
     {
-        $query = "UPDATE contacts set name = $name, type_id=$type_id, country=$country, tva=$tva,updated_at = now() where id = $id";
+        $query = "UPDATE companies set name = :name, type_id=:type_id,updated_at = now() where id = $id";
         $statement = $this->db->prepare($query);
+        $statement->bindValue(':name', $name, \PDO::PARAM_STR);
+        $statement->bindValue(':type_id', $type_id, \PDO::PARAM_INT);
         $statement->execute();
     }
 }
