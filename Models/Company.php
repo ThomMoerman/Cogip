@@ -15,7 +15,11 @@ class Company
 
     public function getLatestCompanies($limit)
     {
-        $query = "SELECT * FROM companies ORDER BY created_at DESC LIMIT :limit";
+        $query = "SELECT companies.*, types.name AS company_type 
+        FROM companies
+        INNER JOIN types ON companies.type_id = types.id 
+        ORDER BY companies.created_at DESC 
+        LIMIT :limit";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':limit', $limit, \PDO::PARAM_INT);
         $statement->execute();

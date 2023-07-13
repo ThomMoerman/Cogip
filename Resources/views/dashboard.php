@@ -35,7 +35,61 @@
             </div>
             </div>
             <section class="dashboard__data">
-            </section>
+    <div class="section">
+        <h2>Last Invoices</h2>
+        <table id="invoicesTable">
+            <tr>
+                <th>Invoice Number</th>
+                <th>Date</th>
+                <th>Company</th>
+            </tr>
+            <?php foreach ($invoices as $invoice): ?>
+                <tr>
+                    <td><a href="/edit-invoice.php?id=<?php echo $invoice['id']; ?>"><?php echo $invoice['ref']; ?></a></td>
+                    <td><?php echo $invoice['due_date']; ?></td>
+                    <td><a href="/edit-company.php?id=<?php echo $invoice['id_company']; ?>"><?php echo $invoice['company_name']; ?></a></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Last Companies</h2>
+        <table id="companiesTable">
+            <tr>
+                <th>Company Name</th>
+                <th>Type</th>
+            </tr>
+            <?php foreach ($companies as $company): ?>
+                <tr>
+                    <td><a href="/edit-company.php?id=<?php echo $company['id']; ?>"><?php echo $company['name']; ?></a></td>
+                    <td><?php echo $company['company_type']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Last Contacts</h2>
+        <table id="contactsTable">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Company</th>
+            </tr>
+            <?php foreach ($contacts as $contact): ?>
+                <tr>
+                    <td><a href="/edit-contact.php?id=<?php echo $contact['id']; ?>"><?php echo $contact['name']; ?></a></td>
+                    <td><?php echo $contact['phone']; ?></td>
+                    <td><?php echo $contact['email']; ?></td>
+                    <td><a href="/edit-company.php?id=<?php echo $contact['company_id']; ?>"><?php echo $contact['company_name']; ?></a></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+</section>
+
     </main>
     
 </body>

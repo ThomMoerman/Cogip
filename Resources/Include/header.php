@@ -10,10 +10,8 @@
     session_start();
     // Vérifier si l'utilisateur est connecté
     if (isset($_SESSION['user_id'])) {
-        // Vérifier le rôle de l'utilisateur (supposons que le rôle 2 correspond à un utilisateur connecté)
+        // Vérifier le rôle de l'utilisateur
         if ($_SESSION['user_role'] == 1) {
-            // Afficher le lien de déconnexion
-            
             echo '<div class="log header__log">
                   <a href="/dashboard" class="btn log__logout_btn logout_link">DASHBOARD</a> 
                   <a href="/logout" class="btn log__logout_btn logout_link">LOGOUT</a>

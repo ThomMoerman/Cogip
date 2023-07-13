@@ -15,7 +15,11 @@ class Contact
 
     public function getLatestContacts($limit)
     {
-        $query = "SELECT * FROM contacts ORDER BY created_at DESC LIMIT :limit";
+        $query = "SELECT contacts.*, companies.id AS company_id, companies.name AS company_name
+        FROM contacts
+        INNER JOIN companies ON contacts.company_id = companies.id
+        ORDER BY contacts.created_at DESC
+        LIMIT :limit";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':limit', $limit, \PDO::PARAM_INT);
         $statement->execute();

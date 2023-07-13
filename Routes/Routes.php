@@ -8,6 +8,7 @@ use App\Models\Contact;
 use Bramus\Router\Router;
 use App\Controllers\HomeController;
 use App\Controllers\AuthController;
+use App\Controllers\DashboardController;
 use App\Core\Controller;
 
 ini_set('display_errors', 1);
@@ -58,8 +59,9 @@ $router->get('/logout', function () {
 });
 
 $router->get('/dashboard', function () {
-    (new AuthController)->dashboardAccess();
+    (new DashboardController)->index();
 });
+
 $router->post('/contacts/{id}', function ($id) {
     (new ContactController)->delete($id);
 });
