@@ -1,4 +1,4 @@
-
+@import './variables_footer.scss'; 
 
 
 @mixin default_spacing($spacing){
@@ -11,7 +11,7 @@
 
 
 .color__band{
-    background-color: rgb(48, 51, 52);
+    background-color: $yellow;
     width: 150px;
     transform: translate(150px, -65px);
     @media (min-width:600px) {
@@ -30,21 +30,21 @@
     justify-content: center;
     @media (min-width:600px) {
         margin-left: 2vw;
-       
     }
-  
     //width: 250px;
     padding: 50px 0;
     .page__head{
-       text-align: center;
-       @media (min-width:600px) {
+    text-align: center;
+
+    @media (min-width:600px) {
         text-align: unset;
-       }
-       @include default_spacing(50px);
-       font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-       @include font_size(2em);
-       color: white;
-       text-transform: uppercase;
+    }
+    @include default_spacing(50px);
+    font-family: $inter_police;
+    @include font_size(2em);
+    color: $title_color;
+    text-transform: capitalize;
+    font-weight: 700
     }
     
     img{
@@ -69,23 +69,37 @@
     }
 }
 
-.page_info{
-    background-color: rgba($color: #074a5b, $alpha: 0.1);
-    border-radius: 20px;
-    color: white;
-    box-shadow:7px 7px 5px rgba(0, 0, 0, 0.341);
-    padding: 20px 55px 5px 20px;
-    @media (min-width:600px) {
-        width: fit-content;
+.page_profile{
+    display: flex;
+    flex-direction: row;
+    .page__head{
+        font-weight: 900;
+        font-size: 25px;
+    }
+    .page_info{
+        background-color: rgba($color: #000000, $alpha: 0.1); 
+        border-radius: 20px;
+        color: $title_color;
+        padding: 20px 20px 10px 20px;
+        @media (min-width:600px) {
+            width: fit-content;
+        }
+        p{
+            @media (min-width:900px){
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    .contact__image{
+        align-self: center;
     }
 }
 
 .info{
     text-align: justify;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $inter_police; 
     @include default_spacing(10px);
-    padding-left: 10%;
-    margin-bottom: 20px;
     display: flex;
     .info_title{
         font-weight: 900;
@@ -95,7 +109,17 @@
         text-align: justify;
     }
 }
-
 p{
     margin-bottom: 5px;
+}
+.contact__image{
+    display: flex;
+    align-self: center;
+}
+.separation_main_footer{
+    border: $yellow solid 1px;
+    margin: 0 20px 0 20px;
+    @media (min-width:900px){
+        margin: 0 100px 0 100px;
+    }
 }

@@ -43,6 +43,12 @@ main{
                 }
             }
         }
+        h3{
+            color: $title_color; 
+            font-size: 60px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
         table{
             @media (min-width : 900px){
                 font-size: 20px;

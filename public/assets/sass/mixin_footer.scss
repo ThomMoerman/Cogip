@@ -62,11 +62,9 @@
 }
 
 @mixin person_card {
-    background-color: $row;
+    background-color: rgba($color: #000000, $alpha: 0.1);
     border-radius: 15px;
-    box-shadow: 7px 7px 5px 0px rgb(0, 0, 0, 0.341);
 }
-
 
 @mixin button_parameter{
     font-family: $roboto_police; 
