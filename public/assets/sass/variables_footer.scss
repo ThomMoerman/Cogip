@@ -1,15 +1,26 @@
-$blue: rgb(7, 149, 128); 
-$grey : rgb(48, 51, 52); 
-$hover: rgb(3, 172, 51); 
-$text :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-$impact : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-$page: rgb(124, 3, 140); 
 
-//Changement de Design
+@font-face {
+    font-family: roboto;
+    src: url('../font/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: inter;
+    src: url('../font/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+//Variables couleur 
 $yellow : #F9DE4E; 
 $white : #FFFFFF; 
 $title_color : #000000;
 $line : #CDCDCD; 
 $text_footer : #737373;
-$row : #F5F5F5; 
-$cogip_footer : #434138; 
+$row : #f5f5f5; 
+$cogip_footer : #434138;
+$roboto_police : roboto; 
+$inter_police : inter; 
+$page: rgb(124, 3, 140); 
+$hover: rgb(3, 172, 51);
+$grey_page:  #919EAB; 
+$filter: #636363; 
+

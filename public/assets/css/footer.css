@@ -1,9 +1,25 @@
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
 body {
   margin: auto 0;
 }
 body footer {
-  background-color: rgb(48, 51, 52);
-  color: #ffffff;
+  background-color: #FFFFFF;
+  color: #737373;
   padding: 20px;
 }
 @media (min-width: 900px) {
@@ -14,7 +30,7 @@ body footer {
 body footer .footer__top {
   display: flex;
   flex-direction: column;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: inter;
 }
 @media (min-width: 900px) {
   body footer .footer__top {
@@ -34,11 +50,12 @@ body footer .footer__top .top__site {
 }
 body footer .footer__top .top__site p {
   text-transform: uppercase;
-  color: #ffffff;
-  border: rgb(7, 149, 128) solid 4px;
-  font-size: 30px;
-  padding: 6px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 900;
+  color: #434138;
+  border: #F9DE4E solid 4px;
+  font-size: 48px;
+  padding: 5px;
+  font-family: roboto;
   width: min-content;
 }
 @media (min-width: 900px) {
@@ -52,7 +69,7 @@ body footer .footer__top .top__information {
   margin: 30px 0 20px 0;
 }
 body footer .footer__top .top__information .information__data {
-  color: #ffffff;
+  color: #737373;
 }
 body footer .footer__top .top__information .information__data .data__adress {
   display: flex;
@@ -61,7 +78,7 @@ body footer .footer__top .top__information .information__data .data__adress {
 }
 body footer .footer__top .top__information .information__data .data__adress img {
   padding-right: 10px;
-  filter: invert(65%) sepia(27%) saturate(966%) hue-rotate(121deg) brightness(93%) contrast(101%);
+  filter: invert(88%) sepia(76%) saturate(715%) hue-rotate(320deg) brightness(110%) contrast(95%);
   margin: 0 5px 0 5px;
 }
 @media (min-width: 900px) {
@@ -77,7 +94,7 @@ body footer .footer__top .top__information .information__data .data__number .dat
 }
 body footer .footer__top .top__information .information__data .data__number .data__number__phone img, body footer .footer__top .top__information .information__data .data__number .data__number__printer img {
   padding-right: 10px;
-  filter: invert(65%) sepia(27%) saturate(966%) hue-rotate(121deg) brightness(93%) contrast(101%);
+  filter: invert(88%) sepia(76%) saturate(715%) hue-rotate(320deg) brightness(110%) contrast(95%);
   margin: 0 5px 0 5px;
 }
 body footer .footer__top .top__information .information__data .data__number .data__number__phone img :hover, body footer .footer__top .top__information .information__data .data__number .data__number__printer img :hover {
@@ -114,9 +131,9 @@ body footer .footer__top .top__information .information__social__media .social__
   justify-content: center;
 }
 body footer .footer__top .top__information .information__social__media .social__media__list li {
-  color: #000000;
+  color: #737373;
   list-style-type: none;
-  filter: invert(65%) sepia(27%) saturate(966%) hue-rotate(121deg) brightness(93%) contrast(101%);
+  filter: invert(88%) sepia(76%) saturate(715%) hue-rotate(320deg) brightness(110%) contrast(95%);
   margin: 0 5px 0 5px;
   text-align: center;
 }
@@ -130,7 +147,7 @@ body footer .footer__top .top__information .information__social__media .social__
   }
 }
 body footer .footer__bottom {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: inter;
 }
 @media (min-width: 900px) {
   body footer .footer__bottom {
@@ -141,7 +158,7 @@ body footer .footer__bottom {
 }
 body footer .footer__bottom .navbar__list {
   margin: 20px 0 10px 0;
-  color: #ffffff;
+  color: #737373;
 }
 @media (min-width: 900px) {
   body footer .footer__bottom .navbar__list {
@@ -167,7 +184,7 @@ body footer .footer__bottom .navbar__list a li:hover {
   cursor: pointer;
 }
 body footer .footer__bottom .navbar__list a li:visited {
-  color: #ffffff;
+  color: #737373;
 }
 @media (min-width: 900px) {
   body footer .footer__bottom .navbar__list a li {
