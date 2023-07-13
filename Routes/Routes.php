@@ -49,16 +49,19 @@ $router->get('/login' , function() {
     (new AuthController)->showLoginForm();
 });
 
-$router->post('/login' , function() {
+$router->post('/login', function () {
     (new AuthController)->login();
 });
 
-$router->get('/logout' , function() {
+$router->get('/logout', function () {
     (new AuthController)->logout();
 });
 
-$router->get('/dashboard', function (){
+$router->get('/dashboard', function () {
     (new AuthController)->dashboardAccess();
+});
+$router->post('/contacts/{id}', function ($id) {
+    (new ContactController)->delete($id);
 });
 
 $router->get('/register', function () {

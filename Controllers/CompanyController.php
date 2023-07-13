@@ -74,13 +74,35 @@ class CompanyController extends Controller
     public function delete($id)
     {
         // Créez une instance du modèle Contact
-        $contactModel = new Company();
+        $companyModel = new Company();
 
         // Appelez la méthode deleteContact pour supprimer le contact spécifié par l'ID
-        $contactModel->deleteCompany($id);
+        $companyModel->deleteCompany($id);
 
         // Redirigez vers la page index des contacts après la suppression
         header('Location: /companies');
         exit();
+    }
+    public function update($id, $name, $type_id, $country, $tva)
+    {
+        // Créez une instance du modèle Contact
+        $companyModel = new Company();
+
+        // Appelez la méthode deletecompany pour supprimer le company spécifié par l'ID
+        $companyModel->editCompany($id, $name, $type_id, $country, $tva);
+
+        // Redirigez vers la page index des contacts après la suppression
+        return $this->view('edit');
+    }
+    public function add($name, $type_id, $country, $tva)
+    {
+        // Créez une instance du modèle Contact
+        $companyModel = new Company();
+
+        // Appelez la méthode deletecompany pour supprimer le company spécifié par l'ID
+        $companyModel->newCompany($name, $type_id, $country, $tva);
+
+        // Redirigez vers la page index des contacts après la suppression
+        return $this->view('add');
     }
 }
