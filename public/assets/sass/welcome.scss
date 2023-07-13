@@ -1,5 +1,6 @@
 @import './variables_footer.scss'; 
 
+
 body{
     background-color: $white;
     #headline {
@@ -95,5 +96,49 @@ body{
         @media (min-width:900px){
             margin: 0 100px 0 100px;
         }
+    }
+}
+
+body{
+    main{
+        .bottom__section{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            @media (min-width: 900px){
+                justify-content: space-between;
+            }
+            .section__illustration{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                transform: translateY(80px);
+                p{
+                    color: $title_color;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: 900;
+                    font-size: 34px;
+                    position: relative;
+                    transform: translateY(100px);
+                    @media (min-width: 900px){
+                        font-size: 68px;
+                        text-align: left;
+                    }
+                }
+                img{
+                    align-self: center;
+                }
+                .illustration__drawkit{
+                    max-width: 300px;
+                    position: relative;
+                    transform: translateY(150px);
+                }
+            }
+        }
+    }
+    .illustration__rectangle{
+        width: 375px;
     }
 }

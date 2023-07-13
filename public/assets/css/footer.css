@@ -106,6 +106,9 @@ body footer .footer__top .top__information .information__data .data__number .dat
     margin-right: 60px;
   }
 }
+body footer .footer__top .top__information hr {
+  color: #F9DE4E;
+}
 @media (min-width: 900px) {
   body footer .footer__top .top__information .information__social__media {
     display: flex;

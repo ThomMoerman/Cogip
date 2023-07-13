@@ -51,13 +51,38 @@ class AuthController extends Controller
         exit();
     }
 
-    public function showForm()
+    public function showLoginForm()
     {
         return $this->view('login');
+    }
+
+    public function showRegisterForm()
+    {
+        return $this->view('register');
     }
 
     public function dashboardAccess()
     {
         return $this->view('dashboard');
+    }
+
+    public function register()
+    {
+        // Récupérez les données du formulaire d'inscription
+        $firstName = $_POST['firstName'];
+        $lastName = $_POST['lastName'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $roleId = 2; 
+
+        // Créez une instance du modèle User
+        $userModel = new User();
+
+        // Appelez la méthode createUser du modèle User pour créer un nouvel utilisateur
+        $userId = $userModel->createUser($firstName, $roleId, $lastName, $email, $password);
+
+        // Redirigez vers la page de connexion ou une autre page appropriée après l'inscription
+        header('Location: /login');
+        exit();
     }
 }

@@ -76,6 +76,32 @@ class ContactController extends Controller
         $contactModel->deleteContact($id);
 
         // Redirigez vers la page index des contacts après la suppression
-        return $this->view('delete');
+        header("Location: /contacts");
+    }
+    public function update($id)
+    {
+        // Créez une instance du modèle Contact
+        $contactModel = new Contact();
+        $name = $_POST['name'];
+        $company_id = $_POST['company_id'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+
+        // Appelez la méthode deletecontact pour supprimer le contact spécifié par l'ID
+        $contactModel->editContact($id, $name, $company_id, $email, $phone);
+
+        // Redirigez vers la page index des contacts après la suppression
+        header('Location: /dashboard');
+    }
+    public function add($name, $company_id, $email, $phone)
+    {
+        // Créez une instance du modèle Contact
+        $contactModel = new Contact();
+
+        // Appelez la méthode deletecontact pour supprimer le contact spécifié par l'ID
+        $contactModel->newContact($name, $company_id, $email, $phone);
+
+        // Redirigez vers la page index des contacts après la suppression
+        return $this->view('edit');
     }
 }

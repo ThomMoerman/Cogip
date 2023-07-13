@@ -34,6 +34,7 @@ body #headline .headline_illustration {
     max-width: 350px;
   }
 }
+
 body .slogan {
   display: flex;
   flex-direction: column;

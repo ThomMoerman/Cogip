@@ -38,6 +38,7 @@ body{
             .top__information{
                 margin: 30px 0 20px 0;
                 .information__data{
+
                     color: $text_footer;
                     .data__adress{
                         display: flex;
@@ -71,6 +72,9 @@ body{
                             }
                         }
                     }
+                }
+                hr{
+                    color: $yellow;
                 }
                 .information__social__media{
                     @media (min-width: 900px){
@@ -112,6 +116,7 @@ body{
             .navbar__list{
                 margin: 20px 0 10px 0 ;
                     color: $text_footer;
+
                     @media (min-width: 900px){
                         display: flex;
                         flex-direction: row;

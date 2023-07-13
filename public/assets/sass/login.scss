@@ -1,0 +1,50 @@
+@import './variables_footer.scss'; 
+@import './mixin_footer.scss'; 
+
+html{
+    width: auto;
+    height: 100%;
+    body{
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        main{
+            margin: 80px 30px 80px 30px;
+            @media  (min-width: 900px){
+                padding: 0 500px 0 500px;
+            }
+            h1{
+                color: $title_color ; 
+                text-transform: uppercase ;
+                font-size: 45px;
+                font-family: $impact;
+                margin: 20px 0 20px 0;
+            }
+            form{
+                background-color: $yellow;
+                padding: 40px 20px 40px 20px;
+                border: black solid 1px;
+                @media (min-width:900px){
+                    padding: 50px 80px 50px 80px;
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    label{
+                        font-family: $text;
+                        margin-bottom: 10px;
+                    }
+                }
+                button{
+                    background-color: $yellow;
+                    border: black solid 1px;
+                    &:hover{
+                        background-color: $white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

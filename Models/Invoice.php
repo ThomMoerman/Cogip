@@ -15,7 +15,11 @@ class Invoice
 
     public function getLatestInvoices($limit)
     {
-        $query = "SELECT * FROM invoices ORDER BY created_at DESC LIMIT :limit";
+        $query = "SELECT invoices.*, companies.name AS company_name 
+        FROM invoices 
+        INNER JOIN companies ON invoices.id_company = companies.id 
+        ORDER BY invoices.created_at DESC 
+        LIMIT :limit";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':limit', $limit, \PDO::PARAM_INT);
         $statement->execute();
@@ -81,8 +85,12 @@ class Invoice
     }
     public function editInvoice($ref, $id_company, $id)
     {
-        $query = "UPDATE contacts set ref=$ref, id_company=$id_company,updated_at = now() where id = $id";
+        $query = "UPDATE invoices SET ref = :ref, id_company = :id_company, updated_at = NOW() WHERE id = :id";
         $statement = $this->db->prepare($query);
+        $statement->bindValue(':ref', $ref, \PDO::PARAM_STR);
+        $statement->bindValue(':id_company', $id_company, \PDO::PARAM_INT);
+        $statement->bindValue(':id', $id, \PDO::PARAM_INT);
         $statement->execute();
     }
+
 }

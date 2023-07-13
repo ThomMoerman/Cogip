@@ -62,13 +62,14 @@ main{
                 width: 900px;
             }
             tr{
+
                 background-color: $row;
                 font-size: 12px;
                 td{
                     color : $title_color;
                     font-weight: 600;
                     padding: 5px 10px 5px 10px;
-                    max-width: 40px;
+                    max-width: 30px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -117,6 +118,7 @@ main{
                 @include pagination; 
                 font-weight: 700;
                 color: $yellow; 
+
             }
         }
     }
