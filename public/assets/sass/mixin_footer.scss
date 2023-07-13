@@ -2,19 +2,27 @@
 
 
 @mixin title {
-    color: #ffffff; 
+    color: $title_color; 
     font-size: 45px;
-    font-family: $impact;
+    font-family: $roboto_police;
     margin: 20px 0 20px 0;
 }
 
-@mixin cogip {
+@mixin cogip_header {
+    color : $title_color; 
+    font-weight: 900;
+    font-family: $roboto_police;
+    font-size: 48px;
+}
+
+@mixin cogip_footer {
     text-transform: uppercase;
-    //font-weight: 700;
-    color: #ffffff;
-    border: $blue solid 4px;
-    font-size: 30px;
-    padding: 6px;
+    font-weight: 900;
+    color: $cogip_footer;
+    border: $yellow solid 4px;
+    font-size: 48px;
+    padding: 5px;
+    font-family: roboto;
 }
 
 @mixin contactList {
@@ -28,14 +36,14 @@
 }
 
 @mixin socialMedia{
-    color: #ffffff;
+    color: $text_footer;
     list-style-type: none;
     @include icons; 
     text-align: center;
 }
 
 @mixin icons{
-    filter: invert(65%) sepia(27%) saturate(966%) hue-rotate(121deg) brightness(93%) contrast(101%);
+    filter: invert(88%) sepia(76%) saturate(715%) hue-rotate(320deg) brightness(110%) contrast(95%);
     margin: 0 5px 0 5px;
 }
 
@@ -45,14 +53,36 @@
 }
 
 @mixin pagination {
+    color : $title_color; 
     margin: 0 5px 0 5px;
-    color: $grey;
-    font-family: $text;
     text-decoration: none;
+    border: $grey_page solid 1px;
+    border-radius: 5px;
 }
 
 @mixin person_card {
-    background-color: rgba(#074a5b, 0.1);
+    background-color: $row;
     border-radius: 15px;
     box-shadow: 7px 7px 5px 0px rgb(0, 0, 0, 0.341);
 }
+
+//mixins
+@mixin button_parameter{
+    font-family: $roboto_police; 
+    font-size: 20px;
+    // -webkit-text-stroke-width: 1px;
+    color: $title_color;
+    text-decoration: none;
+    font-weight: 600;
+    border: $yellow solid 1px;
+    padding: 10px;
+    &:hover{
+        cursor: pointer;
+        border: black solid 1px;
+        // padding: 10px;
+    }
+}
+// @mixin header_element_spacing{
+//     padding-top: 5px;
+//     padding-bottom: 5px;
+// }

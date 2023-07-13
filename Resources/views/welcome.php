@@ -12,17 +12,8 @@
 </head>
 <body>
     <?php
-        require '../Resources/Include/header.php'
+        require '../Resources/Include/header_home.php'
     ?>
-    <div id="headline">
-    <img            src="assets/img/background_effect_hp.svg" 
-                alt="background_effect"
-                class="headline_bg">
-        <h2 class="headline_text">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h2>
-        <img            src="assets/img/Illustration.png" 
-                alt="cogip logo"
-                class="headline_illustration">
-    </div>
     <main>
     <?php require 'table_function.php'; ?>
         <article class="section invoices__table_section">
@@ -63,7 +54,17 @@
                         ?>
             </table>
         </article>
+        <article class="slogan bottom__page">
+            <div class="page__foot__line">
+                <p>work better in your company</p>
+            </div>
+            <div class="page__foot__illustration">
+                <img src="assets/img/phone_illustration.svg" alt="phone illustration for applications" class="illustration_phone">
+                <img src="assets/img/rectangle_yellow.svg" alt="rectangle yellow" class="illustration_bg">
+            </div>
+        </article>
     </main>
+    <hr class="separation_main_footer">
     <?php
         require '../Resources/Include/footer.php'
     ?>

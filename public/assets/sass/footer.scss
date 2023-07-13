@@ -4,8 +4,8 @@
 body{
     margin: auto 0;
     footer{
-        background-color:$grey;
-        color: #ffffff;
+        background-color:$white;
+        color: $text_footer;
         padding: 20px;
         @media (min-width: 900px){
             padding: 0 100px 0 100px;
@@ -13,7 +13,7 @@ body{
         .footer__top{
             display: flex; 
             flex-direction: column;
-            font-family: $text;
+            font-family: $inter_police;
             @media (min-width: 900px){
                 flex-direction: row;
                 justify-content: space-between;
@@ -26,8 +26,7 @@ body{
                 display: flex;
                 justify-content: center;
                 p{
-                    @include cogip;
-                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    @include cogip_footer;
                     width: min-content;
                     @media (min-width: 900px){
                         font-size: 50px;
@@ -39,7 +38,7 @@ body{
             .top__information{
                 margin: 30px 0 20px 0;
                 .information__data{
-                    color: #ffffff;
+                    color: $text_footer;
                     .data__adress{
                         display: flex;
                         flex-direction: row;
@@ -104,7 +103,7 @@ body{
             }
         }
         .footer__bottom{
-            font-family: $text;
+            font-family: $inter_police;
             @media (min-width: 900px){
                 display: flex;
                 justify-content: space-between;
@@ -112,21 +111,21 @@ body{
             }
             .navbar__list{
                 margin: 20px 0 10px 0 ;
-                    color: #ffffff;
+                    color: $text_footer;
                     @media (min-width: 900px){
                         display: flex;
                         flex-direction: row;
                     }
                     a{
                         text-decoration: none;
-                        color: #ffffff;
+                        color: $text_footer;
                         li{
                             @include contactList;
                             &:hover{
                                 @include hoverNav; 
                             }
                             &:visited{
-                                color: #ffffff;
+                                color: $text_footer;
                             }
                             @media (min-width: 900px){
                                 margin: 0 20px 0 20px;
