@@ -159,28 +159,20 @@ INSERT INTO contacts (name, company_id, email, phone, created_at, updated_at) VA
 ('Contact 10', 10, 'contact10@example.com', '0123456789', NOW(), NOW());
 
 INSERT INTO roles (name, created_at, updated_at) VALUES
-('Role 1', NOW(), NOW()),
-('Role 2', NOW(), NOW()),
-('Role 3', NOW(), NOW()),
-('Role 4', NOW(), NOW()),
-('Role 5', NOW(), NOW()),
-('Role 6', NOW(), NOW()),
-('Role 7', NOW(), NOW()),
-('Role 8', NOW(), NOW()),
-('Role 9', NOW(), NOW()),
-('Role 10', NOW(), NOW());
+('ADMIN', NOW(), NOW()),
+('USER', NOW(), NOW());
 
 INSERT INTO users (first_name, role_id, last_name, email, password, created_at, updated_at) VALUES
 ('John', 1, 'Doe', 'john.doe@example.com', 'password1', NOW(), NOW()),
 ('Jane', 2, 'Smith', 'jane.smith@example.com', 'password2', NOW(), NOW()),
-('David', 3, 'Johnson', 'david.johnson@example.com', 'password3', NOW(), NOW()),
-('Sarah', 4, 'Williams', 'sarah.williams@example.com', 'password4', NOW(), NOW()),
-('Michael', 5, 'Brown', 'michael.brown@example.com', 'password5', NOW(), NOW()),
-('Emily', 6, 'Jones', 'emily.jones@example.com', 'password6', NOW(), NOW()),
-('Daniel', 7, 'Miller', 'daniel.miller@example.com', 'password7', NOW(), NOW()),
-('Olivia', 8, 'Davis', 'olivia.davis@example.com', 'password8', NOW(), NOW()),
-('William', 9, 'Wilson', 'william.wilson@example.com', 'password9', NOW(), NOW()),
-('Sophia', 10, 'Taylor', 'sophia.taylor@example.com', 'password10', NOW(), NOW());
+('David', 2, 'Johnson', 'david.johnson@example.com', 'password3', NOW(), NOW()),
+('Sarah', 2, 'Williams', 'sarah.williams@example.com', 'password4', NOW(), NOW()),
+('Michael', 2, 'Brown', 'michael.brown@example.com', 'password5', NOW(), NOW()),
+('Emily', 2, 'Jones', 'emily.jones@example.com', 'password6', NOW(), NOW()),
+('Daniel', 2, 'Miller', 'daniel.miller@example.com', 'password7', NOW(), NOW()),
+('Olivia', 2, 'Davis', 'olivia.davis@example.com', 'password8', NOW(), NOW()),
+('William', 2, 'Wilson', 'william.wilson@example.com', 'password9', NOW(), NOW()),
+('Sophia', 2, 'Taylor', 'sophia.taylor@example.com', 'password10', NOW(), NOW());
 
 INSERT INTO permissions (name, created_at, updated_at) VALUES
 ('Permission 1', NOW(), NOW()),
@@ -197,14 +189,14 @@ INSERT INTO permissions (name, created_at, updated_at) VALUES
 INSERT INTO roles_permission (permission_id, role_id) VALUES
 (1, 1),
 (2, 2),
-(3, 3),
-(4, 4),
-(5, 5),
-(6, 6),
-(7, 7),
-(8, 8),
-(9, 9),
-(10, 10);
+(3, 2),
+(4, 2),
+(5, 2),
+(6, 2),
+(7, 2),
+(8, 2),
+(9, 2),
+(10, 1);
 
 
 ALTER TABLE invoices

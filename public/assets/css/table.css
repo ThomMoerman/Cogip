@@ -43,7 +43,7 @@ main .section table tr {
 main .section table tr td {
   color: rgb(48, 51, 52);
   padding: 5px 10px 5px 10px;
-  max-width: 40px;
+  max-width: 30px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

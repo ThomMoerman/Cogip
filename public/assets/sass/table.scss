@@ -24,21 +24,25 @@ main{
         table{
             th{
                 background-color: $grey;
+                // background-color: $yellow;
                 color: #ffffff;
+                // color : black; 
                 text-align: left;
                 padding: 10px;
                 width: 900px;
             }
             tr{
                 background-color: rgb(153, 214, 205);
+                // background-color: $white;
                 font-size: 12px;
                 @media (min-width : 900px){
                     font-size: 14px;
                 }
                 td{
                     color : $grey;
+                    // color : $black ; 
                     padding: 5px 10px 5px 10px;
-                    max-width: 40px;
+                    max-width: 30px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -55,6 +59,7 @@ main{
             }
             tr:nth-child(even){
                 background-color: #e0fbff;
+                // background-color: $row;
             }
         }
         .invoices_table{
@@ -78,7 +83,8 @@ main{
             }
             .current-page{
                 font-weight: 700;
-                color:#ffffff; 
+                color:#ffffff;
+                // color: black; 
             }
         }
     }

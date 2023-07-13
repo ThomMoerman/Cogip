@@ -3,6 +3,7 @@
 
 @mixin title {
     color: #ffffff; 
+    // color: $title_color; 
     font-size: 45px;
     font-family: $impact;
     margin: 20px 0 20px 0;
@@ -10,9 +11,9 @@
 
 @mixin cogip {
     text-transform: uppercase;
-    //font-weight: 700;
     color: #ffffff;
-    border: $blue solid 4px;
+    // color:$title_color; 
+    border: $blue solid 4px;//Retirer
     font-size: 30px;
     padding: 6px;
 }
@@ -28,7 +29,8 @@
 }
 
 @mixin socialMedia{
-    color: #ffffff;
+    // color: #ffffff;
+    color:$title_color; 
     list-style-type: none;
     @include icons; 
     text-align: center;
@@ -36,6 +38,7 @@
 
 @mixin icons{
     filter: invert(65%) sepia(27%) saturate(966%) hue-rotate(121deg) brightness(93%) contrast(101%);
+    // filter: invert(95%) sepia(91%) saturate(933%) hue-rotate(325deg) brightness(105%) contrast(95%); //Colorisation des icons en jaune 
     margin: 0 5px 0 5px;
 }
 
@@ -47,12 +50,19 @@
 @mixin pagination {
     margin: 0 5px 0 5px;
     color: $grey;
+    // color: $title_color; 
     font-family: $text;
     text-decoration: none;
 }
 
 @mixin person_card {
-    background-color: rgba(#074a5b, 0.1);
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 15px;
-    box-shadow: 7px 7px 5px 0px rgb(0, 0, 0, 0.341);
+    // box-shadow: 7px 7px 5px 0px rgb(0, 0, 0, 0.341);//A retirer
+}
+
+@mixin page {
+    border: $yellow solid 1px;
+    border-radius: 5px;
+    
 }

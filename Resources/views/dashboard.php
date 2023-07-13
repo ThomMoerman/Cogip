@@ -8,7 +8,6 @@
     <link href="assets/css/table.css" rel="stylesheet" type="text/css">
     <script type="module" rel='javascript' src="assets/js/dashboard.js"></script>
     <title>Dashboard</title>
-    
 </head>
 <body>
     <section id="dashboard__navbar">

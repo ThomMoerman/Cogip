@@ -63,6 +63,13 @@
                         ?>
             </table>
         </article>
+        <article class="bottom__section">
+            <div class="section__illustration">
+                <p>work better in your company</p>
+                <img src="assets/img/DrawKit_illustration.svg" alt="illustration" class="illustration__drawkit">
+                <img src="assets/img/Rectangle.svg" alt="rectangle jaune" class="illustration__rectangle">
+            </div>
+        </article>
     </main>
     <?php
         require '../Resources/Include/footer.php'
