@@ -13,10 +13,15 @@
         // Vérifier le rôle de l'utilisateur (supposons que le rôle 2 correspond à un utilisateur connecté)
         if ($_SESSION['user_role'] == 1) {
             // Afficher le lien de déconnexion
-            echo '<a href="/dashboard" class="btn log__logout_btn logout_link">Dashboard</a>';
-            echo '<a href="/logout" class="btn log__logout_btn logout_link">LOGOUT</a>';
+            
+            echo '<div class="log header__log">
+                  <a href="/dashboard" class="btn log__logout_btn logout_link">DASHBOARD</a> 
+                  <a href="/logout" class="btn log__logout_btn logout_link">LOGOUT</a>
+                  </div>';
         } elseif($_SESSION['user_role'] == 2){
-            echo '<a href="/logout" class="btn log__logout_btn logout_link">LOGOUT</a>';
+            echo '<div class="log header__log">
+                  <a href="/logout" class="btn log__logout_btn logout_link">LOGOUT</a>
+                  </div>';
         }
     }else {
         // Afficher le bloc de connexion
