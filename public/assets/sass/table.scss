@@ -15,15 +15,32 @@ main{
         @media (min-width : 900px){
             width: 900px;
         }
-        h3{
-            color: $title_color; 
-            // font-size: 45px;
-            font-size: 30px;
-            font-family: $inter_police;
-            margin: 30px 0 30px 0;
-            font-weight: 900;
-            @media (min-width:900px){
-                font-size: 60px;
+        .title__filter{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            h3{
+                color: $title_color; 
+                // font-size: 45px;
+                font-size: 30px;
+                font-family: $inter_police;
+                margin: 30px 0 30px 0;
+                font-weight: 900;
+                @media (min-width:900px){
+                    font-size: 60px;
+                }
+            }
+            .filter__section{
+                display: flex;
+                #search_filter{
+                    align-self: center;
+                    padding: 8px 15px;
+                    border: $filter solid 1px;
+                    border-radius: 8px;
+                    color: $filter; 
+                    margin-top: 60px;
+                }
             }
         }
         table{
@@ -74,18 +91,26 @@ main{
         .pagination{
             display: flex;
             justify-content: center;
-            margin-top: 30px;
+            margin-top: 50px;
             a{
-                @include pagination; 
+                @include pagination;
                 &:hover{
-                    color : $page; 
+                    color : $yellow; 
+                    background-color: $grey_page;
                     cursor: pointer;
-                    text-decoration: underline;
+                    text-decoration: none;
                 }
             }
             .current-page{
+                @include pagination; 
                 font-weight: 700;
-                color:#ffffff; 
+                color:$yellow;
+                border: $yellow solid 1px; 
+            }
+            .arrow{
+                @include pagination; 
+                font-weight: 700;
+                color: $yellow; 
             }
         }
     }

@@ -55,6 +55,7 @@
 @mixin pagination {
     color : $title_color; 
     margin: 0 5px 0 5px;
+    padding: 5px 10px 5px 10px; 
     text-decoration: none;
     border: $grey_page solid 1px;
     border-radius: 5px;
@@ -66,7 +67,7 @@
     box-shadow: 7px 7px 5px 0px rgb(0, 0, 0, 0.341);
 }
 
-//mixins
+
 @mixin button_parameter{
     font-family: $roboto_police; 
     font-size: 20px;
