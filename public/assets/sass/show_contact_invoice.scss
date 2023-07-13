@@ -13,7 +13,7 @@
 .color__band{
     background-color: $yellow;
     width: 150px;
-    transform: translate(150px, -65px);
+    transform: translate(150px, -55px);
     @media (min-width:600px) {
         width: 280px;
         transform: translate(20px, -65px);
@@ -24,29 +24,42 @@
     
 }
 #page_profile{
-    margin-left: auto;
+    // margin-left: auto;
     margin-right: auto;
-    padding-left: 25px;
+    // padding-left: 25px;
     justify-content: center;
-    @media (min-width:600px) {
+    @media (min-width:900px) {
         margin-left: 2vw;
+        padding: 80px ; 
     }
     //width: 250px;
-    padding: 50px 0;
-    .page__head{
+    // padding: 50px 0;
+    h2{
     text-align: center;
-
     @media (min-width:600px) {
         text-align: unset;
+        font-weight: 900;
+        font-size: 50px;
+        text-transform: uppercase;
     }
     @include default_spacing(50px);
     font-family: $inter_police;
     @include font_size(2em);
     color: $title_color;
     text-transform: capitalize;
-    font-weight: 700
+    font-weight: 700; 
     }
-    
+    .info{
+        display: flex;
+        flex-direction: row;
+        .info_title{
+            font-weight: 900; 
+            font-size: 20px;
+            margin-right: 8px; 
+            line-height: 0.8;
+            font-family: $inter_police; 
+        }
+    }
     img{
         @include default_spacing(50px);
         padding-left: 40vw;
@@ -89,6 +102,9 @@
                 display: flex;
                 flex-wrap: wrap;
             }
+        }
+        .information__label{
+            font-weight: 900; 
         }
     }
     .contact__image{
