@@ -14,3 +14,5 @@ rowInfo('contacts','Contact','071-XXX-XXX','example@mail.com')
 generateTableArticle('companies','Companies','Name','TVA','Country')
 rowInfo('companies','Company','N°XXXXXX','Country')
 
+
+
