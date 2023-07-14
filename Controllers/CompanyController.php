@@ -71,6 +71,9 @@ class CompanyController extends Controller
         $this->view('show_company', $data);
 
     }
+    public function showCompanyForm(){
+        return $this->view('new_company');
+    }
     public function delete($id)
     {
         // Créez une instance du modèle Contact
@@ -97,8 +100,12 @@ class CompanyController extends Controller
         // Redirigez vers la page index des contacts après la suppression
         header('Location: /dashboard');
     }
-    public function add($name, $type_id, $country, $tva)
+    public function add()
     {
+        $name = $_POST['name'];
+        $type_id = $_POST['type_id'];
+        $country = $_POST['country'];
+        $tva = $_POST['tva'];
         // Créez une instance du modèle Contact
         $companyModel = new Company();
 
@@ -106,6 +113,6 @@ class CompanyController extends Controller
         $companyModel->newCompany($name, $type_id, $country, $tva);
 
         // Redirigez vers la page index des contacts après la suppression
-        return $this->view('add');
+        header('Location: /dashboard');
     }
 }

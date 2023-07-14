@@ -62,6 +62,14 @@ $router->get('/dashboard', function () {
     (new DashboardController)->index();
 });
 
+$router->get('/companies_add', function(){
+    (new CompanyController)->showCompanyForm();
+});
+
+$router->post('/companies_add', function(){
+    (new CompanyController)->add();
+});
+
 $router->get('/edit-invoice/{id}', function () {
     (new DashboardController)->editInvoiceIndex();
 });
