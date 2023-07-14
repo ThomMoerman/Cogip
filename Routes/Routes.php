@@ -62,6 +62,30 @@ $router->get('/dashboard', function () {
     (new DashboardController)->index();
 });
 
+$router->get('/companies_add', function () {
+    (new CompanyController)->showCompanyForm();
+});
+
+$router->post('/companies_add', function () {
+    (new CompanyController)->add();
+});
+
+$router->get('/invoices_add', function(){
+    (new InvoiceController)->showInvoiceForm();
+});
+
+$router->post('/invoices_add', function(){
+    (new InvoiceController)->add();
+});
+
+$router->get('/contacts_add', function(){
+    (new ContactController)->showContactForm();
+});
+
+$router->post('/contacts_add', function(){
+    (new ContactController)->add();
+});
+
 $router->get('/edit-invoice/{id}', function () {
     (new DashboardController)->editInvoiceIndex();
 });
@@ -95,6 +119,18 @@ $router->get('/register', function () {
 
 $router->post('/register', function () {
     (new AuthController)->register();
+});
+$router->get('/delete-contact/{id}', function ($id) {
+    (new DashboardController)->deleteContactIndex();
+    (new ContactController)->delete($id);
+});
+$router->get('/delete-company/{id}', function ($id) {
+    (new DashboardController)->deleteCompanyIndex();
+    (new CompanyController)->delete($id);
+});
+$router->get('/delete-invoice/{id}', function ($id) {
+    (new DashboardController)->deleteInvoiceIndex();
+    (new InvoiceController)->delete($id);
 });
 
 $router->run();

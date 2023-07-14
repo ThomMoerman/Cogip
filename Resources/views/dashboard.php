@@ -54,6 +54,7 @@
                                 </td>
                                 <td><a
                                         href="/edit-invoice/<?php echo $invoice['id']; ?>?id=<?php echo $invoice['id']; ?>&ref=<?php echo $invoice['ref']; ?>&id_company=<?php echo $invoice['id_company']; ?>"><?php echo $invoice['company_name']; ?></a></td>
+                                <td><a href="/delete-invoice/<?php echo $invoice['id']; ?>">delete</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>
@@ -73,6 +74,7 @@
                                 <td>
                                     <?php echo $company['company_type']; ?>
                                 </td>
+                                <td><a href="/delete-company/<?php echo $company['id']; ?>">delete</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>
@@ -99,6 +101,7 @@
                                 </td>
                                 <td><a
                                         href="/edit-contact/<?php echo $contact['id']; ?>?id=<?php echo $contact['id']; ?>&name=<?php echo $contact['name']; ?>&company_id=<?php echo $contact['company_id']; ?>&email=<?php echo $contact['email']; ?>&phone=<?php echo $contact['phone']; ?>"><?php echo $contact['company_name']; ?></a></td>
+                                <td><a href="/delete-contact/<?php echo $contact['id']; ?>">delete</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>

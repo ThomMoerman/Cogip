@@ -12,8 +12,8 @@
 
 <body>
     <?php
-        require '../Resources/Include/header.php'
-    ?>
+    require '../Resources/Include/header.php'
+        ?>
     <main>
         <section class="container section" id="info_table">
 
@@ -35,9 +35,11 @@
                     <?php foreach ($companies as $company): ?>
                         <tr>
                             <td>
-                               <a href="/companies/<?php echo $company['id']; ?>"><?php echo $company['name']; ?></a>
+                                <a href="/companies/<?php echo $company['id']; ?>"><?php echo $company['name']; ?></a>
                             </td>
-                            <td> <?php echo $company['id']; ?></td>
+                            <td>
+                                <?php echo $company['id']; ?>
+                            </td>
                             <td>
                                 <?php echo $company['country']; ?>
                             </td>
@@ -77,8 +79,8 @@
     </main>
     <hr class="separation_main_footer">
     <?php
-        require '../Resources/Include/footer.php'
-    ?>
+    require '../Resources/Include/footer.php'
+        ?>
 </body>
 
 </html>

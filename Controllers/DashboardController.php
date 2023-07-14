@@ -38,4 +38,16 @@ class DashboardController extends Controller
     {
         return $this->view('edit-contact');
     }
+    public function deleteContactIndex()
+    {
+        return $this->view('delete-contact');
+    }
+    public function deleteCompanyIndex()
+    {
+        return $this->view('delete-company');
+    }
+    public function deleteInvoiceIndex()
+    {
+        return $this->view('delete-invoice');
+    }
 }
