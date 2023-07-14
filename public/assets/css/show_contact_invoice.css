@@ -1,7 +1,15 @@
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
 .color__band {
-  background-color: rgb(48, 51, 52);
+  background-color: #F9DE4E;
   width: 150px;
-  transform: translate(150px, -65px);
+  transform: translate(150px, -55px);
   height: 25px;
   position: absolute;
   z-index: -1;
@@ -14,29 +22,42 @@
 }
 
 #page_profile {
-  margin-left: auto;
   margin-right: auto;
-  padding-left: 25px;
   justify-content: center;
-  padding: 50px 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   #page_profile {
     margin-left: 2vw;
+    padding: 80px;
   }
 }
-#page_profile .page__head {
+#page_profile h2 {
   text-align: center;
   margin-bottom: 50px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: inter;
   font-size: 2em;
-  color: white;
-  text-transform: uppercase;
+  color: #000000;
+  text-transform: capitalize;
+  font-weight: 700;
 }
 @media (min-width: 600px) {
-  #page_profile .page__head {
+  #page_profile h2 {
     text-align: unset;
+    font-weight: 900;
+    font-size: 50px;
+    text-transform: uppercase;
   }
+}
+#page_profile .info {
+  display: flex;
+  flex-direction: row;
+}
+#page_profile .info .info_title {
+  font-weight: 900;
+  font-size: 20px;
+  margin-right: 8px;
+  line-height: 0.8;
+  font-family: inter;
 }
 #page_profile img {
   margin-bottom: 50px;
@@ -62,25 +83,42 @@
   }
 }
 
-.page_info {
-  background-color: rgba(7, 74, 91, 0.1);
+.page_profile {
+  display: flex;
+  flex-direction: row;
+}
+.page_profile .page__head {
+  font-weight: 900;
+  font-size: 25px;
+}
+.page_profile .page_info {
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  color: white;
-  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.341);
-  padding: 20px 55px 5px 20px;
+  color: #000000;
+  padding: 20px 20px 10px 20px;
 }
 @media (min-width: 600px) {
-  .page_info {
+  .page_profile .page_info {
     width: fit-content;
   }
+}
+@media (min-width: 900px) {
+  .page_profile .page_info p {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.page_profile .page_info .information__label {
+  font-weight: 900;
+}
+.page_profile .contact__image {
+  align-self: center;
 }
 
 .info {
   text-align: justify;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: inter;
   margin-bottom: 10px;
-  padding-left: 10%;
-  margin-bottom: 20px;
   display: flex;
 }
 .info .info_title {
@@ -93,4 +131,19 @@
 
 p {
   margin-bottom: 5px;
+}
+
+.contact__image {
+  display: flex;
+  align-self: center;
+}
+
+.separation_main_footer {
+  border: #F9DE4E solid 1px;
+  margin: 0 20px 0 20px;
+}
+@media (min-width: 900px) {
+  .separation_main_footer {
+    margin: 0 100px 0 100px;
+  }
 }/*# sourceMappingURL=show_contact_invoice.css.map */

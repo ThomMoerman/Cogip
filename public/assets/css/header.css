@@ -16,22 +16,18 @@
 }
 header {
   background-color: #F9DE4E;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 790px;
-  align-items: center;
+  height: 880px;
+  padding-top: 30px;
 }
 header .header_top {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 180px 0 50px 0;
-  width: 100%;
+  padding: 0 0 50px 0;
 }
 @media (min-width: 900px) {
   header .header_top {
+    display: flex;
     flex-direction: row;
+    margin: 0 50px;
     justify-content: space-between;
     padding: 50px 0 50px 0;
   }
@@ -54,11 +50,11 @@ header .header_top .header_top_left .header__title {
   font-size: 48px;
   font-size: 2.5em;
   padding: 6px;
+  -webkit-text-stroke-width: 3px;
 }
 @media (min-width: 900px) {
   header .header_top .header_top_left .header__title {
     font-size: 4em;
-    margin-left: 50px;
     padding-right: 80px;
   }
 }
@@ -95,12 +91,10 @@ header .btn:hover {
     max-width: 100px;
   }
 }
-header .header__login {
-  padding-right: 20px;
-}
 @media (min-width: 900px) {
   header .header__login {
     align-self: center;
+    padding-right: 20px;
   }
 }
 header .header__login .container .logout_link {
@@ -119,6 +113,7 @@ header .header__login .container .logout_link:hover {
 header .header__login .header__log {
   font-weight: 600;
   display: flex;
+  justify-content: center;
 }
 header .header__login .header__log .signup_link {
   background-color: #FFFFFF;
@@ -136,9 +131,6 @@ header .header__login .header__log .signup_link {
     align-self: center;
   }
 }
-header .header_bottom #white_rectangle {
-  align-self: center;
-}
 header .header_bottom #headline {
   display: flex;
   flex-direction: column;
@@ -146,7 +138,7 @@ header .header_bottom #headline {
 }
 @media (min-width: 900px) {
   header .header_bottom #headline {
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: space-around;
   }
 }
@@ -177,12 +169,27 @@ header .header_bottom #headline .headline_illustration {
   }
 }
 header .header_bottom #white_rectangle {
-  max-width: 375px;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 400px) {
+  header .header_bottom #white_rectangle {
+    display: none;
+  }
 }
 @media (min-width: 900px) {
   header .header_bottom #white_rectangle {
-    max-width: 100%;
-    display: flex;
-    align-self: center;
+    max-width: 95%;
+    height: 130px;
   }
+  header .header_bottom #white_rectangle img {
+    justify-self: center;
+    min-width: 100%;
+  }
+}
+header .header_all_page {
+  height: 280px;
+  padding-top: 0;
 }/*# sourceMappingURL=header.css.map */
