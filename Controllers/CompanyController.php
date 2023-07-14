@@ -71,7 +71,8 @@ class CompanyController extends Controller
         $this->view('show_company', $data);
 
     }
-    public function showCompanyForm(){
+    public function showCompanyForm()
+    {
         return $this->view('new_company');
     }
     public function delete($id)
@@ -83,7 +84,7 @@ class CompanyController extends Controller
         $companyModel->deleteCompany($id);
 
         // Redirigez vers la page index des contacts après la suppression
-        header('Location: /companies');
+        header('Location: /dashboard');
         exit();
     }
     public function update($id)

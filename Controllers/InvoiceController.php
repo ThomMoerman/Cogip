@@ -77,7 +77,7 @@ class InvoiceController extends Controller
         $invoiceModel->deleteInvoice($id);
 
         // Redirigez vers la page index des contacts après la suppression
-        header('Location: /invoices');
+        header('Location: /dashboard');
         exit();
     }
     public function update($id)

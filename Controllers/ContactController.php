@@ -75,8 +75,8 @@ class ContactController extends Controller
         // Appelez la méthode deleteContact pour supprimer le contact spécifié par l'ID
         $contactModel->deleteContact($id);
 
-        // Redirigez vers la page index des contacts après la suppression
-        header("Location: /contacts");
+        // Redirigez vers la page dashboard après la suppression
+        header("Location: /dashboard");
     }
     public function update($id)
     {

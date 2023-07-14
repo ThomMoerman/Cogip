@@ -92,12 +92,10 @@ class Company
         $statement->bindValue(':tva', $tva, \PDO::PARAM_STR);
         $statement->execute();
     }
-	
+
     public function deleteCompany($id)
     {
-        $query = "DELETE from companies WHERE id = $id;
-              DELETE from contacts WHERE id_company = $id;
-              DELETE from invoices WHERE company_id = $id";
+        $query = "DELETE from companies WHERE id = $id";
         $statement = $this->db->prepare($query);
         $statement->execute();
     }
