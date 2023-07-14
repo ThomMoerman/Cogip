@@ -48,17 +48,6 @@
     text-transform: uppercase;
   }
 }
-#page_profile .info {
-  display: flex;
-  flex-direction: row;
-}
-#page_profile .info .info_title {
-  font-weight: 900;
-  font-size: 20px;
-  margin-right: 8px;
-  line-height: 0.8;
-  font-family: inter;
-}
 #page_profile img {
   margin-bottom: 50px;
   padding-left: 40vw;
@@ -116,17 +105,17 @@
 }
 
 .info {
-  text-align: justify;
-  font-family: inter;
-  margin-bottom: 10px;
   display: flex;
+  flex-flow: row wrap;
 }
 .info .info_title {
   font-weight: 900;
+  line-height: 0.8;
+  font-family: inter;
 }
 .info .info_element {
-  margin-left: 15px;
-  text-align: justify;
+  font-weight: 600;
+  margin-left: 5px;
 }
 
 p {
@@ -171,14 +160,6 @@ main .page_profile .page__head {
   font-family: inter;
   font-weight: 900;
   font-size: 50px;
-}
-main .page_profile .page_info {
-  background-color: rgba(0, 0, 0, 0.1);
-  font-family: inter;
-  font-size: 25px;
-}
-main .page_profile .page_info .information__label {
-  font-weight: 900;
 }
 main .section__contact {
   display: flex;

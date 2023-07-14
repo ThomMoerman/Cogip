@@ -66,7 +66,6 @@
             </div>
         </article>
     </main>
-    <hr class="separation_main_footer">
     <?php
     require '../Resources/Include/footer.php'
         ?>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/table.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/show_contact_invoice.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/show_company.css" rel="stylesheet" type="text/css">
     <title>Cogip - Show Invoice</title>
 </head>
@@ -20,10 +21,18 @@
                 </h2>
                 <div class="color__band"></div>
             <div class="page_info">
-                <p class="information__label"><b>Name:</b><?php echo $data['name']; ?></p>
-                <p class="information__label">TVA: <?php echo $data['tva']; ?></p>
-                <p class="information__label">Country: <?php echo $data['country']; ?></p>
-                <p class="information__label">Type: <?php echo $data['type']; ?></p>
+                 <div class="info">               
+                    <p class="info_title">Name:  </p> <p class="info_element name">  <?php echo $data['name']; ?></p>
+                </div> 
+                <div class="info"> 
+                    <p class="info_title">TVA: </p> <p class="info_element tva"> <?php echo $data['tva']; ?></p>
+                </div>
+                <div class="info">    
+                    <p class="info_title">Country: </p> <p class="info_element country"> <?php echo $data['country']; ?></p>
+                </div>
+                <div class="info">   
+                    <p class="info_title">Type: </p> <p class="info_element type"> <?php echo $data['type']; ?></p>
+                </div>
             </div>
         </section>
         <section>

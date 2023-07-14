@@ -3,6 +3,9 @@
 
 body{
     margin: auto 0;
+    .top_border{
+        border: 1px solid $yellow;
+    }
     footer{
         background-color:$white;
         color: $text_footer;

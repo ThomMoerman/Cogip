@@ -49,17 +49,7 @@
     text-transform: capitalize;
     font-weight: 700; 
     }
-    .info{
-        display: flex;
-        flex-direction: row;
-        .info_title{
-            font-weight: 900; 
-            font-size: 20px;
-            margin-right: 8px; 
-            line-height: 0.8;
-            font-family: $inter_police; 
-        }
-    }
+  
     img{
         @include default_spacing(50px);
         padding-left: 40vw;
@@ -111,18 +101,18 @@
         align-self: center;
     }
 }
-
 .info{
-    text-align: justify;
-    font-family: $inter_police; 
-    @include default_spacing(10px);
     display: flex;
+    flex-flow: row wrap;
     .info_title{
-        font-weight: 900;
+        font-weight: 900; 
+        //font-size: 20px;
+        line-height: 0.8;
+        font-family: $inter_police; 
     }
     .info_element{
-        margin-left: 15px;
-        text-align: justify;
+        font-weight: 600;
+        margin-left: 5px;
     }
 }
 p{

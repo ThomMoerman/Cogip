@@ -1,5 +1,6 @@
 <footer>
-    <section class="footer__top">
+<hr class="top_border">
+<section class="footer__top"> 
         <div class="top__site">
             <p>cogip</p>
         </div>
