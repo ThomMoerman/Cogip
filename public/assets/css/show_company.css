@@ -23,7 +23,8 @@
 
 #page_profile {
   margin-right: auto;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 900px) {
   #page_profile {
@@ -50,7 +51,7 @@
 }
 #page_profile img {
   margin-bottom: 50px;
-  padding-left: 40vw;
+  align-self: center;
   width: 120px;
 }
 @media (min-width: 600px) {
@@ -62,7 +63,7 @@
     z-index: -2;
     top: 350px;
     left: 55vw;
-    padding-left: unset;
+    padding-left: 40vw;
   }
 }
 @media (min-width: 900px) {
@@ -74,7 +75,12 @@
 
 .page_profile {
   display: flex;
-  flex-direction: row;
+  padding-top: 30px;
+}
+@media (min-width: 900px) {
+  .page_profile {
+    flex-direction: row;
+  }
 }
 .page_profile .page__head {
   font-weight: 900;
@@ -85,10 +91,13 @@
   border-radius: 20px;
   color: #000000;
   padding: 20px 20px 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 600px) {
   .page_profile .page_info {
     width: fit-content;
+    flex-direction: row;
   }
 }
 @media (min-width: 900px) {
@@ -107,6 +116,8 @@
 .info {
   display: flex;
   flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 .info .info_title {
   font-weight: 900;
@@ -116,6 +127,7 @@
 .info .info_element {
   font-weight: 600;
   margin-left: 5px;
+  font-family: inter;
 }
 
 p {
@@ -176,8 +188,13 @@ main .section__contact {
 }
 main .section__contact h2 {
   color: #000000;
-  font-size: 50px;
   font-weight: 900;
+  font-size: 2em;
+}
+@media (min-width: 900px) {
+  main .section__contact h2 {
+    font-size: 50px;
+  }
 }
 @media (min-width: 900px) {
   main .section__contact .contact__identity {
@@ -193,15 +210,18 @@ main .section__contact .contact__identity .person {
 }
 @media (min-width: 900px) {
   main .section__contact .contact__identity .person {
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 15px;
     margin-right: 150px;
     display: flex;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    width: 376px;
+    height: 193px;
   }
 }
 main .section__contact .contact__identity .person img {
   max-width: 100px;
+  padding-bottom: 20px;
 }
 @media (min-width: 900px) {
   main .section__contact .contact__identity .person img {
@@ -210,12 +230,14 @@ main .section__contact .contact__identity .person img {
     margin: 0;
   }
 }
+main .section__contact .contact__identity .person p {
+  font-weight: 900;
+}
 @media (min-width: 900px) {
   main .section__contact .contact__identity .person p {
     align-self: center;
     padding: 20px;
     font-size: 35px;
-    font-weight: 900;
     width: min-content;
   }
 }

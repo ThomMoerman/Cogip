@@ -15,8 +15,10 @@
     ?>
     <main>     
             <section id="page_profile">
-            <h2 class="page__head"><?php echo $data['name'] ?></h2>
-            <div class="color__band"></div>
+                <div>
+                    <h2 class="page__head"><?php echo $data['name'] ?></h2>
+                    <div class="color__band"></div>
+                </div>
             <img src="../assets/img/Avatar_One.svg" alt="avatar_pic">    
             <div class="page_info">
                 <div class="info">               

@@ -25,8 +25,11 @@ main{
         }
         h2{
             color: $title_color; 
-            font-size: 50px;
             font-weight: 900;
+            font-size: 2em;
+            @media (min-width:900px){
+                font-size: 50px;
+            }
         }
         .contact__identity{
             @media (min-width : 900px){
@@ -39,13 +42,16 @@ main{
                 font-family: $inter_police;
                 font-size: 20px;
                 @media (min-width: 900px){
+                    @include person_card; 
                     margin-right: 150px;
                     display: flex;
                     flex-direction: row;
-                    @include person_card; 
+                    width: 376px;
+                    height: 193px;
                 }
                 img{
                     max-width: 100px; 
+                    padding-bottom: 20px;
                     @media (min-width: 900px){
                         max-width: 100%;
                         padding: 20px;
@@ -53,11 +59,12 @@ main{
                     }
                 }
                 p{
+                    font-weight: 900;
                     @media (min-width: 900px){
                         align-self: center;
                         padding: 20px;
                         font-size: 35px;
-                        font-weight: 900;
+                        // font-weight: 900;
                         width: min-content;
                     }
                 }

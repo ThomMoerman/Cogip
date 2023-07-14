@@ -36,15 +36,19 @@ main .section {
 }
 main .section .title__filter {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 20px;
+}
+@media (min-width: 900px) {
+  main .section .title__filter {
+    flex-direction: row;
+  }
 }
 main .section .title__filter h3 {
   color: #000000;
   font-size: 30px;
   font-family: inter;
-  margin: 30px 0 30px 0;
   font-weight: 900;
 }
 @media (min-width: 900px) {
@@ -61,7 +65,11 @@ main .section .title__filter .filter__section #search_filter {
   border: #636363 solid 1px;
   border-radius: 8px;
   color: #636363;
-  margin-top: 60px;
+}
+@media (min-width: 900px) {
+  main .section .title__filter .filter__section #search_filter {
+    margin-top: 60px;
+  }
 }
 main .section h3 {
   color: #000000;

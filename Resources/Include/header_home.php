@@ -20,7 +20,7 @@
                     if ($_SESSION['user_role'] == 1) {
                         // Afficher le lien de déconnexion
                         echo '
-                        <div class="section container">
+                        <div class="log header__log">
                             <a href="/dashboard" class="btn log__logout_btn logout_link">Dashboard</a>
                             <a href="/logout" class="btn log__logout_btn logout_link">Logout</a>
                         </div>
