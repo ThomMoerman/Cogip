@@ -53,10 +53,10 @@
     cursor: pointer;
 }
 
-@mixin pagination {
+@mixin pagination($pl) {
     color : $title_color; 
     margin: 0 5px 0 5px;
-    padding: 5px 10px 5px 10px; 
+    padding: 5px $pl 5px 10px; 
     text-decoration: none;
     border: $grey_page solid 1px;
     border-radius: 5px;

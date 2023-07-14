@@ -100,24 +100,27 @@ main{
             justify-content: center;
             margin-top: 50px;
             a{
-                @include pagination;
+                //font-size: 0.8em;
+                @include pagination(10px);
                 &:hover{
                     color : $yellow; 
                     background-color: $grey_page;
                     cursor: pointer;
                     text-decoration: none;
                 }
+               
             }
             .current-page{
-                @include pagination; 
+                @include pagination(10px); 
                 font-weight: 700;
                 color:$yellow;
                 border: $yellow solid 1px; 
             }
             .arrow{
-                @include pagination; 
+                @include pagination(5px); 
                 font-weight: 700;
                 color: $yellow; 
+               
 
             }
         }

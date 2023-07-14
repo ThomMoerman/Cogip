@@ -147,7 +147,7 @@ main .section .pagination .current-page {
 main .section .pagination .arrow {
   color: #000000;
   margin: 0 5px 0 5px;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 5px 5px 10px;
   text-decoration: none;
   border: #919EAB solid 1px;
   border-radius: 5px;

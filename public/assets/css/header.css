@@ -17,7 +17,7 @@
 header {
   background-color: #F9DE4E;
   justify-content: center;
-  height: 880px;
+  max-height: 880px;
   padding-top: 30px;
 }
 header .header_top {

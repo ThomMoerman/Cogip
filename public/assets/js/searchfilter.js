@@ -1,5 +1,5 @@
 "use strict";
-const coreTable = document.querySelector('section');
+const coreTable = document.querySelector('.filter__section');
 console.log(coreTable);
 const searchBar = document.createElement('input');
 searchBar.setAttribute('id', 'search_filter');

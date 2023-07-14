@@ -1,5 +1,5 @@
 
-  const coreTable = document.querySelector('section') as HTMLBodyElement
+  const coreTable = document.querySelector('.filter__section') as HTMLBodyElement
   
   console.log(coreTable)
 

@@ -17,7 +17,10 @@
     <main>
         <section class="container section" id="info_table">
 
-            <h3>All companies</h3>
+        <div class="title__filter">
+                <div class="title__section"><h3>All companies</h3></div>
+                <div class="filter__section"></div>
+            </div>
 
             <!-- Afficher le tableau des entreprises -->
             <table id='list_table'>
@@ -55,7 +58,7 @@
             <div class="pagination">
                 <?php if ($currentPage > 1): ?>
                     <!-- Afficher la flèche précédente si ce n'est pas la première page -->
-                    <a href="/companies?page=<?php echo ($currentPage - 1); ?>" class="arrow">← Previous</a>
+                    <a href="/companies?page=<?php echo ($currentPage - 1); ?>" class="arrow">←</a>
                 <?php endif; ?>
 
                 <?php for ($i = 1; $i <= $totalPages; $i++): ?>
@@ -72,7 +75,7 @@
 
                 <?php if ($currentPage < $totalPages): ?>
                     <!-- Afficher la flèche suivante si ce n'est pas la dernière page -->
-                    <a href="/companies?page=<?php echo ($currentPage + 1); ?>" class="arrow">Next →</a>
+                    <a href="/companies?page=<?php echo ($currentPage + 1); ?>" class="arrow">→</a>
                 <?php endif; ?>
             </div>
         </section>
