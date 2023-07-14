@@ -70,6 +70,22 @@ $router->post('/companies_add', function () {
     (new CompanyController)->add();
 });
 
+$router->get('/invoices_add', function(){
+    (new InvoiceController)->showInvoiceForm();
+});
+
+$router->post('/invoices_add', function(){
+    (new InvoiceController)->add();
+});
+
+$router->get('/contacts_add', function(){
+    (new ContactController)->showContactForm();
+});
+
+$router->post('/contacts_add', function(){
+    (new ContactController)->add();
+});
+
 $router->get('/edit-invoice/{id}', function () {
     (new DashboardController)->editInvoiceIndex();
 });

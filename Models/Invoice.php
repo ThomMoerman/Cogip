@@ -70,11 +70,14 @@ class Invoice
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
-    public function newInvoice($ref, $id_company)
+    public function newInvoice($ref, $due_date, $id_company)
     {
-        $query = "INSERT INTO invoices (ref, id_company, created_at, updated_at) VALUES
-        ($ref,$id_company,now(),now()";
+        $query = "INSERT INTO invoices (ref, due_date, id_company, created_at, updated_at) VALUES
+        (:ref,:due_date,:id_company,now(),now())";
         $statement = $this->db->prepare($query);
+        $statement->bindParam(':ref', $ref);
+        $statement->bindParam(':due_date', $due_date);
+        $statement->bindParam(':id_company', $id_company);
         $statement->execute();
     }
     public function deleteInvoice($id)

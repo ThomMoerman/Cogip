@@ -93,15 +93,22 @@ class InvoiceController extends Controller
         // Redirigez vers la page index des contacts après la suppression
         header('Location: /dashboard');
     }
-    public function add($ref, $id_company)
+    public function add()
     {
+        $ref = $_POST['ref'];
+        $due_date = $_POST['due_date'];
+        $company_id = $_POST['company_id'];
         // Créez une instance du modèle Contact
         $invoiceModel = new Invoice();
 
         // Appelez la méthode deleteinvoice pour supprimer le invoice spécifié par l'ID
-        $invoiceModel->newInvoice($ref, $id_company);
+        $invoiceModel->newInvoice($ref, $due_date, $company_id);
 
         // Redirigez vers la page index des contacts après la suppression
-        return $this->view('edit');
+        header('Location: /dashboard');
+    }
+
+    public function showInvoiceForm(){
+        return $this->view('new_invoice');
     }
 }

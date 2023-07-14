@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,22 @@
     <title>New Invoice
     </title>
 </head>
+
 <body>
-    
+    <h1>New Contact</h1>
+
+    <form action="/invoices_add" method="POST">
+        <label for="ref">Ref:</label>
+        <input type="text" name="ref" id="ref" required><br>
+
+        <label for="due_date">Due Date:</label>
+        <input type="date" name="due_date" id="due_date" required><br>
+
+        <label for="company_id">Company:</label>
+        <input type="text" name="company_id" id="company_id" required><br>
+
+        <button type="submit">Create</button>
+    </form>
 </body>
+
 </html>

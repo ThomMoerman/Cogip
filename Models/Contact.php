@@ -72,8 +72,12 @@ class Contact
     public function newContact($name, $company_id, $email, $phone)
     {
         $query = "INSERT INTO contacts (name, company_id, email, phone, created_at, updated_at) VALUES
-        ($name,$company_id, $email, $phone,now(),now()";
+        (:name, :company_id, :email, :phone, now(), now())";
         $statement = $this->db->prepare($query);
+        $statement->bindParam(':name', $name);
+        $statement->bindParam(':company_id', $company_id);
+        $statement->bindParam(':email', $email);
+        $statement->bindParam(':phone', $phone);
         $statement->execute();
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }

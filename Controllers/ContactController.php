@@ -93,8 +93,13 @@ class ContactController extends Controller
         // Redirigez vers la page index des contacts après la suppression
         header('Location: /dashboard');
     }
-    public function add($name, $company_id, $email, $phone)
+    public function add()
     {
+        $name = $_POST['name'];
+        $company_id = $_POST['company_id'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+
         // Créez une instance du modèle Contact
         $contactModel = new Contact();
 
@@ -102,6 +107,10 @@ class ContactController extends Controller
         $contactModel->newContact($name, $company_id, $email, $phone);
 
         // Redirigez vers la page index des contacts après la suppression
-        return $this->view('edit');
+        header('Location: /dashboard');
+    }
+	
+	public function showContactForm(){
+        return $this->view('new_contact');
     }
 }

@@ -107,6 +107,5 @@ class Company
         $statement->bindValue(':type_id', $type_id, \PDO::PARAM_INT);
         $statement->execute();
     }
-}
-f;
+};
 ?>
