@@ -18,7 +18,10 @@
         <section class="container section" id="info_table">
 
         <div class="title__filter">
-                <div class="title__section"><h3>All companies</h3></div>
+                <div class="title__section">
+                    <h3>All companies</h3>
+                    <div class="color__band_company"></div>
+                </div>
                 <div class="filter__section"></div>
             </div>
 

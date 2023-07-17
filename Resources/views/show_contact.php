@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/show_contact_invoice.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/sub_nav_location.js" defer></script>
     <title>Contact</title>
 </head>
 

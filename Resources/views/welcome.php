@@ -29,6 +29,8 @@
                 tableInvoices($invoices);
                 ?>
             </table>
+            <img src="assets/img/file.png" alt="data file shown"
+                    class="file_pic">
         </article>
         <article class="section contacts__table_section">
             <h3>Last contacts</h3>
@@ -42,6 +44,8 @@
                 tableContacts($contacts);
                 ?>
             </table>
+            <img src="assets/img/lightbulb.png" alt="lightbulb picture"
+                    class="light_pic">
         </article>
         <article class="section companies__table_section">
             <h3>Last companies</h3>

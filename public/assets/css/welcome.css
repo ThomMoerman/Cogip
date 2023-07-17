@@ -158,4 +158,19 @@ body main .bottom__section .section__illustration .illustration__drawkit {
 }
 body .illustration__rectangle {
   width: 375px;
+}
+
+.file_pic {
+  position: absolute;
+  z-index: -2;
+  max-width: 120px;
+  right: 0;
+}
+
+.light_pic {
+  position: absolute;
+  z-index: -2;
+  max-width: 120px;
+  left: 0;
+  transform: translateY(-30px);
 }/*# sourceMappingURL=welcome.css.map */

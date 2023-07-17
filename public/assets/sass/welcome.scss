@@ -1,6 +1,5 @@
 @import './variables_footer.scss'; 
 
-
 body{
     background-color: $white;
     #headline {
@@ -64,6 +63,7 @@ body{
         img{
             width: 350px;
             align-self: center;
+           
         }
         .page__foot__illustration{
             display: flex;
@@ -141,4 +141,20 @@ body{
     .illustration__rectangle{
         width: 375px;
     }
+}
+
+@mixin doodlePics{
+    position:absolute;
+    z-index: -2;
+    max-width: 120px;
+}
+.file_pic{
+    @include doodlePics();
+    right:0;
+    
+}
+.light_pic{
+    @include doodlePics();
+    left:0;
+    transform: translateY(-30px);
 }

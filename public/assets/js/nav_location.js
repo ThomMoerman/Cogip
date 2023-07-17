@@ -1,5 +1,5 @@
 "use strict";
-const navButton = document.querySelectorAll('btn');
+const links = document.querySelectorAll('.nav a');
 // JavaScript function to add a black border to the active link
 function addBorderToActiveLink() {
     const links = document.querySelectorAll('.nav a');

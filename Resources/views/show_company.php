@@ -8,6 +8,7 @@
     <link href="../assets/css/table.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/show_contact_invoice.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/show_company.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/sub_nav_location.js" defer></script>
     <title>Cogip - Show Invoice</title>
 </head>
 <body>
@@ -52,6 +53,8 @@
                     <p>Henry George</p>
                 </div>
             </div>
+            <img src="../assets/img/file.png" alt="data file shown"
+                    class="file_pic">
         </section>
         <section>
             <hr>
