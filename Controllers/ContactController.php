@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Models\Company;
 use App\Models\Contact;
 
 class ContactController extends Controller
@@ -96,21 +97,26 @@ class ContactController extends Controller
     public function add()
     {
         $name = $_POST['name'];
-        $company_id = $_POST['company_id'];
+        $company_name = $_POST['company_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
 
         $contactModel = new Contact();
 
-        $errors = $contactModel->newContact($name, $company_id, $email, $phone);
+        $companyModel = new Company();
+        $company = $companyModel->getCompanyByName($company_name); // Implement this method in your Company model
 
-        if ($errors) {
-            return $this->view('new_contact', ['errors' => $errors]);
+        if ($company) {
+            $company_id = $company['id'];
+            $contactModel->newContact($name, $company_id, $email, $phone);
+        } else {
+
         }
 
         header('Location: /dashboard');
     }
-	public function showContactForm(){
+    public function showContactForm()
+    {
         return $this->view('new_contact');
     }
 }
