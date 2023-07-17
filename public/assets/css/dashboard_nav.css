@@ -4,6 +4,12 @@
   padding-top: 5vh;
   background-color: white;
 }
+@media (min-width: 600px) {
+  #dashboard__navbar {
+    max-width: 285px;
+    height: 100vh;
+  }
+}
 #dashboard__navbar .navbar__admin_block {
   width: 132px;
   margin-left: auto;
@@ -19,9 +25,17 @@
 #dashboard__navbar .navbar__buttons {
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
+  margin-top: 40px;
+  width: 400px;
   text-align: center;
   padding: 0 0 2vh 0;
+}
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 #dashboard__navbar .navbar__buttons .btn_dashboard {
   background-image: url("../img/dashboard_logo.svg");
@@ -29,11 +43,21 @@
   background-repeat: no-repeat;
   background-position-x: center;
 }
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .btn_dashboard {
+    background-position: 120px 30px;
+  }
+}
 #dashboard__navbar .navbar__buttons .btn_invoices {
   background-image: url("../img/invoices_logo.svg");
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
+}
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .btn_invoices {
+    background-position: 120px 30px;
+  }
 }
 #dashboard__navbar .navbar__buttons .btn_companies {
   background-image: url("../img/companies_logo.svg");
@@ -41,16 +65,31 @@
   background-repeat: no-repeat;
   background-position-x: center;
 }
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .btn_companies {
+    background-position: 120px 30px;
+  }
+}
 #dashboard__navbar .navbar__buttons .btn_contacts {
   background-image: url("../img/contacts_logo.svg");
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
 }
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .btn_contacts {
+    background-position: 120px 30px;
+  }
+}
 #dashboard__navbar .navbar__buttons .nav {
   border: 0;
   background-color: unset;
-  padding: 20px 5px 0 5px;
+  padding: 30px 5px 0 5px;
+}
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .nav {
+    padding: 15px 5px 15px 5px;
+  }
 }
 #dashboard__navbar .navbar__buttons .nav:hover {
   cursor: pointer;
@@ -63,4 +102,29 @@ body {
 
 p {
   padding-top: 50px;
+}
+
+hr:last-of-type {
+  display: none;
+  position: absolute;
+}
+
+.navbar__logout {
+  display: flex;
+  position: absolute;
+  width: 150px;
+  justify-content: space-between;
+  top: 10px;
+  text-align: center;
+}
+.navbar__logout img {
+  display: none;
+  max-width: 60px;
+}
+.navbar__logout a {
+  color: rgb(150, 152, 214);
+}
+.navbar__logout a :hover {
+  cursor: pointer;
+  color: aliceblue;
 }/*# sourceMappingURL=dashboard_nav.css.map */

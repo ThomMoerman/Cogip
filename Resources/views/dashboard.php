@@ -18,10 +18,15 @@
         </div>
         <hr>
         <div class="navbar__buttons">
-            <button class="nav btn_dashboard">Dashboard</button>
-            <button class="nav btn_invoices">Invoices</button>
-            <button class="nav btn_companies">Companies</button>
-            <button class="nav btn_contacts">Contacts</button>
+            <a class="nav btn_dashboard">Dashboard</a>
+            <a class="nav btn_invoices">Invoices</a>
+            <a class="nav btn_companies">Companies</a>
+            <a class="nav btn_contacts">Contacts</a>
+        </div>
+        <hr>
+        <div class="navbar__logout">
+        <img class="nav btn_logout" src="assets/img/Avatar_two.svg" alt="profile pic">
+        <a class="nav btn_logout">Logout</a>
         </div>
     </section>
     <main>
