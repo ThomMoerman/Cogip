@@ -11,6 +11,10 @@ class ComposerStaticInit682b111ed6cc892341334c304ccdddbf
         array (
             'Whoops\\' => 7,
         ),
+        'R' => 
+        array (
+            'Rakit\\Validation\\' => 17,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -25,6 +29,10 @@ class ComposerStaticInit682b111ed6cc892341334c304ccdddbf
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Rakit\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rakit/validation/src',
         ),
         'Psr\\Log\\' => 
         array (
