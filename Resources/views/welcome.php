@@ -8,6 +8,7 @@
     <link href="assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="assets/css/welcome.css" rel="stylesheet" type="text/css">
     <link href="assets/css/table.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/nav_location.js" defer></script>
     <title>Cogip - Welcome</title>
 </head>
 

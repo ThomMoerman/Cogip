@@ -87,12 +87,10 @@
     // }
     .page__head{
         font-weight: 900;
-        font-size: 25px;
+        font-size: 40px;
     }
     .page_info{
-        background-color: rgba($color: #000000, $alpha: 0.1); 
-        border-radius: 20px;
-        color: $title_color;
+      
         padding: 20px 20px 10px 20px;
         margin-left: auto;
         margin-right: auto;
@@ -122,13 +120,14 @@
     margin-right: auto;
     .info_title{
         font-weight: 900; 
-        //font-size: 20px;
+        font-size: 20px;
         line-height: 0.8;
         font-family: $inter_police; 
     }
     .info_element{
         font-weight: 600;
         margin-left: 5px;
+        font-size: 20px;
         font-family: $inter_police;
     }
 }

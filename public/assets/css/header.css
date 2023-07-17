@@ -77,13 +77,12 @@ header .btn {
   color: #000000;
   text-decoration: none;
   font-weight: 600;
-  border: #F9DE4E solid 1px;
   padding: 10px;
   align-self: center;
 }
 header .btn:hover {
   cursor: pointer;
-  border: black solid 1px;
+  background-color: white;
 }
 @media (min-width: 600px) {
   header .btn {
@@ -103,12 +102,11 @@ header .header__login .container .logout_link {
   color: #000000;
   text-decoration: none;
   font-weight: 600;
-  border: #F9DE4E solid 1px;
   padding: 10px;
 }
 header .header__login .container .logout_link:hover {
   cursor: pointer;
-  border: black solid 1px;
+  background-color: white;
 }
 header .header__login .header__log {
   font-weight: 600;

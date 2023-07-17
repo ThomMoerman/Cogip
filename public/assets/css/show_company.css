@@ -112,12 +112,9 @@
 
 #page_profile .page__head {
   font-weight: 900;
-  font-size: 25px;
+  font-size: 40px;
 }
 #page_profile .page_info {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  color: #000000;
   padding: 20px 20px 10px 20px;
   margin-left: auto;
   margin-right: auto;
@@ -150,12 +147,14 @@
 }
 .info .info_title {
   font-weight: 900;
+  font-size: 20px;
   line-height: 0.8;
   font-family: inter;
 }
 .info .info_element {
   font-weight: 600;
   margin-left: 5px;
+  font-size: 20px;
   font-family: inter;
 }
 
@@ -194,9 +193,6 @@ p {
   font-family: inter;
   src: url("../font/Inter-VariableFont_slnt,wght.ttf");
 }
-main .page_profile {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 main .page_profile .page__head {
   font-family: inter;
   font-weight: 900;
@@ -213,6 +209,7 @@ main .section__contact {
     align-self: flex-start;
     justify-content: space-between;
     margin: 40px 0 40px 0;
+    padding-left: 130px;
   }
 }
 main .section__contact h2 {
@@ -233,14 +230,14 @@ main .section__contact h2 {
 }
 main .section__contact .contact__identity .person {
   margin: 15px 0 40px 0;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
   text-align: center;
   font-family: inter;
   font-size: 20px;
 }
 @media (min-width: 900px) {
   main .section__contact .contact__identity .person {
-    background-color: rgba(0, 0, 0, 0.01);
-    border-radius: 15px;
     margin-right: 150px;
     display: flex;
     flex-direction: row;

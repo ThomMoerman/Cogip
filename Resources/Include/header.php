@@ -1,3 +1,6 @@
+<head>
+<script src="assets/js/nav_location.js" defer></script>
+</head>
 <header>
 
 <section class="header_top">
