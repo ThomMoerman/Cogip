@@ -129,7 +129,7 @@ class Contact
             'company_id' => 'required|numeric',
             'email' => 'required|email',
             'phone' => 'required',
-        ]);
+        ]); 
 
         $validation->validate();
 

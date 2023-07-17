@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h1>New Company</h1>
+    <h1>New Company</h1> 
 
     <form action="/companies_add" method="POST">
         <label for="name">Name:</label>

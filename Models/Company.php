@@ -139,7 +139,7 @@ class Company
         $company = $stmt->fetch(\PDO::FETCH_ASSOC);
 
         return $company;
-    }
+    } 
 
     public function editCompany($id, $name, $type_id)
     {

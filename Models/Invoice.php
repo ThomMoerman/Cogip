@@ -115,7 +115,7 @@ class Invoice
         $statement->execute();
     }
     public function editInvoice($ref, $id_company, $id)
-    {
+    { 
         $validation = $this->validator->make([
             'ref' => $ref,
             'id_company' => $id_company,

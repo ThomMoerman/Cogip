@@ -116,4 +116,4 @@ class AuthController extends Controller
         header('Location: /login?successMessage=' . urlencode($successMessage));
         exit();
     }
-}
+} 

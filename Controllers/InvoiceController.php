@@ -80,7 +80,7 @@ class InvoiceController extends Controller
     public function update($id)
     {
         $invoiceModel = new Invoice();
-        $ref = $_POST['ref'];
+        $ref = $_POST['ref']; 
         $id_company = $_POST['id_company'];
 
         $errors = $invoiceModel->editInvoice($ref, $id_company, $id);
