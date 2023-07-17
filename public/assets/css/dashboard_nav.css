@@ -23,39 +23,38 @@
   text-align: center;
   padding: 0 0 2vh 0;
 }
-#dashboard__navbar .navbar__buttons .nav {
-  padding: 20px 5px 0 5px;
-}
 #dashboard__navbar .navbar__buttons .btn_dashboard {
   background-image: url("../img/dashboard_logo.svg");
-  background-size: 30%;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
 }
 #dashboard__navbar .navbar__buttons .btn_invoices {
   background-image: url("../img/invoices_logo.svg");
-  background-size: 30%;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
 }
 #dashboard__navbar .navbar__buttons .btn_companies {
   background-image: url("../img/companies_logo.svg");
-  background-size: 30%;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
 }
 #dashboard__navbar .navbar__buttons .btn_contacts {
   background-image: url("../img/contacts_logo.svg");
-  background-size: 30%;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
 }
 #dashboard__navbar .navbar__buttons .nav {
   border: 0;
   background-color: unset;
+  padding: 20px 5px 0 5px;
 }
 #dashboard__navbar .navbar__buttons .nav:hover {
   cursor: pointer;
+  color: rgb(90, 0, 128);
 }
 
 body {
