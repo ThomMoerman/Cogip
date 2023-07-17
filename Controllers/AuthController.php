@@ -95,21 +95,25 @@ class AuthController extends Controller
 
     public function register()
     {
-        // Récupérez les données du formulaire d'inscription
         $firstName = $_POST['firstName'];
         $lastName = $_POST['lastName'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $roleId = 2; 
+        $roleId = 2;
 
-        // Créez une instance du modèle User
         $userModel = new User();
 
-        // Appelez la méthode createUser du modèle User pour créer un nouvel utilisateur
-        $userId = $userModel->createUser($firstName, $roleId, $lastName, $email, $password);
+        $result = $userModel->createUser($firstName, $roleId, $lastName, $email, $password);
 
-        // Redirigez vers la page de connexion ou une autre page appropriée après l'inscription
-        header('Location: /login');
+        if (is_array($result)) {
+            $errorMessages = $result;
+            return $this->view('register', ['errorMessages' => $errorMessages]);
+        }
+
+        $successMessage = 'Your account has been created, log in to see our functionalities';
+        
+        // Redirigez vers la page de connexion en passant le message de succès en tant que variable
+        header('Location: /login?successMessage=' . urlencode($successMessage));
         exit();
     }
 }

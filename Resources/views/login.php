@@ -34,6 +34,13 @@
                 <?php endif; ?>
             </div>
         <?php endif; ?>
+        <?php if (isset($_GET['successMessage'])): ?>
+            <div class="success-message">
+                <p>
+                    <?php echo $_GET['successMessage']; ?>
+                </p>
+            </div>
+        <?php endif; ?>
     </main>
 </body>
 
