@@ -100,16 +100,16 @@ class ContactController extends Controller
         $email = $_POST['email'];
         $phone = $_POST['phone'];
 
-        // Créez une instance du modèle Contact
         $contactModel = new Contact();
 
-        // Appelez la méthode deletecontact pour supprimer le contact spécifié par l'ID
-        $contactModel->newContact($name, $company_id, $email, $phone);
+        $errors = $contactModel->newContact($name, $company_id, $email, $phone);
 
-        // Redirigez vers la page index des contacts après la suppression
+        if ($errors) {
+            return $this->view('new_contact', ['errors' => $errors]);
+        }
+
         header('Location: /dashboard');
     }
-	
 	public function showContactForm(){
         return $this->view('new_contact');
     }
