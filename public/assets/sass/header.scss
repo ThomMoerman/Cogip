@@ -129,9 +129,9 @@ header{
           display: flex;
         img{ 
           justify-self: center;
-          min-width: 95%;
-          transform: translateY(10px);
-          min-height: 130px;
+          min-width: 95vw;
+          transform: scaleY(150px);
+          
         }
       }
     }

@@ -180,9 +180,8 @@ header .header_bottom #white_rectangle {
   }
   header .header_bottom #white_rectangle img {
     justify-self: center;
-    min-width: 95%;
-    transform: translateY(10px);
-    min-height: 130px;
+    min-width: 95vw;
+    transform: scaleY(150px);
   }
 }
 header .header_all_page {
