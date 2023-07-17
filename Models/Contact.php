@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Core\DatabaseConnection;
+use Rakit\Validation\Validator;
+
 
 class Contact
 {

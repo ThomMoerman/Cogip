@@ -14,6 +14,13 @@
         <input type="number" id="id_company" name="id_company" required value="<?php echo $_GET['id_company'] ?>">
         <input type="submit" name="send" value="send">
     </form>
+    <?php if (isset($errors) && !empty($errors)): ?>
+    <div class="error-messages">
+        <?php foreach ($errors as $error): ?>
+            <p><?php echo $error; ?></p>
+        <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
 </body>
 
 </html>

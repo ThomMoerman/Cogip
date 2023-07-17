@@ -70,41 +70,42 @@ class InvoiceController extends Controller
     }
     public function delete($id)
     {
-        // Créez une instance du modèle Contact
         $invoiceModel = new Invoice();
 
-        // Appelez la méthode deleteContact pour supprimer le contact spécifié par l'ID
         $invoiceModel->deleteInvoice($id);
 
-        // Redirigez vers la page index des contacts après la suppression
         header('Location: /dashboard');
         exit();
     }
     public function update($id)
     {
-        // Créez une instance du modèle Contact
         $invoiceModel = new Invoice();
         $ref = $_POST['ref'];
         $id_company = $_POST['id_company'];
 
-        // Appelez la méthode deleteinvoice pour supprimer le invoice spécifié par l'ID
-        $invoiceModel->editInvoice($ref, $id_company, $id);
+        $errors = $invoiceModel->editInvoice($ref, $id_company, $id);
 
-        // Redirigez vers la page index des contacts après la suppression
+        if ($errors) {
+            return $this->view('edit_invoice', ['errors' => $errors]);
+        }
+
         header('Location: /dashboard');
     }
+
     public function add()
     {
         $ref = $_POST['ref'];
         $due_date = $_POST['due_date'];
         $company_id = $_POST['company_id'];
-        // Créez une instance du modèle Contact
+
         $invoiceModel = new Invoice();
 
-        // Appelez la méthode deleteinvoice pour supprimer le invoice spécifié par l'ID
-        $invoiceModel->newInvoice($ref, $due_date, $company_id);
+        $errors = $invoiceModel->newInvoice($ref, $due_date, $company_id);
 
-        // Redirigez vers la page index des contacts après la suppression
+        if ($errors) {
+            return $this->view('new_invoice', ['errors' => $errors]);
+        }
+
         header('Location: /dashboard');
     }
 
