@@ -81,42 +81,39 @@ class ContactController extends Controller
     }
     public function update($id)
     {
-        // Créez une instance du modèle Contact
         $contactModel = new Contact();
         $name = $_POST['name'];
         $company_id = $_POST['company_id'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
 
-        // Appelez la méthode deletecontact pour supprimer le contact spécifié par l'ID
-        $contactModel->editContact($id, $name, $company_id, $email, $phone);
+        $errors = $contactModel->editContact($id, $name, $company_id, $email, $phone);
 
-        // Redirigez vers la page index des contacts après la suppression
+        if ($errors) {
+            return $this->view('edit_contact', ['errors' => $errors]);
+        }
+
         header('Location: /dashboard');
     }
+
     public function add()
     {
         $name = $_POST['name'];
-        $company_name = $_POST['company_name'];
+        $company_id = $_POST['company_id'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
 
         $contactModel = new Contact();
 
-        $companyModel = new Company();
-        $company = $companyModel->getCompanyByName($company_name); // Implement this method in your Company model
+        $errors = $contactModel->newContact($name, $company_id, $email, $phone);
 
-        if ($company) {
-            $company_id = $company['id'];
-            $contactModel->newContact($name, $company_id, $email, $phone);
-        } else {
-
+        if ($errors) {
+            return $this->view('new_contact', ['errors' => $errors]);
         }
 
         header('Location: /dashboard');
     }
-    public function showContactForm()
-    {
+	public function showContactForm(){
         return $this->view('new_contact');
     }
 }

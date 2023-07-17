@@ -63,7 +63,7 @@ class InvoiceController extends Controller
             'due_date' => $invoice['due_date'],
             'company_name' => $invoice['company_name'],
             'created_at' => $invoice['created_at']
-        ];
+        ]; 
 
         // Renvoyez les données à la vue appropriée pour l'affichage
         return $this->view('show_invoice', $data);
