@@ -39,6 +39,11 @@ body{
                                 height: 80px;
                                 font-size: 12px;
                             }
+                            span{
+                                @media (min-width:900px) {
+                                    margin-top: 3px;
+                                }
+                            }
                         }
                         .statistics__invoices{
                             background-color: $invoices_stat;
