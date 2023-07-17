@@ -89,16 +89,21 @@ class CompanyController extends Controller
     }
     public function update($id)
     {
-        // Créez une instance du modèle Contact
+        // Créez une instance du modèle Company
         $companyModel = new Company();
 
         $name = $_POST['name'];
         $type_id = $_POST['type_id'];
 
-        // Appelez la méthode deletecompany pour supprimer le company spécifié par l'ID
-        $companyModel->editCompany($id, $name, $type_id);
+        // Appelez la méthode editCompany pour mettre à jour l'entreprise
+        $errors = $companyModel->editCompany($id, $name, $type_id);
 
-        // Redirigez vers la page index des contacts après la suppression
+        if ($errors) {
+            // Si des erreurs se sont produites, affichez-les dans la vue appropriée (par exemple, edit_company)
+            return $this->view('edit_company', ['errors' => $errors]);
+        }
+
+        // Redirigez vers la page index des entreprises après la mise à jour
         header('Location: /dashboard');
     }
     public function add()
