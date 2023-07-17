@@ -125,11 +125,12 @@ header{
         justify-content: center;
         margin-right: auto;
         margin-left: auto;
-        @media (min-width:1800px){
+        @media (min-width:1200px){
           display: flex;
         img{ 
           justify-self: center;
           min-width: 95%;
+          transform: translateY(10px);
           min-height: 130px;
         }
       }
