@@ -13,7 +13,7 @@ main{
         align-self: center;
         margin: 40px 0 40px 0 ;
         @media (min-width : 900px){
-            width: 900px;
+            width: 90vw;
         }
         .title__filter{
             display: flex;
@@ -55,8 +55,11 @@ main{
             margin-bottom: 30px;
         }
         table{
+            
+            font-size: 20px;
             @media (min-width : 900px){
-                font-size: 20px;
+               
+                min-width: 80%;
             }
             th{
                 background-color: $yellow;
@@ -69,7 +72,7 @@ main{
             tr{
 
                 background-color: $row;
-                font-size: 12px;
+              
                 td{
                     color : $title_color;
                     font-weight: 600;
