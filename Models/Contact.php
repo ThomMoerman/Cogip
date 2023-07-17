@@ -3,14 +3,18 @@
 namespace App\Models;
 
 use App\Core\DatabaseConnection;
+use Rakit\Validation\Validator;
+
 
 class Contact
 {
     private $db;
+    private $validator;
 
     public function __construct()
     {
         $this->db = DatabaseConnection::getInstance();
+        $this->validator = new Validator();
     }
 
     public function getLatestContacts($limit)
@@ -71,6 +75,31 @@ class Contact
     }
     public function newContact($name, $company_id, $email, $phone)
     {
+        $validation = $this->validator->make([
+            'name' => $name,
+            'company_id' => $company_id,
+            'email' => $email,
+            'phone' => $phone,
+        ], [
+            'name' => 'required',
+            'company_id' => 'required|numeric',
+            'email' => 'required|email',
+            'phone' => 'required',
+        ]);
+
+        $validation->validate();
+
+        if ($validation->fails()) {
+            $errors = $validation->errors()->firstOfAll();
+
+            $errorMessages = [];
+            foreach ($errors as $field => $message) {
+                $errorMessages[] = ucfirst($field) . ': ' . $message;
+            }
+
+            return $errorMessages;
+        }
+
         $query = "INSERT INTO contacts (name, company_id, email, phone, created_at, updated_at) VALUES
         (:name, :company_id, :email, :phone, now(), now())";
         $statement = $this->db->prepare($query);
@@ -79,8 +108,8 @@ class Contact
         $statement->bindParam(':email', $email);
         $statement->bindParam(':phone', $phone);
         $statement->execute();
-        return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+
     public function deleteContact($id)
     {
         $query = "DELETE from contacts WHERE id = $id";
@@ -90,14 +119,41 @@ class Contact
     }
     public function editContact($id, $name, $company_id, $email, $phone)
     {
-        $query = "UPDATE contacts set name = :name, company_id= :company_id, email= :email, phone= :phone,updated_at = now() where id = :id";
+        $validation = $this->validator->make([
+            'name' => $name,
+            'company_id' => $company_id,
+            'email' => $email,
+            'phone' => $phone,
+        ], [
+            'name' => 'required',
+            'company_id' => 'required|numeric',
+            'email' => 'required|email',
+            'phone' => 'required',
+        ]);
+
+        $validation->validate();
+
+        if ($validation->fails()) {
+            $errors = $validation->errors()->firstOfAll();
+
+            // Formatage des messages d'erreur
+            $errorMessages = [];
+            foreach ($errors as $field => $message) {
+                $errorMessages[] = ucfirst($field) . ': ' . $message;
+            }
+
+            // Retourne les messages d'erreur à l'appelant
+            return $errorMessages;
+        }
+
+        $query = "UPDATE contacts SET name = :name, company_id = :company_id, email = :email, phone = :phone, updated_at = now() WHERE id = :id";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':name', $name, \PDO::PARAM_STR);
         $statement->bindValue(':company_id', $company_id, \PDO::PARAM_INT);
         $statement->bindValue(':email', $email, \PDO::PARAM_STR);
-        $statement->bindValue(':phone', $phone, \PDO::PARAM_INT);
+        $statement->bindValue(':phone', $phone, \PDO::PARAM_STR);
         $statement->bindValue(':id', $id, \PDO::PARAM_INT);
         $statement->execute();
-        return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+
 }

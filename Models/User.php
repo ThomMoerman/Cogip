@@ -3,14 +3,19 @@
 namespace App\Models;
 
 use App\Core\DatabaseConnection;
+use Rakit\Validation\Validator;
+
 
 class User
 {
     private $db;
+    private $validator;
+
 
     public function __construct()
     {
         $this->db = DatabaseConnection::getInstance();
+        $this->validator = new Validator();
     }
 
     public function getUsers()
@@ -34,8 +39,37 @@ class User
 
     public function createUser($firstName, $roleId, $lastName, $email, $password)
     {
+        $validation = $this->validator->make([
+            'firstName' => $firstName,
+            'roleId' => $roleId,
+            'lastName' => $lastName,
+            'email' => $email,
+            'password' => $password,
+        ], [
+            'firstName' => 'required',
+            'roleId' => 'required|numeric',
+            'lastName' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:6',
+        ]);
+
+        $validation->validate();
+
+        if ($validation->fails()) {
+            $errors = $validation->errors()->firstOfAll();
+
+            // Formatage des messages d'erreur
+            $errorMessages = [];
+            foreach ($errors as $field => $message) {
+                $errorMessages[] = ucfirst($field) . ': ' . $message;
+            }
+
+            // Retourne les messages d'erreur à l'appelant
+            return $errorMessages;
+        }
+
         $query = "INSERT INTO users (first_name, role_id, last_name, email, password, created_at, updated_at)
-                  VALUES (:firstName, :roleId, :lastName, :email, :password, NOW(), NOW())";
+                VALUES (:firstName, :roleId, :lastName, :email, :password, NOW(), NOW())";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':firstName', $firstName, \PDO::PARAM_STR);
         $statement->bindValue(':roleId', $roleId, \PDO::PARAM_INT);
@@ -46,6 +80,7 @@ class User
 
         return $this->db->lastInsertId();
     }
+
 
     public function updateUser($id, $firstName, $roleId, $lastName, $email, $password)
     {

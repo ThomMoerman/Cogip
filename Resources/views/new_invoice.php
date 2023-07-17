@@ -16,7 +16,7 @@
 
     <form action="/invoices_add" method="POST">
         <label for="ref">Ref:</label>
-        <input type="text" name="ref" id="ref" required><br>
+        <input type="text" name="ref" id="ref" ><br>
 
         <label for="due_date">Due Date:</label>
         <input type="date" name="due_date" id="due_date" required><br>
@@ -26,6 +26,13 @@
 
         <button type="submit">Create</button>
     </form>
+    <?php if (isset($errors) && !empty($errors)): ?>
+    <div class="error-messages">
+        <?php foreach ($errors as $error): ?>
+            <p><?php echo $error; ?></p>
+        <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
 </body>
 
 </html>
