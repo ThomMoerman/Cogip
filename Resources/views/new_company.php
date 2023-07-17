@@ -18,7 +18,11 @@
         <input type="text" name="name" id="name" required><br>
 
         <label for="type_id">Type:</label>
-        <input type="text" name="type_id" id="type_id" required><br>
+        <select name="type_id" id="type_id" required>
+            <option value="1">Client</option>
+            <option value="2">Supplier</option>
+        </select><br>
+
 
         <label for="country">Country:</label>
         <input type="text" name="country" id="country" required><br>
@@ -28,12 +32,14 @@
 
         <button type="submit">Create</button>
     </form>
-    <?php if(isset($errors) && !empty($errors)): ?>
-    <div class="error-messages">
-        <?php foreach($errors as $error): ?>
-            <p><?php echo $error; ?></p>
-        <?php endforeach; ?>
-    </div>
+    <?php if (isset($errors) && !empty($errors)): ?>
+        <div class="error-messages">
+            <?php foreach ($errors as $error): ?>
+                <p>
+                    <?php echo $error; ?>
+                </p>
+            <?php endforeach; ?>
+        </div>
     <?php endif; ?>
 </body>
 
