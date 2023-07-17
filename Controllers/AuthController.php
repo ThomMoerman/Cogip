@@ -4,42 +4,69 @@ namespace App\Controllers;
 
 use App\Models\User;
 use App\Core\Controller;
+use Rakit\Validation\Validator;
+
 
 class AuthController extends Controller
 {
+    private $validator;
+
     public function login()
     {   
+        $this->validator = new Validator();
+
         session_start();
         $email = $_POST['email'];
         $password = $_POST['password'];
-        
+
         // Validez les données, effectuez les vérifications nécessaires
+        $validation = $this->validator->make([
+            'email' => $email,
+            'password' => $password,
+        ], [
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $validation->validate();
+
+        if ($validation->fails()) {
+            // Si la validation échoue, récupérez les erreurs et redirigez vers la page de connexion avec les messages d'erreur
+            $errors = $validation->errors()->firstOfAll();
+            $errorMessages = implode(', ', $errors);
+            header('Location: /login?error=1&messages=' . urlencode($errorMessages));
+            exit();
+        }
 
         $userModel = new User();
-        
+
         // Vérifiez si l'utilisateur existe dans la base de données
         $user = $userModel->findUserByEmail($email);
-        
-        if ($user) {
-            // Vérifiez le mot de passe
-            if ($password === $user['password']) {
-                // Connexion réussie
-                
-                // Effectuez les opérations nécessaires, comme définir des variables de session
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['user_role'] = $user['role_id'];
 
-                // Redirigez vers la page d'accueil ou une autre page appropriée
-                header('Location: /');
-                exit();
-            }
+        if (!$user) {
+            // Utilisateur non trouvé
+            header('Location: /login?error=1&messages=User not found');
+            exit();
         }
-        
-        // Si la connexion a échoué, redirigez vers la page de connexion avec un message d'erreur
-        header('Location: /connexion?error=1');
-        exit();
+
+        // Vérifiez le mot de passe
+        if ($password === $user['password']) {
+            // Connexion réussie
+
+            // Effectuez les opérations nécessaires, comme définir des variables de session
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_role'] = $user['role_id'];
+
+            // Redirigez vers la page d'accueil ou une autre page appropriée
+            header('Location: /');
+            exit();
+        } else {
+            // Mot de passe incorrect
+            header('Location: /login?error=1&messages=Invalid Password');
+            exit();
+        }
     }
-    
+
     public function logout()
     {
         session_start();
