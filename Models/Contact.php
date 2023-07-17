@@ -136,13 +136,11 @@ class Contact
         if ($validation->fails()) {
             $errors = $validation->errors()->firstOfAll();
 
-            // Formatage des messages d'erreur
             $errorMessages = [];
             foreach ($errors as $field => $message) {
                 $errorMessages[] = ucfirst($field) . ': ' . $message;
             }
 
-            // Retourne les messages d'erreur à l'appelant
             return $errorMessages;
         }
 
