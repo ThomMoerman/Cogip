@@ -16,7 +16,7 @@
     <main>     
             <section id="page_profile">
             <h2 class="page__head"><?php echo $data['ref'] ?></h2>
-            <div class="color__band"></div>
+            <div class="color__band_invoice"></div>
             <div class="page_info">
                 <div class="info">               
                     <p class="info_title">Invoice N°:  </p> <p class="info_element ref"> <?php echo $data['ref'] ?></p>

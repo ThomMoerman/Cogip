@@ -19,9 +19,9 @@
                 <h2 class="page__head">
                 <?php echo $data['name'];?>
                 </h2>
-                <div class="color__band"></div>
+                <div class="color__band_company"></div>
             <div class="page_info">
-                 <div class="info">               
+                <div class="info">               
                     <p class="info_title">Name:  </p> <p class="info_element name">  <?php echo $data['name']; ?></p>
                 </div> 
                 <div class="info"> 
