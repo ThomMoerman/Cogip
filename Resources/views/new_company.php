@@ -28,7 +28,13 @@
 
         <button type="submit">Create</button>
     </form>
-
+    <?php if(isset($errors) && !empty($errors)): ?>
+    <div class="error-messages">
+        <?php foreach($errors as $error): ?>
+            <p><?php echo $error; ?></p>
+        <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
 </body>
 
 </html>

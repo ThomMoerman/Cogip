@@ -102,18 +102,24 @@ class CompanyController extends Controller
         header('Location: /dashboard');
     }
     public function add()
-    {
-        $name = $_POST['name'];
-        $type_id = $_POST['type_id'];
-        $country = $_POST['country'];
-        $tva = $_POST['tva'];
-        // Créez une instance du modèle Contact
-        $companyModel = new Company();
+{
+    $name = $_POST['name'];
+    $type_id = $_POST['type_id'];
+    $country = $_POST['country'];
+    $tva = $_POST['tva'];
 
-        // Appelez la méthode deletecompany pour supprimer le company spécifié par l'ID
-        $companyModel->newCompany($name, $type_id, $country, $tva);
+    // Créez une instance du modèle Company
+    $companyModel = new Company();
 
-        // Redirigez vers la page index des contacts après la suppression
-        header('Location: /dashboard');
+    // Appelez la méthode newCompany pour ajouter l'entreprise
+    $errors = $companyModel->newCompany($name, $type_id, $country, $tva);
+
+    if ($errors) {
+        // Si des erreurs se sont produites, affichez-les dans la vue new_company
+        return $this->view('new_company', ['errors' => $errors]);
     }
+
+    // Redirigez vers la page index des entreprises après l'ajout
+    header('Location: /dashboard');
+}
 }
