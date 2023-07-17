@@ -143,12 +143,37 @@ class Company
 
     public function editCompany($id, $name, $type_id)
     {
-        $query = "UPDATE companies set name = :name, type_id=:type_id,updated_at = now() where id = $id";
+        $validation = $this->validator->make([
+            'name' => $name,
+            'type_id' => $type_id,
+        ], [
+            'name' => 'required',
+            'type_id' => 'required|numeric',
+        ]);
+
+        $validation->validate();
+
+        if ($validation->fails()) {
+            $errors = $validation->errors()->firstOfAll();
+
+            // Formatage des messages d'erreur
+            $errorMessages = [];
+            foreach ($errors as $field => $message) {
+                $errorMessages[] = ucfirst($field) . ': ' . $message;
+            }
+
+            // Retourne les messages d'erreur à l'appelant
+            return $errorMessages;
+        }
+
+        $query = "UPDATE companies SET name = :name, type_id = :type_id, updated_at = now() WHERE id = :id";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':name', $name, \PDO::PARAM_STR);
         $statement->bindValue(':type_id', $type_id, \PDO::PARAM_INT);
+        $statement->bindValue(':id', $id, \PDO::PARAM_INT);
         $statement->execute();
     }
+
 }
 ;
 ?>
