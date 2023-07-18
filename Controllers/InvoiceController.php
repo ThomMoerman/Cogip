@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Models\Company;
 use App\Models\Invoice;
 
 class InvoiceController extends Controller
@@ -70,45 +71,62 @@ class InvoiceController extends Controller
     }
     public function delete($id)
     {
-        // Créez une instance du modèle Contact
         $invoiceModel = new Invoice();
 
-        // Appelez la méthode deleteContact pour supprimer le contact spécifié par l'ID
         $invoiceModel->deleteInvoice($id);
 
-        // Redirigez vers la page index des contacts après la suppression
         header('Location: /dashboard');
         exit();
     }
     public function update($id)
     {
-        // Créez une instance du modèle Contact
         $invoiceModel = new Invoice();
         $ref = $_POST['ref'];
         $id_company = $_POST['id_company'];
 
-        // Appelez la méthode deleteinvoice pour supprimer le invoice spécifié par l'ID
-        $invoiceModel->editInvoice($ref, $id_company, $id);
+        $errors = $invoiceModel->editInvoice($ref, $id_company, $id);
 
-        // Redirigez vers la page index des contacts après la suppression
+        if ($errors) {
+            return $this->view('edit_invoice', ['errors' => $errors]);
+        }
+
         header('Location: /dashboard');
     }
+
     public function add()
     {
         $ref = $_POST['ref'];
         $due_date = $_POST['due_date'];
-        $company_id = $_POST['company_id'];
-        // Créez une instance du modèle Contact
+        $company_name = $_POST['company_name'];
+
         $invoiceModel = new Invoice();
 
-        // Appelez la méthode deleteinvoice pour supprimer le invoice spécifié par l'ID
-        $invoiceModel->newInvoice($ref, $due_date, $company_id);
+        $companyModel = new Company();
+        $company = $companyModel->getCompanyByName($company_name);
 
-        // Redirigez vers la page index des contacts après la suppression
+        if ($company) {
+            $id_company = $company['id'];
+            $invoiceModel->newInvoice($ref, $id_company, $due_date);
+            // $errors = $invoiceModel->newInvoice($ref, $due_date, $id_company);
+        } else {
+            $error_message = "Company not found.";
+        }
+
+        if ($error_message) {
+            return $this->view('new_invoice', ['error_message' => $error_message]);
+        }
+
+        $errors = $invoiceModel->newInvoice($ref, $due_date, $id_company);
+
+        if ($errors) {
+            return $this->view('new_invoice', ['errors' => $errors]);
+        }
+
         header('Location: /dashboard');
     }
 
-    public function showInvoiceForm(){
+    public function showInvoiceForm()
+    {
         return $this->view('new_invoice');
     }
 }

@@ -1,1 +1,8 @@
-/*# sourceMappingURL=dashboard_main.css.map */
+main {
+  padding-left: 200px;
+}
+@media (max-width: 599px) {
+  main {
+    padding-left: unset;
+  }
+}/*# sourceMappingURL=dashboard_main.css.map */

@@ -11,6 +11,10 @@ class ComposerStaticInit682b111ed6cc892341334c304ccdddbf
         array (
             'Whoops\\' => 7,
         ),
+        'R' => 
+        array (
+            'Rakit\\Validation\\' => 17,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -25,6 +29,10 @@ class ComposerStaticInit682b111ed6cc892341334c304ccdddbf
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Rakit\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rakit/validation/src',
         ),
         'Psr\\Log\\' => 
         array (
@@ -46,12 +54,17 @@ class ComposerStaticInit682b111ed6cc892341334c304ccdddbf
         ),
     );
 
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit682b111ed6cc892341334c304ccdddbf::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit682b111ed6cc892341334c304ccdddbf::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit682b111ed6cc892341334c304ccdddbf::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit682b111ed6cc892341334c304ccdddbf::$classMap;
 
         }, null, ClassLoader::class);
     }

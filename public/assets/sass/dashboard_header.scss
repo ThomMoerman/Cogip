@@ -1,0 +1,92 @@
+@import './variables_footer.scss'; 
+
+header{
+    background-color: $dashboard_bg;
+    @media (min-width:900px) {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section__page__name{
+        text-align: center;
+        @media (min-width:900px){
+            text-align: left;
+            // padding-left: 50px;
+            padding: 30px 0 50px 0px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        h1{
+            font-weight: 900;
+            font-size: 30px;
+            padding: 30px 0 10px 0;
+            font-family: $inter_police;
+            @media (min-width:900px) {
+                padding-top: 0;
+            }
+        }
+        p{
+            font-weight: 300;
+            font-size: 15px;
+            padding: 10px 0 30px 0;
+            font-family: $inter_police;
+            @media (min-width:900px) {
+                padding-bottom: 0;
+            }
+        }
+    }
+    .section__welcome__client{
+        background-color: $dashboard_header;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 10px;
+        font-family: $inter_police;
+        color: $white; 
+        margin: 0 20px 0 20px;
+        @media (min-width:900px) {
+            flex-direction: row;
+            justify-content: space-around;
+            height: 206px;
+            width: 1100px;
+            margin: 0;
+        }
+        .welcome__client__text{
+            @media (min-width:900px) {
+                margin: auto;
+            }
+            h2{
+                padding: 30px 0 15px 0;
+                font-weight: 700;
+                font-size: 35px;
+                @media (min-width:900px) {
+                    padding: 0 0 15px 0;
+                    text-align: left;
+                }
+            }
+            p{
+                text-align: center;
+                font-size: 15px;
+                font-weight: 300;
+                padding-bottom: 30px;
+                margin: 0 20px 0 20px;
+                @media (min-width:900px) {
+                    padding-bottom: 0;
+                    margin-left: 0;
+                    max-width: 70%;
+                    text-align: left;
+                }
+            }
+        }
+        img{
+            max-width: 300px;
+            padding-bottom: 50px;
+            @media (min-width:900px) {
+                max-width: 100%;
+                transform: translateY(-180px);
+                padding-bottom: 0;
+            }
+        }
+    }
+}

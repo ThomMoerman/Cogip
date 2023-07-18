@@ -17,6 +17,7 @@
     require '../Resources/Include/header_home.php'
         ?>
     <main>
+
         <?php require 'table_function.php'; ?>
         <article class="section invoices__table_section">
             <h3>Last invoices</h3>

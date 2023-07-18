@@ -1,0 +1,111 @@
+@import './variables_footer.scss'; 
+@import './mixin_footer.scss'; 
+
+body{
+    background-color: $dashboard_bg;
+    main{
+        margin: 0 20px 0 20px;
+        .dashboard__data{
+            @media (min-width:900px){
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 35px;
+                margin-top: 50px;
+            }
+            .data__statistics__contacts{
+                display: flex;
+                flex-direction: column;
+                .statistics{
+                    .statistics__list{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        @media (min-width:900px) {
+                            justify-content: space-evenly;
+                            padding-bottom: 30px;
+                        }
+                        li{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            @include stat; 
+                            width: 60px;
+                            height: 60px;
+                            margin: 20px;
+                            @media (min-width:900px) {
+                                width: 80px;
+                                height: 80px;
+                                font-size: 12px;
+                            }
+                            span{
+                                @media (min-width:900px) {
+                                    margin-top: 3px;
+                                }
+                            }
+                        }
+                        .statistics__invoices{
+                            background-color: $invoices_stat;
+                        }
+                        .statistics__contacts{
+                            background-color: $contacts_stat;
+                        }
+                        .statistics__companies{
+                            background-color: $companies_stat;
+                        }
+                    }
+                }
+            }
+            .section{
+                background-color: $white;
+                border-radius: 10px;
+                padding: 15px;
+                margin: 20px 0 20px 0;
+                @media (min-width:900px) {
+                    max-width: 500px;
+                    margin: 0 0 35px 0; 
+                    padding-bottom: 0;
+                }
+                h2{
+                    font-weight: 700;
+                    font-size: 18px;
+                    font-family: $inter_police;
+                    margin-bottom: 15px;
+                    @media (min-width:900px) {
+                        margin-top: 15px;
+                        margin-bottom: 20px;
+                    }
+                }
+                table{
+                    max-width: fit-content;
+                    font-family: $inter_police;
+                    margin-top: 20px;
+                    th{
+                        font-size: 12px;
+                        font-weight: 700;
+                        text-align: left;
+                        height: 30px;
+                        @media (min-width:900px) {
+                            font-size: 15px;
+                            height: 50px;
+                        }
+                    }
+                    td{
+                        width: 350px;
+                        height: 30px;
+                        font-size: 12px;
+                        @media (min-width:900px) {
+                            font-size: 15px;
+                            height: 50px;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $title_color; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

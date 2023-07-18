@@ -1,0 +1,113 @@
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
+header {
+  background-color: #e7e7e7;
+}
+@media (min-width: 900px) {
+  header {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+header .section__page__name {
+  text-align: center;
+}
+@media (min-width: 900px) {
+  header .section__page__name {
+    text-align: left;
+    padding: 30px 0 50px 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+header .section__page__name h1 {
+  font-weight: 900;
+  font-size: 30px;
+  padding: 30px 0 10px 0;
+  font-family: inter;
+}
+@media (min-width: 900px) {
+  header .section__page__name h1 {
+    padding-top: 0;
+  }
+}
+header .section__page__name p {
+  font-weight: 300;
+  font-size: 15px;
+  padding: 10px 0 30px 0;
+  font-family: inter;
+}
+@media (min-width: 900px) {
+  header .section__page__name p {
+    padding-bottom: 0;
+  }
+}
+header .section__welcome__client {
+  background-color: #9698D6;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  font-family: inter;
+  color: #FFFFFF;
+  margin: 0 20px 0 20px;
+}
+@media (min-width: 900px) {
+  header .section__welcome__client {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 206px;
+    width: 1100px;
+    margin: 0;
+  }
+}
+@media (min-width: 900px) {
+  header .section__welcome__client .welcome__client__text {
+    margin: auto;
+  }
+}
+header .section__welcome__client .welcome__client__text h2 {
+  padding: 30px 0 15px 0;
+  font-weight: 700;
+  font-size: 35px;
+}
+@media (min-width: 900px) {
+  header .section__welcome__client .welcome__client__text h2 {
+    padding: 0 0 15px 0;
+    text-align: left;
+  }
+}
+header .section__welcome__client .welcome__client__text p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  padding-bottom: 30px;
+  margin: 0 20px 0 20px;
+}
+@media (min-width: 900px) {
+  header .section__welcome__client .welcome__client__text p {
+    padding-bottom: 0;
+    margin-left: 0;
+    max-width: 70%;
+    text-align: left;
+  }
+}
+header .section__welcome__client img {
+  max-width: 300px;
+  padding-bottom: 50px;
+}
+@media (min-width: 900px) {
+  header .section__welcome__client img {
+    max-width: 100%;
+    transform: translateY(-180px);
+    padding-bottom: 0;
+  }
+}/*# sourceMappingURL=dashboard_header.css.map */
