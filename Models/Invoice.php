@@ -63,8 +63,9 @@ class Invoice
     }
     public function getPaginatedInvoices($offset, $perPage)
     {
-        $query = "SELECT invoices.*, types.name AS type_name FROM invoices 
-        LEFT JOIN types ON invoices.id_company = types.id 
+        $query = "SELECT invoices.*, companies.name AS company_name
+        FROM invoices 
+        LEFT JOIN companies ON invoices.id_company = companies.id
         ORDER BY invoices.id ASC 
         LIMIT :offset, :perPage";
         $statement = $this->db->prepare($query);
