@@ -6,18 +6,54 @@
   font-family: inter;
   src: url("../font/Inter-VariableFont_slnt,wght.ttf");
 }
-.color__band {
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
+.color__band_contact {
+  transform: translate(150px, -55px);
   background-color: #F9DE4E;
   width: 150px;
-  transform: translate(150px, -55px);
   height: 25px;
   position: absolute;
   z-index: -1;
 }
 @media (min-width: 600px) {
-  .color__band {
+  .color__band_contact {
     width: 280px;
     transform: translate(20px, -65px);
+  }
+}
+
+.color__band_company {
+  background-color: #F9DE4E;
+  width: 150px;
+  height: 25px;
+  position: absolute;
+  z-index: -1;
+  transform: translate(60px, 35px);
+}
+@media (min-width: 900px) {
+  .color__band_company {
+    transform: translate(30px, 30px);
+  }
+}
+
+.color__band_invoice {
+  background-color: #F9DE4E;
+  width: 150px;
+  height: 25px;
+  position: absolute;
+  z-index: -1;
+  transform: translate(150px, 15px);
+}
+@media (min-width: 900px) {
+  .color__band_invoice {
+    transform: translate(25px, 10px);
   }
 }
 
@@ -30,6 +66,7 @@
   #page_profile {
     margin-left: 2vw;
     padding: 80px;
+    justify-content: flex-start;
   }
 }
 #page_profile h2 {
@@ -73,20 +110,11 @@
   }
 }
 
-.page_profile {
-  display: flex;
-  padding-top: 30px;
-}
-@media (min-width: 900px) {
-  .page_profile {
-    flex-direction: row;
-  }
-}
-.page_profile .page__head {
+#page_profile .page__head {
   font-weight: 900;
   font-size: 25px;
 }
-.page_profile .page_info {
+#page_profile .page_info {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   color: #000000;
@@ -95,21 +123,22 @@
   margin-right: auto;
 }
 @media (min-width: 600px) {
-  .page_profile .page_info {
+  #page_profile .page_info {
     width: fit-content;
     flex-direction: row;
+    margin-left: 0;
   }
 }
 @media (min-width: 900px) {
-  .page_profile .page_info p {
+  #page_profile .page_info p {
     display: flex;
     flex-wrap: wrap;
   }
 }
-.page_profile .page_info .information__label {
+#page_profile .page_info .information__label {
   font-weight: 900;
 }
-.page_profile .contact__image {
+#page_profile .contact__image {
   align-self: center;
 }
 

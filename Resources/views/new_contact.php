@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dashboard_nav.css" rel="stylesheet" type="text/css">
-    <script type="module" rel='javascript' src="assets/js/contact_form.js"></script>
+    <link href="assets/css/dashboard_header.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard_tab.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard_main.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard_form.css" rel="stylesheet" type="text/css">
     <title>New Contact</title>
 </head>
-
 <body>
     <h1>New Contact</h1>
 
@@ -43,7 +45,6 @@
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-
 </body>
 
 </html>

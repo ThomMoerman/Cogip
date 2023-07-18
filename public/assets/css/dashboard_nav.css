@@ -1,8 +1,24 @@
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
 #dashboard__navbar {
+  font-family: inter;
   position: sticky;
   top: 0;
   padding-top: 5vh;
   background-color: white;
+}
+@media (min-width: 600px) {
+  #dashboard__navbar {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+  }
 }
 #dashboard__navbar .navbar__admin_block {
   width: 132px;
@@ -19,49 +35,143 @@
 #dashboard__navbar .navbar__buttons {
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
+  margin-top: 40px;
+  width: 400px;
   text-align: center;
   padding: 0 0 2vh 0;
 }
-#dashboard__navbar .navbar__buttons .nav {
-  padding: 20px 5px 0 5px;
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 176px;
+    text-align: justify;
+    padding-left: 25px;
+  }
 }
 #dashboard__navbar .navbar__buttons .btn_dashboard {
   background-image: url("../img/dashboard_logo.svg");
-  background-size: 30%;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
+}
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .btn_dashboard {
+    background-position: 0px 0px;
+  }
+  #dashboard__navbar .navbar__buttons .btn_dashboard :hover {
+    filter: saturate(1);
+  }
 }
 #dashboard__navbar .navbar__buttons .btn_invoices {
   background-image: url("../img/invoices_logo.svg");
-  background-size: 30%;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
+}
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .btn_invoices {
+    background-position: 0px 0px;
+  }
+  #dashboard__navbar .navbar__buttons .btn_invoices :hover {
+    filter: saturate(1);
+  }
 }
 #dashboard__navbar .navbar__buttons .btn_companies {
   background-image: url("../img/companies_logo.svg");
-  background-size: 30%;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
+}
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .btn_companies {
+    background-position: 0px 0px;
+  }
+  #dashboard__navbar .navbar__buttons .btn_companies :hover {
+    filter: saturate(1);
+  }
 }
 #dashboard__navbar .navbar__buttons .btn_contacts {
   background-image: url("../img/contacts_logo.svg");
-  background-size: 30%;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position-x: center;
 }
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .btn_contacts {
+    background-position: 0px 0px;
+  }
+  #dashboard__navbar .navbar__buttons .btn_contacts :hover {
+    filter: saturate(1);
+  }
+}
 #dashboard__navbar .navbar__buttons .nav {
   border: 0;
-  background-color: unset;
+  padding: 30px 5px 0 5px;
+}
+@media (min-width: 600px) {
+  #dashboard__navbar .navbar__buttons .nav {
+    padding: 2px 5px 2px 40px;
+    margin-top: 28px;
+    border-right: 5px solid #9698D6;
+  }
 }
 #dashboard__navbar .navbar__buttons .nav:hover {
   cursor: pointer;
+  color: rgb(90, 0, 128);
 }
 
 body {
   background-color: rgb(241, 255, 255);
 }
 
-p {
-  padding-top: 50px;
+.navbar__hline {
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+.navbar__hline:last-of-type {
+  display: none;
+}
+@media (min-width: 600px) {
+  .navbar__hline:last-of-type {
+    display: block;
+    transform: translateY(160px);
+  }
+}
+
+.navbar__logout {
+  display: flex;
+  position: absolute;
+  width: 150px;
+  justify-content: space-between;
+  top: 10px;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .navbar__logout {
+    width: 180px;
+    margin-left: 10px;
+    transform: translateY(650px);
+  }
+}
+.navbar__logout img {
+  max-width: 60px;
+}
+@media (max-width: 599px) {
+  .navbar__logout img {
+    display: none;
+  }
+}
+.navbar__logout a {
+  color: rgb(150, 152, 214);
+}
+@media (min-width: 600px) {
+  .navbar__logout a {
+    margin-top: 20px;
+  }
+}
+.navbar__logout a :hover {
+  cursor: pointer;
+  color: aliceblue;
 }/*# sourceMappingURL=dashboard_nav.css.map */

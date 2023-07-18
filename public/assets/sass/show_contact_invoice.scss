@@ -1,4 +1,5 @@
 @import './variables_footer.scss'; 
+@import './mixin_footer.scss'; 
 
 
 @mixin default_spacing($spacing){
@@ -9,32 +10,38 @@
     font-size: $size;
 }
 
-
-.color__band{
-    background-color: $yellow;
-    width: 150px;
+.color__band_contact{
     transform: translate(150px, -55px);
+    @include colorBand; 
     @media (min-width:600px) {
         width: 280px;
         transform: translate(20px, -65px);
     }
-    height: 25px;
-    position: absolute;
-    z-index: -1;
-    
 }
+.color__band_company{
+    @include colorBand; 
+    transform: translate(60px, 35px);
+    @media (min-width:900px){
+        transform: translate(30px, 30px);
+    }
+}
+.color__band_invoice{
+    @include colorBand; 
+    transform: translate(150px, 15px);
+    @media (min-width:900px){
+        transform: translate(25px, 10px);
+    }
+}
+
 #page_profile{
-    // margin-left: auto;
     margin-right: auto;
-    // padding-left: 25px;
     display: flex;
     flex-direction: column;
     @media (min-width:900px) {
         margin-left: 2vw;
         padding: 80px ; 
+        justify-content: flex-start;
     }
-    //width: 250px;
-    // padding: 50px 0;
     h2{
     text-align: center;
     @media (min-width:600px) {
@@ -50,7 +57,6 @@
     text-transform: capitalize;
     font-weight: 700; 
     }
-  
     img{
         @include default_spacing(50px);
         align-self: center;
@@ -62,7 +68,6 @@
             z-index: -2;
             top: 350px;
             left: 55vw;
-            // padding-left: unset;
             padding-left: 40vw;
         }
         @media (min-width:900px){
@@ -73,12 +78,13 @@
     }
 }
 
-.page_profile{
-    display: flex;
-    padding-top: 30px;
-    @media (min-width:900px) {
-        flex-direction: row;
-    }
+#page_profile{
+    // display: flex;
+    // padding-top: 30px;
+    // @media (min-width:900px) {
+    //     // flex-direction: row;
+    //     flex-direction: column;
+    // }
     .page__head{
         font-weight: 900;
         font-size: 25px;
@@ -93,6 +99,7 @@
         @media (min-width:600px) {
             width: fit-content;
             flex-direction: row;
+            margin-left: 0;
         }
         p{
             @media (min-width:900px){

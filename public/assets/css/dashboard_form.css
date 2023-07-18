@@ -1,0 +1,38 @@
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
+#form_section {
+  font-family: inter;
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px 20px;
+  width: 71vw;
+}
+#form_section h3 {
+  font-weight: 700;
+}
+#form_section input {
+  margin-top: 15px;
+  padding: 5px 10px;
+  background-color: rgb(241, 255, 255);
+  width: 70vw;
+  border: none;
+  border-radius: 5px;
+}
+#form_section button {
+  margin-top: 15px;
+  padding: 5px 10px;
+  width: 70vw;
+  background-color: #9698D6;
+  color: white;
+  border: none;
+  text-align: left;
+}/*# sourceMappingURL=dashboard_form.css.map */

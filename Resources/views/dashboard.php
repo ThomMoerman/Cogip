@@ -6,105 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dashboard_nav.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/table.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard_header.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard_tab.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard_main.css" rel="stylesheet" type="text/css">
+
+</svg>
     <title>Dashboard</title>
 </head>
 
 <body>
-    <section id="dashboard__navbar">
-        <div class="navbar__admin_block">
-            <img src="assets/img/Avatar_two.svg" alt="profile pic">
-            <h3>John Doe</h3>
-        </div>
-        <hr>
-        <div class="navbar__buttons">
-            <button class="nav btn_dashboard">Dashboard</button>
-            <button class="nav btn_invoices">Invoices</button>
-            <button class="nav btn_companies">Companies</button>
-            <button class="nav btn_contacts">Contacts</button>
-        </div>
-    </section>
+<?php
+     require '../Resources/Include/navbar_dashboard.php'
+    ?>
     <main>
-        <section class="dashboard__header">
-            <div class="header_name"></div>
-            <h2>Dashboard</h2>
-            <p>dashboard/</p>
-            <div class="header_message">
-                <h3>Welcome back Henry!</h3>
-                <p>You can here add an invoice, a company and some contacts</p>
-                <img src="" alt="">
-            </div>
-            </div>
+        <?php
+            require '../Resources/Include/header_dashboard.php'
+        ?>
             <section class="dashboard__data">
-                <div class="section">
-                    <h2>Last Invoices</h2>
-                    <table id="invoicesTable">
-                        <tr>
-                            <th>Invoice Number</th>
-                            <th>Date</th>
-                            <th>Company</th>
-                        </tr>
-                        <?php foreach ($invoices as $invoice): ?>
+                <div class="data__statistics__contacts">
+                    <div class="section statistics">
+                        <h2>Statistics</h2>
+                        <ul class="statistics__list">
+                            <li class="statistics__invoices">
+                                <span>245</span>
+                                <span>Invoices</span>
+                            </li>
+                            <li class="statistics__contacts">
+                                <span>245</span>
+                                <span>Contacts</span>
+                            </li>
+                            <li class="statistics__companies">
+                                <span>245</span>
+                                <span>Companies</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section contacts">
+                        <h2>Last Contacts</h2>
+                        <hr>
+                        <table id="contactsTable">
                             <tr>
-                                <td><a
-                                        href="/edit-invoice/<?php echo $invoice['id']; ?>?id=<?php echo $invoice['id']; ?>&ref=<?php echo $invoice['ref']; ?>&id_company=<?php echo $invoice['id_company']; ?>"><?php echo $invoice['ref']; ?></a>
-                                </td>
-                                <td>
-                                    <?php echo $invoice['due_date']; ?>
-                                </td>
-                                <td><a
-                                        href="/edit-invoice/<?php echo $invoice['id']; ?>?id=<?php echo $invoice['id']; ?>&ref=<?php echo $invoice['ref']; ?>&id_company=<?php echo $invoice['id_company']; ?>"><?php echo $invoice['company_name']; ?></a></td>
-                                <td><a href="/delete-invoice/<?php echo $invoice['id']; ?>">delete</a></td>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <!-- <th>Company</th> -->
                             </tr>
-                        <?php endforeach; ?>
-                    </table>
+                            <?php foreach ($contacts as $contact): ?>
+                                <tr>
+                                    <td><a
+                                            href="/edit-contact/<?php echo $contact['id']; ?>?id=<?php echo $contact['id']; ?>&name=<?php echo $contact['name']; ?>&company_id=<?php echo $contact['company_id']; ?>&email=<?php echo $contact['email']; ?>&phone=<?php echo $contact['phone']; ?>"><?php echo $contact['name']; ?></a></td>
+                                    <td>
+                                        <?php echo $contact['phone']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $contact['email']; ?>
+                                    </td>
+                                        <!-- <td><a
+                                                href="/edit-contact/<?php echo $contact['id']; ?>?id=<?php echo $contact['id']; ?>&name=<?php echo $contact['name']; ?>&company_id=<?php echo $contact['company_id']; ?>&email=<?php echo $contact['email']; ?>&phone=<?php echo $contact['phone']; ?>"><?php echo $contact['company_name']; ?></a></td>
+                                        <td><a href="/delete-contact/<?php echo $contact['id']; ?>">delete</a></td> -->
+                                </tr>
+                            <?php endforeach; ?>
+                        </table>
+                    </div>
                 </div>
 
-                <div class="section">
-                    <h2>Last Companies</h2>
-                    <table id="companiesTable">
-                        <tr>
-                            <th>Company Name</th>
-                            <th>Type</th>
-                        </tr>
-                        <?php foreach ($companies as $company): ?>
+                <div class="data__invoices data__companies">
+                    <div class="section companies" >
+                        <h2>Last Companies</h2>
+                        <hr>
+                        <table id="companiesTable">
                             <tr>
-                                <td><a
-                                        href="/edit-company/<?php echo $company['id']; ?>?id=<?php echo $company['id']; ?>&name=<?php echo $company['name']; ?>&type_id=<?php echo $company['type_id']; ?>"><?php echo $company['name']; ?></a></td>
-                                <td>
-                                    <?php echo $company['company_type']; ?>
-                                </td>
-                                <td><a href="/delete-company/<?php echo $company['id']; ?>">delete</a></td>
+                                <th>Name</th>
+                                <th>TVA</th>
+                                <th>Country</th>
+                                <th>Delete</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </table>
-                </div>
-
-                <div class="section">
-                    <h2>Last Contacts</h2>
-                    <table id="contactsTable">
-                        <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Email</th>
-                            <th>Company</th>
-                        </tr>
-                        <?php foreach ($contacts as $contact): ?>
+                            <?php foreach ($companies as $company): ?>
+                                <tr>
+                                    <td><a
+                                            href="/edit-company/<?php echo $company['id']; ?>?id=<?php echo $company['id']; ?>&name=<?php echo $company['name']; ?>&type_id=<?php echo $company['type_id']; ?>"><?php echo $company['name']; ?></a></td>
+                                    <td>
+                                        <?php echo $company['company_type']; ?>
+                                    </td>
+                                    <td> <?php echo $company['country'];?> </a></td>
+                                    <td><a href="/delete-company/<?php echo $company['id']; ?>" class="delete">Delete</a></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </table>
+                    </div>
+                    <div class="section invoices">
+                        <h2>Last Invoices</h2>
+                        <hr>
+                        <table id="invoicesTable">
                             <tr>
-                                <td><a
-                                        href="/edit-contact/<?php echo $contact['id']; ?>?id=<?php echo $contact['id']; ?>&name=<?php echo $contact['name']; ?>&company_id=<?php echo $contact['company_id']; ?>&email=<?php echo $contact['email']; ?>&phone=<?php echo $contact['phone']; ?>"><?php echo $contact['name']; ?></a></td>
-                                <td>
-                                    <?php echo $contact['phone']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $contact['email']; ?>
-                                </td>
-                                <td><a
-                                        href="/edit-contact/<?php echo $contact['id']; ?>?id=<?php echo $contact['id']; ?>&name=<?php echo $contact['name']; ?>&company_id=<?php echo $contact['company_id']; ?>&email=<?php echo $contact['email']; ?>&phone=<?php echo $contact['phone']; ?>"><?php echo $contact['company_name']; ?></a></td>
-                                <td><a href="/delete-contact/<?php echo $contact['id']; ?>">delete</a></td>
+                                <th>Invoice Number</th>
+                                <th>Date</th>
+                                <th>Company</th>
+                                <th>Delete</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </table>
+                            <?php foreach ($invoices as $invoice): ?>
+                                <tr>
+                                    <td><a
+                                            href="/edit-invoice/<?php echo $invoice['id']; ?>?id=<?php echo $invoice['id']; ?>&ref=<?php echo $invoice['ref']; ?>&id_company=<?php echo $invoice['id_company']; ?>"><?php echo $invoice['ref']; ?></a>
+                                    </td>
+                                    <td>
+                                        <?php echo $invoice['due_date']; ?>
+                                    </td>
+                                    <td><a
+                                            href="/edit-invoice/<?php echo $invoice['id']; ?>?id=<?php echo $invoice['id']; ?>&ref=<?php echo $invoice['ref']; ?>&id_company=<?php echo $invoice['id_company']; ?>"><?php echo $invoice['company_name']; ?></a></td>
+                                    <td><a href="/delete-invoice/<?php echo $invoice['id']; ?>">Delete</a></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </table>
+                    </div>
                 </div>
             </section>
 

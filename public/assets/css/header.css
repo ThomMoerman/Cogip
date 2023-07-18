@@ -169,24 +169,19 @@ header .header_bottom #headline .headline_illustration {
   }
 }
 header .header_bottom #white_rectangle {
-  display: flex;
+  display: none;
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
 }
-@media (max-width: 400px) {
+@media (min-width: 1200px) {
   header .header_bottom #white_rectangle {
-    display: none;
-  }
-}
-@media (min-width: 900px) {
-  header .header_bottom #white_rectangle {
-    max-width: 95%;
-    height: 130px;
+    display: flex;
   }
   header .header_bottom #white_rectangle img {
     justify-self: center;
-    min-width: 100%;
+    min-width: 95vw;
+    transform: scaleY(150px);
   }
 }
 header .header_all_page {

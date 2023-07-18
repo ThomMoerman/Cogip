@@ -6,20 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dashboard_nav.css" rel="stylesheet" type="text/css">
-    <script type="module" rel='javascript' src="assets/js/invoice_form.js"></script>
+    <link href="assets/css/dashboard_header.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard_tab.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard_main.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/dashboard_form.css" rel="stylesheet" type="text/css">
     <title>New Invoice
     </title>
 </head>
 
 <body>
-    <h1>New Invoice</h1>
-
+<?php
+     require '../Resources/Include/navbar_dashboard.php'
+    ?>
+    <main>
+        <?php
+            require '../Resources/Include/header_dashboard.php'
+        ?>
+    <div id="form_section">
+    <h3>New Invoice</h3>
+    <hr class="form_hr">
     <form action="/invoices_add" method="POST">
-        <label for="ref">Ref:</label>
-        <input type="text" name="ref" id="ref"><br>
+      <!--   <label for="ref">Ref:</label> -->
+        <input type="text" name="ref" id="ref" placeholder="Reference" required><br>
 
-        <label for="due_date">Due Date:</label>
-        <input type="date" name="due_date" id="due_date" required><br>
+       <!--  <label for="due_date">Due Date:</label> -->
+        <input type="date" name="due_date" id="due_date" placeholder="Due date" required><br>
 
         <label for="company_name">Company:</label>
         <input type="text" name="company_name" id="company_name" required><br>
