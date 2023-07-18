@@ -11,25 +11,27 @@
 }
 
 .color__band_contact{
-    transform: translate(150px, -55px);
+    min-width: 250px;
+    transform: translate(100px, -65px);
     @include colorBand; 
     @media (min-width:600px) {
-        width: 280px;
-        transform: translate(20px, -65px);
+        transform: translate(100px, -65px);
     }
 }
 .color__band_company{
+    min-width: 250px;
     @include colorBand; 
-    transform: translate(60px, 35px);
+    transform: translate(60px, 25px);
     @media (min-width:900px){
-        transform: translate(30px, 30px);
+        transform: translate(30px, 20px);
     }
 }
 .color__band_invoice{
+    min-width: 250px;
     @include colorBand; 
-    transform: translate(150px, 15px);
+    transform: translate(150px, 25px);
     @media (min-width:900px){
-        transform: translate(25px, 10px);
+        transform: translate(100px, 35px);
     }
 }
 
@@ -58,23 +60,27 @@
     font-weight: 700; 
     }
     img{
+        min-width: 250px;
         @include default_spacing(50px);
         align-self: center;
-        @media (min-width:600px) {
-            @include default_spacing(0);
+        @media (min-width:600px) and (max-width:899px) {
             width: 200px;
             height: 200px;
             position: absolute;
             z-index: -2;
-            top: 350px;
-            left: 55vw;
-            padding-left: 40vw;
+            top: 320px;
+            left: 350px;
         }
         @media (min-width:900px){
-            top: 300px;
-            left:35vw;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: -2;
+            top: auto;
+            margin-left: 50px;
+            
         }
-        width: 120px;
+     
     }
 }
 
@@ -87,12 +93,10 @@
     // }
     .page__head{
         font-weight: 900;
-        font-size: 25px;
+        font-size: 40px;
     }
     .page_info{
-        background-color: rgba($color: #000000, $alpha: 0.1); 
-        border-radius: 20px;
-        color: $title_color;
+      
         padding: 20px 20px 10px 20px;
         margin-left: auto;
         margin-right: auto;
@@ -122,13 +126,14 @@
     margin-right: auto;
     .info_title{
         font-weight: 900; 
-        //font-size: 20px;
+        font-size: 20px;
         line-height: 0.8;
         font-family: $inter_police; 
     }
     .info_element{
         font-weight: 600;
         margin-left: 5px;
+        font-size: 20px;
         font-family: $inter_police;
     }
 }

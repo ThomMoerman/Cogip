@@ -15,7 +15,8 @@
   src: url("../font/Inter-VariableFont_slnt,wght.ttf");
 }
 .color__band_contact {
-  transform: translate(150px, -55px);
+  min-width: 250px;
+  transform: translate(100px, -65px);
   background-color: #F9DE4E;
   width: 150px;
   height: 25px;
@@ -24,36 +25,37 @@
 }
 @media (min-width: 600px) {
   .color__band_contact {
-    width: 280px;
-    transform: translate(20px, -65px);
+    transform: translate(100px, -65px);
   }
 }
 
 .color__band_company {
+  min-width: 250px;
   background-color: #F9DE4E;
   width: 150px;
   height: 25px;
   position: absolute;
   z-index: -1;
-  transform: translate(60px, 35px);
+  transform: translate(60px, 25px);
 }
 @media (min-width: 900px) {
   .color__band_company {
-    transform: translate(30px, 30px);
+    transform: translate(30px, 20px);
   }
 }
 
 .color__band_invoice {
+  min-width: 250px;
   background-color: #F9DE4E;
   width: 150px;
   height: 25px;
   position: absolute;
   z-index: -1;
-  transform: translate(150px, 15px);
+  transform: translate(150px, 25px);
 }
 @media (min-width: 900px) {
   .color__band_invoice {
-    transform: translate(25px, 10px);
+    transform: translate(100px, 35px);
   }
 }
 
@@ -87,37 +89,36 @@
   }
 }
 #page_profile img {
+  min-width: 250px;
   margin-bottom: 50px;
   align-self: center;
-  width: 120px;
 }
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 899px) {
   #page_profile img {
-    margin-bottom: 0;
     width: 200px;
     height: 200px;
     position: absolute;
     z-index: -2;
-    top: 350px;
-    left: 55vw;
-    padding-left: 40vw;
+    top: 320px;
+    left: 350px;
   }
 }
 @media (min-width: 900px) {
   #page_profile img {
-    top: 300px;
-    left: 35vw;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: -2;
+    top: auto;
+    margin-left: 50px;
   }
 }
 
 #page_profile .page__head {
   font-weight: 900;
-  font-size: 25px;
+  font-size: 40px;
 }
 #page_profile .page_info {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  color: #000000;
   padding: 20px 20px 10px 20px;
   margin-left: auto;
   margin-right: auto;
@@ -150,12 +151,14 @@
 }
 .info .info_title {
   font-weight: 900;
+  font-size: 20px;
   line-height: 0.8;
   font-family: inter;
 }
 .info .info_element {
   font-weight: 600;
   margin-left: 5px;
+  font-size: 20px;
   font-family: inter;
 }
 
@@ -194,9 +197,6 @@ p {
   font-family: inter;
   src: url("../font/Inter-VariableFont_slnt,wght.ttf");
 }
-main .page_profile {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 main .page_profile .page__head {
   font-family: inter;
   font-weight: 900;
@@ -213,6 +213,7 @@ main .section__contact {
     align-self: flex-start;
     justify-content: space-between;
     margin: 40px 0 40px 0;
+    padding-left: 130px;
   }
 }
 main .section__contact h2 {
@@ -233,14 +234,14 @@ main .section__contact h2 {
 }
 main .section__contact .contact__identity .person {
   margin: 15px 0 40px 0;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
   text-align: center;
   font-family: inter;
   font-size: 20px;
 }
 @media (min-width: 900px) {
   main .section__contact .contact__identity .person {
-    background-color: rgba(0, 0, 0, 0.01);
-    border-radius: 15px;
     margin-right: 150px;
     display: flex;
     flex-direction: row;
@@ -280,4 +281,12 @@ h2 {
   margin-bottom: 25px;
   font-weight: 900;
   font-family: inter;
+}
+
+.file_pic {
+  position: absolute;
+  z-index: -5;
+  max-width: 120px;
+  right: 0;
+  transform: translateY(150px);
 }/*# sourceMappingURL=show_company.css.map */

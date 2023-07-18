@@ -15,7 +15,10 @@
     <main>
         <section class="section invoices_table_section">
         <div class="title__filter">
-                <div class="title__section"><h3>All invoices</h3></div>
+                <div class="title__section">
+                    <h3>All invoices</h3>
+                    <div class="color__band_company"></div>
+                </div>
                 <div class="filter__section"></div>
             </div>
             <table class="invoices_table" id='list_table'>

@@ -1,6 +1,9 @@
 @import'./variables_footer.scss';
 @import'./mixin_footer.scss'; 
 
+
+
+
 main{
     display: flex;
     flex-direction: column;
@@ -58,9 +61,11 @@ main{
             margin-bottom: 30px;
         }
         table{
+            min-width: 80vw;
+            font-size: 12px;
             
-            font-size: 20px;
             @media (min-width : 900px){
+                font-size: 20px;
                 min-width: 85vw;
             }
             th{
@@ -134,5 +139,15 @@ main{
 
             }
         }
+    }
+}
+
+.color__band_company{
+    min-width: 250px;
+    transform: translate(50px, -50px);
+    @include colorBand; 
+    @media (min-width:600px) {
+        min-width: 400px;
+        transform: translate(100px, -50px);
     }
 }

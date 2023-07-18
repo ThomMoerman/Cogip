@@ -8,6 +8,7 @@
     <link href="assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="assets/css/welcome.css" rel="stylesheet" type="text/css">
     <link href="assets/css/table.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/nav_location.js" defer></script>
     <title>Cogip - Welcome</title>
 </head>
 
@@ -29,6 +30,8 @@
                 tableInvoices($invoices);
                 ?>
             </table>
+            <img src="assets/img/file.png" alt="data file shown"
+                    class="file_pic">
         </article>
         <article class="section contacts__table_section">
             <h3>Last contacts</h3>
@@ -42,6 +45,8 @@
                 tableContacts($contacts);
                 ?>
             </table>
+            <img src="assets/img/lightbulb.png" alt="lightbulb picture"
+                    class="light_pic">
         </article>
         <article class="section companies__table_section">
             <h3>Last companies</h3>
