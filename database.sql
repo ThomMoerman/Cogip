@@ -1,6 +1,7 @@
 -- Commande pour démarrer le serveur php : php -S localhost:8000 -t public
 
-DROP DATABASE cogipDB;
+DROP DATABASE IF EXISTS cogipDB;
+
 -- Création de la base de données
 CREATE DATABASE IF NOT EXISTS cogipDB;
 
@@ -34,6 +35,7 @@ CREATE TABLE IF NOT EXISTS companies (
 CREATE TABLE IF NOT EXISTS invoices (
     id INT AUTO_INCREMENT PRIMARY KEY,
     ref VARCHAR(50),
+    due_date DATETIME,
     id_company INT,
     created_at DATETIME,
     updated_at DATETIME,
@@ -194,7 +196,7 @@ INSERT INTO contacts (name, company_id, email, phone, created_at, updated_at) VA
 
 INSERT INTO roles (name, created_at, updated_at) VALUES
 ('ADMIN', NOW(), NOW()),
-('USER', NOW(), NOW())
+('USER', NOW(), NOW()),
 ('MODERATOR', NOW(), NOW());
 
 INSERT INTO users (first_name, role_id, last_name, email, password, created_at, updated_at) VALUES
@@ -220,6 +222,7 @@ INSERT INTO permissions (name, created_at, updated_at) VALUES
 ('Permission 8', NOW(), NOW()),
 ('Permission 9', NOW(), NOW()),
 ('Permission 10', NOW(), NOW());
+
 
 INSERT INTO roles_permission (permission_id, role_id) VALUES
 (1, 1),
