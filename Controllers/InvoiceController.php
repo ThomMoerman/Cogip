@@ -109,8 +109,11 @@ class InvoiceController extends Controller
             $invoiceModel->newInvoice($ref, $id_company, $due_date);
             // $errors = $invoiceModel->newInvoice($ref, $due_date, $id_company);
         } else {
-            echo "Company not found.";
-            exit;
+            $error_message = "Company not found.";
+        }
+
+        if ($error_message) {
+            return $this->view('new_invoice', ['error_message' => $error_message]);
         }
 
         $errors = $invoiceModel->newInvoice($ref, $due_date, $id_company);

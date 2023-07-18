@@ -122,8 +122,11 @@ class ContactController extends Controller
             $company_id = $company['id'];
             $contactModel->newContact($name, $company_id, $email, $phone);
         } else {
-            echo "Company not found.";
-            exit;
+            $error_message = "Company not found.";
+        }
+
+        if ($error_message) {
+            return $this->view('new_contact', ['error_message' => $error_message]);
         }
 
         $errors = $contactModel->newContact($name, $company_id, $email, $phone);
