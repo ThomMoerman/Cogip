@@ -20,6 +20,12 @@
         <label for="company_name">Company:</label>
         <input type="text" name="company_name" id="company_name" required><br>
 
+        <?php if (isset($error_message) && !empty($error_message)): ?>
+            <div class="error-message">
+                <?php echo $error_message; ?>
+            </div>
+        <?php endif; ?>
+
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" required><br>
 
