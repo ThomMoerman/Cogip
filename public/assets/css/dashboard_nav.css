@@ -119,16 +119,16 @@ p {
   padding-top: 50px;
 }
 
-hr {
+.navbar__hline {
   opacity: 0.5;
   margin-right: 5px;
 }
 
-hr:last-of-type {
+.navbar__hline:last-of-type {
   display: none;
 }
 @media (min-width: 600px) {
-  hr:last-of-type {
+  .navbar__hline:last-of-type {
     display: block;
     transform: translateY(160px);
   }
