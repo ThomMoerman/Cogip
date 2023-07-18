@@ -1,0 +1,11 @@
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
+form {
+  font: inter;
+}/*# sourceMappingURL=dashboard_new.css.map */

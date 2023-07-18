@@ -1,4 +1,13 @@
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
 #dashboard__navbar {
+  font-family: inter;
   position: sticky;
   top: 0;
   padding-top: 5vh;
@@ -35,9 +44,9 @@
   #dashboard__navbar .navbar__buttons {
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: 176px;
     text-align: justify;
-    margin-left: 30px;
+    padding-left: 25px;
   }
 }
 #dashboard__navbar .navbar__buttons .btn_dashboard {
@@ -48,7 +57,7 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .btn_dashboard {
-    background-position: 0px 13px;
+    background-position: 0px 0px;
   }
   #dashboard__navbar .navbar__buttons .btn_dashboard :hover {
     filter: saturate(1);
@@ -62,7 +71,7 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .btn_invoices {
-    background-position: 0px 13px;
+    background-position: 0px 0px;
   }
   #dashboard__navbar .navbar__buttons .btn_invoices :hover {
     filter: saturate(1);
@@ -76,7 +85,7 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .btn_companies {
-    background-position: 0px 13px;
+    background-position: 0px 0px;
   }
   #dashboard__navbar .navbar__buttons .btn_companies :hover {
     filter: saturate(1);
@@ -90,7 +99,7 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .btn_contacts {
-    background-position: 0px 13px;
+    background-position: 0px 0px;
   }
   #dashboard__navbar .navbar__buttons .btn_contacts :hover {
     filter: saturate(1);
@@ -98,12 +107,13 @@
 }
 #dashboard__navbar .navbar__buttons .nav {
   border: 0;
-  background-color: unset;
   padding: 30px 5px 0 5px;
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .nav {
-    padding: 15px 5px 15px 40px;
+    padding: 2px 5px 2px 40px;
+    margin-top: 28px;
+    border-right: 5px solid #9698D6;
   }
 }
 #dashboard__navbar .navbar__buttons .nav:hover {
