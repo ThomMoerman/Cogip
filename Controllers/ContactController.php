@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Models\Company;
 use App\Models\Contact;
 
 class ContactController extends Controller
@@ -80,37 +81,64 @@ class ContactController extends Controller
     }
     public function update($id)
     {
-        // Créez une instance du modèle Contact
         $contactModel = new Contact();
         $name = $_POST['name'];
-        $company_id = $_POST['company_id'];
+        $company_name = $_POST['company_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
 
-        // Appelez la méthode deletecontact pour supprimer le contact spécifié par l'ID
-        $contactModel->editContact($id, $name, $company_id, $email, $phone);
+        $companyModel = new Company();
+        $company = $companyModel->getCompanyByName($company_name);
 
-        // Redirigez vers la page index des contacts après la suppression
+        if ($company) {
+            $company_id = $company['id'];
+            $contactModel->newContact($name, $company_id, $email, $phone);
+        } else {
+
+        }
+
+        $errors = $contactModel->editContact($id, $name, $company_id, $email, $phone);
+
+        if ($errors) {
+            return $this->view('edit_contact', ['errors' => $errors]);
+        }
+
         header('Location: /dashboard');
     }
+
     public function add()
     {
         $name = $_POST['name'];
-        $company_id = $_POST['company_id'];
+        $company_name = $_POST['company_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
 
-        // Créez une instance du modèle Contact
         $contactModel = new Contact();
 
-        // Appelez la méthode deletecontact pour supprimer le contact spécifié par l'ID
-        $contactModel->newContact($name, $company_id, $email, $phone);
+        $companyModel = new Company();
+        $company = $companyModel->getCompanyByName($company_name);
 
-        // Redirigez vers la page index des contacts après la suppression
+        if ($company) {
+            $company_id = $company['id'];
+            $contactModel->newContact($name, $company_id, $email, $phone);
+        } else {
+            $error_message = "Company not found.";
+        }
+
+        if ($error_message) {
+            return $this->view('new_contact', ['error_message' => $error_message]);
+        }
+
+        $errors = $contactModel->newContact($name, $company_id, $email, $phone);
+
+        if ($errors) {
+            return $this->view('new_contact', ['errors' => $errors]);
+        }
+
         header('Location: /dashboard');
     }
-	
-	public function showContactForm(){
+    public function showContactForm()
+    {
         return $this->view('new_contact');
     }
 }

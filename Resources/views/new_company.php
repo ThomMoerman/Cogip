@@ -27,10 +27,11 @@
     <form action="/companies_add" method="POST">
      <!--    <label for="name">Name:</label> -->
         <input type="text" name="name" id="name" placeholder="Name" required><br>
-
-     <!--    <label for="type_id">Type:</label> -->
-        <input type="text" name="type_id" id="type_id" placeholder="Type" required><br>
-
+        <label for="type_id">Type:</label>
+        <select name="type_id" id="type_id" required>
+            <option value="1">Client</option>
+            <option value="2">Supplier</option>
+        </select><br>
     <!--     <label for="country">Country:</label> -->
         <input type="text" name="country" id="country" placeholder="Country" required><br>
 
@@ -39,8 +40,15 @@
 
         <button type="submit">Save</button>
     </form>
-</div>
-</main>
+    <?php if (isset($errors) && !empty($errors)): ?>
+        <div class="error-messages">
+            <?php foreach ($errors as $error): ?>
+                <p>
+                    <?php echo $error; ?>
+                </p>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 </body>
 
 </html>

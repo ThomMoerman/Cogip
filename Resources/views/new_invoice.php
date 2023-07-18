@@ -32,13 +32,26 @@
        <!--  <label for="due_date">Due Date:</label> -->
         <input type="date" name="due_date" id="due_date" placeholder="Due date" required><br>
 
-      <!--   <label for="company_id">Company:</label> -->
-        <input type="text" name="company_id" id="company_id" placeholder="Company" required><br>
+        <label for="company_name">Company:</label>
+        <input type="text" name="company_name" id="company_name" required><br>
+
+        <?php if (isset($error_message) && !empty($error_message)): ?>
+            <div class="error-message">
+                <?php echo $error_message; ?>
+            </div>
+        <?php endif; ?>
 
         <button type="submit">Create</button>
     </form>
-    </div>
-</main>
+    <?php if (isset($errors) && !empty($errors)): ?>
+        <div class="error-messages">
+            <?php foreach ($errors as $error): ?>
+                <p>
+                    <?php echo $error; ?>
+                </p>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 </body>
 
 </html>

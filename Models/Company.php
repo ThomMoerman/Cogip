@@ -3,14 +3,17 @@
 namespace App\Models;
 
 use App\Core\DatabaseConnection;
+use Rakit\Validation\Validator;
 
 class Company
 {
     private $db;
+    private $validator;
 
     public function __construct()
     {
         $this->db = DatabaseConnection::getInstance();
+        $this->validator = new Validator();
     }
 
     public function getLatestCompanies($limit)
@@ -82,6 +85,33 @@ class Company
     }
     public function newCompany($name, $type_id, $country, $tva)
     {
+        $validation = $this->validator->make([
+            'name' => $name,
+            'type_id' => $type_id,
+            'country' => $country,
+            'tva' => $tva,
+        ], [
+            'name' => 'required',
+            'type_id' => 'required|numeric',
+            'country' => 'required',
+            'tva' => 'required',
+        ]);
+
+        $validation->validate();
+
+        if ($validation->fails()) {
+            $errors = $validation->errors()->firstOfAll();
+
+            // Formatage des messages d'erreur
+            $errorMessages = [];
+            foreach ($errors as $field => $message) {
+                $errorMessages[] = ucfirst($field) . ': ' . $message;
+            }
+
+            // Retourne les messages d'erreur à l'appelant
+            return $errorMessages;
+        }
+
         $query = "INSERT INTO companies (name, type_id, country, tva, created_at, updated_at) VALUES
         (:name, :type_id, :country, :tva, now(), now())";
 
@@ -99,13 +129,51 @@ class Company
         $statement = $this->db->prepare($query);
         $statement->execute();
     }
+    public function getCompanyByName($company_name)
+    {
+        $sql = "SELECT * FROM companies WHERE name = :name";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindParam(':name', $company_name);
+        $stmt->execute();
+
+        $company = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+        return $company;
+    } 
+
     public function editCompany($id, $name, $type_id)
     {
-        $query = "UPDATE companies set name = :name, type_id=:type_id,updated_at = now() where id = $id";
+        $validation = $this->validator->make([
+            'name' => $name,
+            'type_id' => $type_id,
+        ], [
+            'name' => 'required',
+            'type_id' => 'required|numeric',
+        ]);
+
+        $validation->validate();
+
+        if ($validation->fails()) {
+            $errors = $validation->errors()->firstOfAll();
+
+            // Formatage des messages d'erreur
+            $errorMessages = [];
+            foreach ($errors as $field => $message) {
+                $errorMessages[] = ucfirst($field) . ': ' . $message;
+            }
+
+            // Retourne les messages d'erreur à l'appelant
+            return $errorMessages;
+        }
+
+        $query = "UPDATE companies SET name = :name, type_id = :type_id, updated_at = now() WHERE id = :id";
         $statement = $this->db->prepare($query);
         $statement->bindValue(':name', $name, \PDO::PARAM_STR);
         $statement->bindValue(':type_id', $type_id, \PDO::PARAM_INT);
+        $statement->bindValue(':id', $id, \PDO::PARAM_INT);
         $statement->execute();
     }
-};
+
+}
+;
 ?>

@@ -17,8 +17,10 @@
     <main>
         <section class="container section" id="info_table">
 
-        <div class="title__filter">
-                <div class="title__section"><h3>All companies</h3></div>
+            <div class="title__filter">
+                <div class="title__section">
+                    <h3>All companies</h3>
+                </div>
                 <div class="filter__section"></div>
             </div>
 
@@ -28,9 +30,10 @@
                 <thead>
                     <tr>
                         <th>Nom</th>
-                        <th>ID</th>
-                        <th>Pays</th>
+                        <th>TVA</th>
+                        <th>Country</th>
                         <th>Type</th>
+                        <th>Created at</th>
                     </tr>
                 </thead>
                 <!-- Données -->
@@ -41,13 +44,16 @@
                                 <a href="/companies/<?php echo $company['id']; ?>"><?php echo $company['name']; ?></a>
                             </td>
                             <td>
-                                <?php echo $company['id']; ?>
+                                <?php echo $company['tva']; ?>
                             </td>
                             <td>
                                 <?php echo $company['country']; ?>
                             </td>
                             <td>
                                 <?php echo $company['type_name']; ?>
+                            </td>
+                            <td>
+                                <?php echo $company['created_at']; ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
