@@ -53,7 +53,7 @@
                                 <?php echo $contact['company_name']; ?>
                             </td>
                             <td>
-                                <?php echo $contact['created_at']; ?>
+                                <?php echo date('d-m-Y', strtotime($contact['created_at'])); ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>

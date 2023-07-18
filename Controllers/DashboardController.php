@@ -13,17 +13,23 @@ class DashboardController extends Controller
     {
         $invoiceModel = new Invoice();
         $invoices = $invoiceModel->getLatestInvoices(5);
+        $totalInvoiceCount = $invoiceModel->getTotalInvoiceCount();
 
         $companyModel = new Company();
         $companies = $companyModel->getLatestCompanies(5);
+        $totalCompanyCount = $companyModel->getTotalCompanyCount();
 
         $contactModel = new Contact();
         $contacts = $contactModel->getLatestContacts(5);
+        $totalContactCount = $contactModel->getTotalContactCount();
 
         return $this->view('dashboard', [
             'invoices' => $invoices,
+            'totalInvoices' => $totalInvoiceCount,
             'companies' => $companies,
-            'contacts' => $contacts
+            'totalCompanies' => $totalCompanyCount,
+            'contacts' => $contacts,
+            'totalContacts' => $totalContactCount
         ]);
     }
     public function editInvoiceIndex()

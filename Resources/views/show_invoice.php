@@ -23,13 +23,13 @@
                     <p class="info_title">Invoice N°:  </p> <p class="info_element ref"> <?php echo $data['ref'] ?></p>
                 </div> 
                 <div class="info"> 
-                    <p class="info_title">Due date: </p> <p class="info_element due_date"><?php echo $data['due_date'] ?></p>
+                    <p class="info_title">Due date: </p> <p class="info_element due_date"><?php echo date('d-m-Y', strtotime($data['due_date'])) ?></p>
                 </div>
                 <div class="info">    
                     <p class="info_title">Company: </p> <p class="info_element mail"><?php echo $data['company_name'] ?></p>
                 </div>
                 <div class="info">   
-                    <p class="info_title">Created at: </p> <p class="info_element company"><?php echo $data['created_at'] ?></p>
+                    <p class="info_title">Created at: </p> <p class="info_element company"><?php echo date('d-m-Y', strtotime($data['created_at'])) ?></p>
                 </div>
                 </div>
         </section>

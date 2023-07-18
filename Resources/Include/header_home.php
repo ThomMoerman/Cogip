@@ -32,7 +32,7 @@
                     // Afficher le bloc de connexion
                     echo '
                     <div class="log header__log">
-                        <a type="link"  class="btn log__signup_btn signup_link">Sign up</a>
+                        <a type="link" href="/register" class="btn log__signup_btn signup_link">Sign up</a>
                         <a type="link" href="/login" class="btn log__login_btn login_link">Login</a>
                     </div>';
                 }

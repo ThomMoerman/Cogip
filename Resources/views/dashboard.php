@@ -28,15 +28,15 @@
                         <h2>Statistics</h2>
                         <ul class="statistics__list">
                             <li class="statistics__invoices">
-                                <span>245</span>
+                                <span><?php echo $totalInvoices; ?></span>
                                 <span>Invoices</span>
                             </li>
                             <li class="statistics__contacts">
-                                <span>245</span>
+                                <span><?php echo $totalContacts; ?></span>
                                 <span>Contacts</span>
                             </li>
                             <li class="statistics__companies">
-                                <span>245</span>
+                                <span><?php echo $totalCompanies; ?></span>
                                 <span>Companies</span>
                             </li>
                         </ul>

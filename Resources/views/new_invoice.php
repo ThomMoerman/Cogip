@@ -26,14 +26,11 @@
     <h3>New Invoice</h3>
     <hr class="form_hr">
     <form action="/invoices_add" method="POST">
-      <!--   <label for="ref">Ref:</label> -->
         <input type="text" name="ref" id="ref" placeholder="Reference" required><br>
 
-       <!--  <label for="due_date">Due Date:</label> -->
         <input type="date" name="due_date" id="due_date" placeholder="Due date" required><br>
 
-        <label for="company_name">Company:</label>
-        <input type="text" name="company_name" id="company_name" required><br>
+        <input type="text" name="company_name" id="company_name" placeholder="Company Name" required><br>
 
         <?php if (isset($error_message) && !empty($error_message)): ?>
             <div class="error-message">

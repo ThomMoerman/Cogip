@@ -31,10 +31,10 @@
                 <tbody>
                     <?php foreach ($invoices as $invoice_data): ?>
                         <tr>
-                            <td><a href="/invoices/<?php echo $invoice_data['ref']; ?>"><?php echo $invoice_data['ref']; ?></a></td>
-                            <td><?php echo $invoice_data['due_date'] ?></td>
+                            <td><a href="/invoices/<?php echo $invoice_data['id']; ?>"><?php echo $invoice_data['ref']; ?></a></td>
+                            <td><?php echo date('d-m-Y', strtotime($invoice_data['due_date'])); ?></td>
                             <td><?php echo $invoice_data['company_name'] ?></td>
-                            <td><?php echo $invoice_data['created_at'] ?></td>
+                            <td><?php echo date('d-m-Y', strtotime($invoice_data['created_at'])); ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

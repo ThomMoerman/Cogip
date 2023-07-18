@@ -54,7 +54,7 @@
                                 <?php echo $company['type_name']; ?>
                             </td>
                             <td>
-                                <?php echo $company['created_at']; ?>
+                                <?php echo date('d-m-Y', strtotime($company['created_at'])); ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>

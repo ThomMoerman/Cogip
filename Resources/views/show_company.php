@@ -66,7 +66,7 @@
         <thead>
             <tr>
                 <th>Invoice Number</th>
-                <th>Dates</th>
+                <th>Due Date</th>
                 <th>Company</th>
                 <th>Created at</th>
             </tr>
@@ -79,13 +79,13 @@
                         <?php echo $invoice['ref']; ?>
                     </td>
                     <td>
-                        <?php echo $invoice['due_date']; ?>
+                        <?php echo date('d-m-Y', strtotime($invoice['due_date'])); ?>
                     </td>
                     <td>
                         <?php echo $invoice['name']; ?>
                     </td>
                     <td>
-                        <?php echo $invoice['created_at']; ?>
+                        <?php echo date('d-m-Y', strtotime($invoice['created_at'])); ?> 
                     </td>
                 </tr>
             <?php endforeach; ?>
