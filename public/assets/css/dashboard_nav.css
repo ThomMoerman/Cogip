@@ -1,4 +1,13 @@
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: inter;
+  src: url("../font/Inter-VariableFont_slnt,wght.ttf");
+}
 #dashboard__navbar {
+  font-family: inter;
   position: sticky;
   top: 0;
   padding-top: 5vh;
