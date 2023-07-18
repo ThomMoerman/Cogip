@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Models\Company;
 use App\Models\Invoice;
 
 class InvoiceController extends Controller
@@ -63,7 +64,7 @@ class InvoiceController extends Controller
             'due_date' => $invoice['due_date'],
             'company_name' => $invoice['company_name'],
             'created_at' => $invoice['created_at']
-        ]; 
+        ];
 
         // Renvoyez les données à la vue appropriée pour l'affichage
         return $this->view('show_invoice', $data);
@@ -80,7 +81,7 @@ class InvoiceController extends Controller
     public function update($id)
     {
         $invoiceModel = new Invoice();
-        $ref = $_POST['ref']; 
+        $ref = $_POST['ref'];
         $id_company = $_POST['id_company'];
 
         $errors = $invoiceModel->editInvoice($ref, $id_company, $id);
@@ -96,11 +97,23 @@ class InvoiceController extends Controller
     {
         $ref = $_POST['ref'];
         $due_date = $_POST['due_date'];
-        $company_id = $_POST['company_id'];
+        $company_name = $_POST['company_name'];
 
         $invoiceModel = new Invoice();
 
-        $errors = $invoiceModel->newInvoice($ref, $due_date, $company_id);
+        $companyModel = new Company();
+        $company = $companyModel->getCompanyByName($company_name);
+
+        if ($company) {
+            $id_company = $company['id'];
+            $invoiceModel->newInvoice($ref, $id_company, $due_date);
+            // $errors = $invoiceModel->newInvoice($ref, $due_date, $id_company);
+        } else {
+            echo "Company not found.";
+            exit;
+        }
+
+        $errors = $invoiceModel->newInvoice($ref, $due_date, $id_company);
 
         if ($errors) {
             return $this->view('new_invoice', ['errors' => $errors]);
@@ -109,7 +122,8 @@ class InvoiceController extends Controller
         header('Location: /dashboard');
     }
 
-    public function showInvoiceForm(){
+    public function showInvoiceForm()
+    {
         return $this->view('new_invoice');
     }
 }

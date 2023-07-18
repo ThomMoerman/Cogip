@@ -82,7 +82,7 @@ class Contact
             'phone' => $phone,
         ], [
             'name' => 'required',
-            'company_id' => 'required|numeric',
+            'company_id' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
         ]);
@@ -129,7 +129,7 @@ class Contact
             'company_id' => 'required|numeric',
             'email' => 'required|email',
             'phone' => 'required',
-        ]); 
+        ]);
 
         $validation->validate();
 

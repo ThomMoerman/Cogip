@@ -83,9 +83,19 @@ class ContactController extends Controller
     {
         $contactModel = new Contact();
         $name = $_POST['name'];
-        $company_id = $_POST['company_id'];
+        $company_name = $_POST['company_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
+
+        $companyModel = new Company();
+        $company = $companyModel->getCompanyByName($company_name);
+
+        if ($company) {
+            $company_id = $company['id'];
+            $contactModel->newContact($name, $company_id, $email, $phone);
+        } else {
+
+        }
 
         $errors = $contactModel->editContact($id, $name, $company_id, $email, $phone);
 
@@ -99,11 +109,22 @@ class ContactController extends Controller
     public function add()
     {
         $name = $_POST['name'];
-        $company_id = $_POST['company_id'];
+        $company_name = $_POST['company_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
 
         $contactModel = new Contact();
+
+        $companyModel = new Company();
+        $company = $companyModel->getCompanyByName($company_name);
+
+        if ($company) {
+            $company_id = $company['id'];
+            $contactModel->newContact($name, $company_id, $email, $phone);
+        } else {
+            echo "Company not found.";
+            exit;
+        }
 
         $errors = $contactModel->newContact($name, $company_id, $email, $phone);
 
@@ -113,7 +134,8 @@ class ContactController extends Controller
 
         header('Location: /dashboard');
     }
-	public function showContactForm(){
+    public function showContactForm()
+    {
         return $this->view('new_contact');
     }
 }
