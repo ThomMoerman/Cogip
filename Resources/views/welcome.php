@@ -16,11 +16,6 @@
     require '../Resources/Include/header_home.php'
         ?>
     <main>
-        <?php if (isset($_SESSION['user_name'])): ?>
-            <h3>Welcome back
-                <?php echo $_SESSION['user_name'] ?>!
-            </h3>
-        <?php endif ?>
 
         <?php require 'table_function.php'; ?>
         <article class="section invoices__table_section">
