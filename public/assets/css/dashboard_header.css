@@ -7,7 +7,7 @@
   src: url("../font/Inter-VariableFont_slnt,wght.ttf");
 }
 header {
-  background-color: #F5F5FB;
+  background-color: #e7e7e7;
 }
 @media (min-width: 900px) {
   header {

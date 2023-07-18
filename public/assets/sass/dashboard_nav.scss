@@ -1,10 +1,13 @@
+$light_blue:rgb(241, 255, 255);
+
 @mixin buttonLogo($url){
     background-image: url($url);
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position-x: center;
     @media (min-width:600px){
-        background-position:120px 30px;
+        background-position:0px 13px;
+        :hover{filter:saturate(1);}
     }
 }
 
@@ -14,7 +17,8 @@
     padding-top: 5vh;
     background-color: white;
     @media (min-width:600px) {
-        max-width: 285px;
+        position: fixed;
+        width: 200px;
         height: 100vh;
     }
     .navbar__admin_block{
@@ -39,7 +43,10 @@
         @media (min-width:600px){
             display: flex;
             flex-direction: column;
-            text-align: center;
+            width: 150px;
+            text-align: justify;
+            margin-left: 30px;
+
         }
         .btn_dashboard{
           @include buttonLogo("../img/dashboard_logo.svg");
@@ -58,7 +65,7 @@
             background-color:unset;
             padding: 30px 5px 0 5px;
             @media (min-width:600px) {
-                padding: 15px 5px 15px 5px;
+                padding: 15px 5px 15px 40px;
             }
             &:hover{
                 cursor: pointer;
@@ -69,7 +76,7 @@
 }
 
 
-$light_blue:rgb(241, 255, 255);
+
 body{
     background-color: $light_blue;
 }
@@ -77,28 +84,41 @@ body{
 p{padding-top: 50px; 
 }
 
+hr{
+    opacity: 0.5;
+    margin-right: 5px;
+}
 
 hr:last-of-type{
-    display: none;
-    position: absolute;
+    display: none;   
+    @media (min-width:600px){
+        display: block; 
+        transform:translateY(160px);
+    }
 }
 .navbar__logout{
     display: flex;
     position: absolute;
     width:150px;
+    @media (min-width:600px){
+            width:180px;
+            margin-left: 10px;    
+            transform: translateY(650px);  
+        }
+
     justify-content: space-between;
     top: 10px;
     text-align: center;
     img{
-        display: none;
         max-width: 60px;
+        @media (max-width:599px){display: none;}
     }
-    a{
-        
+    a{       
         color:rgb(150, 152, 214);
+        @media (min-width:600px){margin-top: 20px;}
         :hover{
             cursor: pointer;
             color: aliceblue;
         }
-    }
+    } 
 }

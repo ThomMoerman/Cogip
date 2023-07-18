@@ -6,7 +6,8 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar {
-    max-width: 285px;
+    position: fixed;
+    width: 200px;
     height: 100vh;
   }
 }
@@ -34,7 +35,9 @@
   #dashboard__navbar .navbar__buttons {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    width: 150px;
+    text-align: justify;
+    margin-left: 30px;
   }
 }
 #dashboard__navbar .navbar__buttons .btn_dashboard {
@@ -45,7 +48,10 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .btn_dashboard {
-    background-position: 120px 30px;
+    background-position: 0px 13px;
+  }
+  #dashboard__navbar .navbar__buttons .btn_dashboard :hover {
+    filter: saturate(1);
   }
 }
 #dashboard__navbar .navbar__buttons .btn_invoices {
@@ -56,7 +62,10 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .btn_invoices {
-    background-position: 120px 30px;
+    background-position: 0px 13px;
+  }
+  #dashboard__navbar .navbar__buttons .btn_invoices :hover {
+    filter: saturate(1);
   }
 }
 #dashboard__navbar .navbar__buttons .btn_companies {
@@ -67,7 +76,10 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .btn_companies {
-    background-position: 120px 30px;
+    background-position: 0px 13px;
+  }
+  #dashboard__navbar .navbar__buttons .btn_companies :hover {
+    filter: saturate(1);
   }
 }
 #dashboard__navbar .navbar__buttons .btn_contacts {
@@ -78,7 +90,10 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .btn_contacts {
-    background-position: 120px 30px;
+    background-position: 0px 13px;
+  }
+  #dashboard__navbar .navbar__buttons .btn_contacts :hover {
+    filter: saturate(1);
   }
 }
 #dashboard__navbar .navbar__buttons .nav {
@@ -88,7 +103,7 @@
 }
 @media (min-width: 600px) {
   #dashboard__navbar .navbar__buttons .nav {
-    padding: 15px 5px 15px 5px;
+    padding: 15px 5px 15px 40px;
   }
 }
 #dashboard__navbar .navbar__buttons .nav:hover {
@@ -104,9 +119,19 @@ p {
   padding-top: 50px;
 }
 
+hr {
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
 hr:last-of-type {
   display: none;
-  position: absolute;
+}
+@media (min-width: 600px) {
+  hr:last-of-type {
+    display: block;
+    transform: translateY(160px);
+  }
 }
 
 .navbar__logout {
@@ -117,12 +142,28 @@ hr:last-of-type {
   top: 10px;
   text-align: center;
 }
+@media (min-width: 600px) {
+  .navbar__logout {
+    width: 180px;
+    margin-left: 10px;
+    transform: translateY(650px);
+  }
+}
 .navbar__logout img {
-  display: none;
   max-width: 60px;
+}
+@media (max-width: 599px) {
+  .navbar__logout img {
+    display: none;
+  }
 }
 .navbar__logout a {
   color: rgb(150, 152, 214);
+}
+@media (min-width: 600px) {
+  .navbar__logout a {
+    margin-top: 20px;
+  }
 }
 .navbar__logout a :hover {
   cursor: pointer;

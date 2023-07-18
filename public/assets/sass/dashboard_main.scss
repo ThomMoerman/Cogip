@@ -1,0 +1,6 @@
+main{
+        padding-left: 200px;    
+        @media (max-width:599px) {
+            padding-left:unset;     
+        }
+    }

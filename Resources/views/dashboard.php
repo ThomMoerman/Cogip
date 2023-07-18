@@ -5,28 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
-    <!-- <link href="assets/css/dashboard_nav.css" rel="stylesheet" type="text/css"> -->
+    <link href="assets/css/dashboard_nav.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dashboard_header.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dashboard_tab.css" rel="stylesheet" type="text/css">
-    <!-- <link href="assets/css/table.css" rel="stylesheet" type="text/css"> -->
+    <link href="assets/css/dashboard_main.css" rel="stylesheet" type="text/css">
+
 </svg>
     <title>Dashboard</title>
 </head>
 
 <body>
-    <!-- <section id="dashboard__navbar">
-        <div class="navbar__admin_block">
-            <img src="assets/img/Avatar_two.svg" alt="profile pic">
-            <h3>John Doe</h3>
-        </div>
-        <hr>
-        <div class="navbar__buttons">
-            <button class="nav btn_dashboard">Dashboard</button>
-            <button class="nav btn_invoices">Invoices</button>
-            <button class="nav btn_companies">Companies</button>
-            <button class="nav btn_contacts">Contacts</button>
-        </div>
-    </section> -->
+<?php
+     require '../Resources/Include/navbar_dashboard.php'
+    ?>
     <main>
         <?php
             require '../Resources/Include/header_dashboard.php'
