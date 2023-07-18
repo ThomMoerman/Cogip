@@ -12,7 +12,7 @@ class AuthController extends Controller
     private $validator;
 
     public function login()
-    {   
+    {
         $this->validator = new Validator();
 
         session_start();
@@ -56,6 +56,7 @@ class AuthController extends Controller
             // Effectuez les opérations nécessaires, comme définir des variables de session
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_role'] = $user['role_id'];
+            $_SESSION['user_name'] = $user['first_name'];
 
             // Redirigez vers la page d'accueil ou une autre page appropriée
             header('Location: /');
@@ -72,7 +73,7 @@ class AuthController extends Controller
         session_start();
         session_unset(); // Supprimer toutes les variables de session
         session_destroy();
-        
+
         // Redirigez vers la page de connexion ou une autre page appropriée après la déconnexion
         header('Location: /');
         exit();
@@ -111,9 +112,9 @@ class AuthController extends Controller
         }
 
         $successMessage = 'Your account has been created, log in to see our functionalities';
-        
+
         // Redirigez vers la page de connexion en passant le message de succès en tant que variable
         header('Location: /login?successMessage=' . urlencode($successMessage));
         exit();
     }
-} 
+}

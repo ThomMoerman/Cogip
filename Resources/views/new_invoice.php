@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <h1>New Contact</h1>
+    <h1>New Invoice</h1>
 
     <form action="/invoices_add" method="POST">
         <label for="ref">Ref:</label>
