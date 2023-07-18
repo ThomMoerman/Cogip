@@ -115,10 +115,6 @@ body {
   background-color: rgb(241, 255, 255);
 }
 
-p {
-  padding-top: 50px;
-}
-
 .navbar__hline {
   opacity: 0.5;
   margin-right: 5px;
