@@ -84,10 +84,17 @@ class InvoiceController extends Controller
         $ref = $_POST['ref'];
         $company_name = $_POST['company_name'];
 
-        $errors = $invoiceModel->editInvoice($ref, $company_name, $id);
+        $companyModel = new Company();
+        $company = $companyModel->getCompanyByName($company_name);
 
-        if ($errors) {
-            return $this->view('edit_invoice', ['errors' => $errors]);
+        if ($company) {
+            $id_company = $company['id'];
+            $invoiceModel->editInvoice($id, $ref, $id_company);
+            $errors = $invoiceModel->editInvoice($id, $ref, $id_company);
+
+            if ($errors) {
+                return $this->view('edit-invoice', ['errors' => $errors]);
+            }
         }
 
         header('Location: /dashboard');
@@ -107,12 +114,8 @@ class InvoiceController extends Controller
         if ($company) {
             $id_company = $company['id'];
             $invoiceModel->newInvoice($ref, $id_company, $due_date);
-            // $errors = $invoiceModel->newInvoice($ref, $due_date, $id_company);
         } else {
             $error_message = "Company not found.";
-        }
-
-        if ($error_message) {
             return $this->view('new_invoice', ['error_message' => $error_message]);
         }
 

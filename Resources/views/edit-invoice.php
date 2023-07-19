@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
 <body>
     <?php require '../Resources/Include/navbar_dashboard.php'; ?>
     <main>
-        <?php require '../Resources/Include/header_dashboard.php'; ?> 
+        <?php require '../Resources/Include/header_dashboard.php'; ?>
         <div id="form_section">
             <h3>Edit Invoice</h3>
             <hr>
@@ -23,18 +24,21 @@
                 <!-- <label for="ref">ref:</label> -->
                 <input type="text" id="ref" name="ref" required value="<?php echo $_GET['ref'] ?>"><br><br>
 
-                <label for='id_company'>id company:</label>
-                <input type="number" id="id_company" name="id_company" required value="<?php echo $_GET['id_company'] ?>">
+                <label for='company_name'>Company:</label>
+                <input type="text" id="company_name" name="company_name" required
+                    value="<?php echo $_GET['company_name'] ?>">
                 <input type="submit" name="send" value="send" id="edit_submit">
             </form>
         </div>
-            <?php if (isset($errors) && !empty($errors)): ?>
+        <?php if (isset($errors) && !empty($errors)): ?>
             <div class="error-messages">
                 <?php foreach ($errors as $error): ?>
-                    <p><?php echo $error; ?></p>
+                    <p>
+                        <?php echo $error; ?>
+                    </p>
                 <?php endforeach; ?>
             </div>
-            <?php endif; ?>
+        <?php endif; ?>
     </main>
 </body>
 

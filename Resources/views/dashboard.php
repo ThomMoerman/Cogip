@@ -85,7 +85,8 @@
                                 </td>
                                 <td>
                                     <?php if ($_SESSION['user_role'] == 1): ?>
-                                        <a href="/delete-contact/<?php echo $contact['id']; ?>"><i class="fas fa-trash" style="color: #d10000;"></i></a>
+                                        <a href="/delete-contact/<?php echo $contact['id']; ?>"><i class="fas fa-trash"
+                                                style="color: #d10000;"></i></a>
                                     <?php endif; ?>
 
                                 </td>
@@ -105,17 +106,18 @@
                             <th>Type</th>
                             <th>Country</th>
                             <?php if ($_SESSION['user_role'] == 1): ?>
-                            <th>Delete</th>
+                                <th>Delete</th>
                             <?php endif; ?>
                         </tr>
                         <?php foreach ($companies as $company): ?>
                             <tr>
                                 <td>
-                                <?php if ($_SESSION['user_role'] == 1): ?>
-                                    <a href="/edit-company/<?php echo $company['id']; ?>?id=<?php echo $company['id']; ?>&name=<?php echo $company['name']; ?>&type_id=<?php echo $company['type_id']; ?>"><?php echo $company['name']; ?></a>
-                                <?php else: ?>
-                                    <?php echo $company['name']; ?>
-                                <?php endif;?>
+                                    <?php if ($_SESSION['user_role'] == 1): ?>
+                                        <a
+                                            href="/edit-company/<?php echo $company['id']; ?>?id=<?php echo $company['id']; ?>&name=<?php echo $company['name']; ?>&type_id=<?php echo $company['type_id']; ?>"><?php echo $company['name']; ?></a>
+                                    <?php else: ?>
+                                        <?php echo $company['name']; ?>
+                                    <?php endif; ?>
                                 </td>
                                 <td>
                                     <?php echo $company['company_type']; ?>
@@ -125,7 +127,8 @@
                                 </td>
                                 <td>
                                     <?php if ($_SESSION['user_role'] == 1): ?>
-                                        <a href="/delete-company/<?php echo $company['id']; ?>" class="delete"><i class="fas fa-trash" style="color: #d10000;"></i></a>
+                                        <a href="/delete-company/<?php echo $company['id']; ?>" class="delete"><i
+                                                class="fas fa-trash" style="color: #d10000;"></i></a>
                                     <?php endif; ?>
                                 </td>
                             </tr>
@@ -141,32 +144,35 @@
                             <th>Due Date</th>
                             <th>Company</th>
                             <?php if ($_SESSION['user_role'] == 1): ?>
-                            <th>Delete</th>
+                                <th>Delete</th>
                             <?php endif; ?>
                         </tr>
                         <?php foreach ($invoices as $invoice): ?>
                             <tr>
                                 <td>
-                                <?php if ($_SESSION['user_role'] == 1): ?>
-                                    <a href="/edit-invoice/<?php echo $invoice['id']; ?>?id=<?php echo $invoice['id']; ?>&ref=<?php echo $invoice['ref']; ?>&id_company=<?php echo $invoice['id_company']; ?>"><?php echo $invoice['ref']; ?></a>
-                                <?php else: ?>
-                                   <?php echo $invoice['ref']; ?>
-                                <?php endif; ?>
+                                    <?php if ($_SESSION['user_role'] == 1): ?>
+                                        <a
+                                            href="/edit-invoice/<?php echo $invoice['id']; ?>?id=<?php echo $invoice['id']; ?>&ref=<?php echo $invoice['ref']; ?>&company_name=<?php echo $invoice['company_name']; ?>"><?php echo $invoice['ref']; ?></a>
+                                    <?php else: ?>
+                                        <?php echo $invoice['ref']; ?>
+                                    <?php endif; ?>
                                 </td>
                                 <td>
                                     <?php echo date('d-m-Y', strtotime($invoice['due_date'])); ?>
                                 </td>
                                 <td>
-                                <?php if ($_SESSION['user_role'] == 1): ?>
-                                    <a href="/edit-invoice/<?php echo $invoice['id']; ?>?id=<?php echo $invoice['id']; ?>&ref=<?php echo $invoice['ref']; ?>&id_company=<?php echo $invoice['id_company']; ?>"><?php echo $invoice['company_name']; ?></a>
-                                <?php else: ?>
-                                    <?php echo $invoice['company_name'] ?>
-                                <?php endif; ?>
+                                    <?php if ($_SESSION['user_role'] == 1): ?>
+                                        <a
+                                            href="/edit-invoice/<?php echo $invoice['id']; ?>?id=<?php echo $invoice['id']; ?>&ref=<?php echo $invoice['ref']; ?>&company_name=<?php echo $invoice['company_name']; ?>"><?php echo $invoice['company_name']; ?></a>
+                                    <?php else: ?>
+                                        <?php echo $invoice['company_name'] ?>
+                                    <?php endif; ?>
                                 </td>
                                 <td>
-                                <?php if ($_SESSION['user_role'] == 1): ?>
-                                    <a href="/delete-invoice/<?php echo $invoice['id']; ?>"><i class="fas fa-trash" style="color: #d10000;"></i></a>
-                                <?php endif; ?>
+                                    <?php if ($_SESSION['user_role'] == 1): ?>
+                                        <a href="/delete-invoice/<?php echo $invoice['id']; ?>"><i class="fas fa-trash"
+                                                style="color: #d10000;"></i></a>
+                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
