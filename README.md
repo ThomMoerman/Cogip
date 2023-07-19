@@ -11,15 +11,14 @@
 
 ## About the project
 ### COGIP story
-**COGIP** is a company which produce Jean-Michel toys. 
-Jean-Christian Ranu works in accounting at the company. However, he's using an old and incomplete software for years, making him go between it and excels sheet.
+**COGIP** is a company that produces Jean-Michel toys. Jean-Christian Ranu works in accounting at the company. However, he has been using an old and incomplete software for years, forcing him to switch back and forth between it and Excel spreadsheets.
 
 ### Objectives
-The aim of this project is to create a web application which will respond to the needs of Jean-Christian and so far, to the company COGIP.
+The aim of this project is to create a web application that will cater to the needs of Jean-Christian and, by extension, to the company COGIP.
 
-*Front-end* developpers will create a new design based on a figma model. The design will be mobile-first with responsive for desktop versions.
+*Front-end* developers will create a new design based on a Figma model. The design will be mobile-first and responsive for desktop versions..
 
-*Back-end* developers will work on the functional aspect of the site: displaying data, enabling account creation and connection (customer and providers), creation of an interface of administration, etc.
+*Back-end* developers will work on the functional aspect of the site: displaying data, enabling account creation and connection (for customers and providers), creation of an administrative interface, etc.
 
 
 ## Team Members
