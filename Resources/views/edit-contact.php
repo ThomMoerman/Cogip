@@ -20,18 +20,15 @@
         <div id="form_section">
             <h3>Edit Contact</h3>
             <hr>
-            <form action="/edit-contact/<?php echo $_GET['id'] ?>" method="POST">
+            <form
+                action="/edit-contact/<?php echo $_GET['id']; ?>?id=<?php echo $_GET['id']; ?>&name=<?php echo $_GET['name']; ?>&company_name=<?php echo $_GET['company_name']; ?>&email=<?php echo $_GET['email']; ?>&phone=<?php echo $_GET['phone']; ?>"
+                method="POST">
                 <!-- <label for="name">Name:</label> -->
                 <input type="text" id="name" name="name" required value="<?php echo $_GET['name'] ?>"><br><br>
 
                 <!-- <label for='company_id'>Company id:</label> -->
                 <input type="text" id="company_name" name="company_name" required
                     value="<?php echo $_GET['company_name'] ?>">
-                <?php if (isset($error_message) && !empty($error_message)): ?>
-                    <div class="error-message">
-                        <?php echo $error_message; ?>
-                    </div>
-                <?php endif; ?>
                 <?php if (isset($error_message) && !empty($error_message)): ?>
                     <div class="error-message">
                         <?php echo $error_message; ?>

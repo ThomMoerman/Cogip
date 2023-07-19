@@ -20,7 +20,9 @@
         <div id="form_section">
             <h3>Edit Invoice</h3>
             <hr>
-            <form action="/edit-invoice/<?php echo $_GET['id'] ?>" method="POST">
+            <form
+                action="/edit-invoice/<?php echo $_GET['id']; ?>?id=<?php echo $_GET['id']; ?>&ref=<?php echo $_GET['ref']; ?>&company_name=<?php echo $_GET['company_name']; ?>"
+                method="POST">
                 <!-- <label for="ref">ref:</label> -->
                 <input type="text" id="ref" name="ref" required value="<?php echo $_GET['ref'] ?>"><br><br>
 

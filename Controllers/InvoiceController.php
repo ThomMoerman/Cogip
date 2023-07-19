@@ -95,6 +95,9 @@ class InvoiceController extends Controller
             if ($errors) {
                 return $this->view('edit-invoice', ['errors' => $errors]);
             }
+        } else {
+            $error_message = "Company not found.";
+            return $this->view('edit-invoice', ['error_message' => $error_message]);
         }
 
         header('Location: /dashboard');
