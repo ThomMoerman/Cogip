@@ -89,8 +89,8 @@ class InvoiceController extends Controller
 
         if ($company) {
             $id_company = $company['id'];
-            $invoiceModel->editInvoice($id, $ref, $id_company);
-            $errors = $invoiceModel->editInvoice($id, $ref, $id_company);
+            $invoiceModel->editInvoice($ref, $id_company, $id);
+            $errors = $invoiceModel->editInvoice($ref, $id_company, $id);
 
             if ($errors) {
                 return $this->view('edit-invoice', ['errors' => $errors]);

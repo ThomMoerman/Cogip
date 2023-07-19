@@ -27,6 +27,11 @@
                 <label for='company_name'>Company:</label>
                 <input type="text" id="company_name" name="company_name" required
                     value="<?php echo $_GET['company_name'] ?>">
+                <?php if (isset($error_message) && !empty($error_message)): ?>
+                    <div class="error-message">
+                        <?php echo $error_message; ?>
+                    </div>
+                <?php endif; ?>
                 <input type="submit" name="send" value="send" id="edit_submit">
             </form>
         </div>

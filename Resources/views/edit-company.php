@@ -21,7 +21,6 @@
             <h3>Edit Company</h3>
             <hr>
             <form action="/edit-company/<?php echo $_GET['id'] ?>" method="POST">
-                <!-- <label for="name">Name:</label> -->
                 <input type="text" id="name" name="name" required value="<?php echo $_GET['name'] ?>"><br><br>
                 <label for='type_id'>Type:</label>
                 <select name="type_id" id="type_id" required>

@@ -70,43 +70,44 @@ $router->post('/companies_add', function () {
     (new CompanyController)->add();
 });
 
-$router->get('/invoices_add', function(){
+$router->get('/invoices_add', function () {
     (new InvoiceController)->showInvoiceForm();
 });
 
-$router->post('/invoices_add', function(){
+$router->post('/invoices_add', function () {
     (new InvoiceController)->add();
 });
 
-$router->get('/contacts_add', function(){
+$router->get('/contacts_add', function () {
     (new ContactController)->showContactForm();
 });
 
-$router->post('/contacts_add', function(){
+$router->post('/contacts_add', function () {
     (new ContactController)->add();
 });
 
 $router->get('/edit-invoice/{id}', function () {
     (new DashboardController)->editInvoiceIndex();
 });
-$router->get('/edit-company/{id}', function () {
-    (new DashboardController)->editCompanyIndex();
+
+$router->post('/edit-invoice/{id}', function ($id) {
+    (new InvoiceController)->update($id);
 });
 
-$router->get('/edit-contact/{id}', function () {
-    (new DashboardController)->editContactIndex();
+$router->get('/edit-company/{id}', function () {
+    (new DashboardController)->editCompanyIndex();
 });
 
 $router->post('/edit-company/{id}', function ($id) {
     (new CompanyController)->update($id);
 });
 
-$router->post('/edit-contact/{id}', function ($id) {
-    (new ContactController)->update($id);
+$router->get('/edit-contact/{id}', function () {
+    (new DashboardController)->editContactIndex();
 });
 
-$router->post('/edit-invoice/{id}', function ($id) {
-    (new InvoiceController)->update($id);
+$router->post('/edit-contact/{id}', function ($id) {
+    (new ContactController)->update($id);
 });
 
 $router->post('/contacts/{id}', function ($id) {

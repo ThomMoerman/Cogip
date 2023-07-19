@@ -93,16 +93,14 @@ class ContactController extends Controller
 
         if ($company) {
             $company_id = $company['id'];
-            $contactModel->editContact($id, $name, $company_id, $email, $phone);
+            $errors = $contactModel->editContact($id, $name, $company_id, $email, $phone);
+            if ($errors) {
+                return $this->view('edit_contact', ['errors' => $errors]);
+            }
         } else {
             $error_message = "Company not found.";
-            return $this->view('new_contact', ['error_message' => $error_message]);
+            return $this->view('edit-contact', ['error_message' => $error_message]);
         }
-        $errors = $contactModel->editContact($id, $name, $company_id, $email, $phone);
-        if ($errors) {
-            return $this->view('edit_contact', ['errors' => $errors]);
-        }
-
         header('Location: /dashboard');
     }
 
@@ -120,20 +118,18 @@ class ContactController extends Controller
 
         if ($company) {
             $company_id = $company['id'];
-            $contactModel->newContact($name, $company_id, $email, $phone);
+            $errors = $contactModel->newContact($name, $company_id, $email, $phone);
+            if ($errors) {
+                return $this->view('new_contact', ['errors' => $errors]);
+            }
         } else {
             $error_message = "Company not found.";
             return $this->view('new_contact', ['error_message' => $error_message]);
         }
 
-        $errors = $contactModel->newContact($name, $company_id, $email, $phone);
-
-        if ($errors) {
-            return $this->view('new_contact', ['errors' => $errors]);
-        }
-
         header('Location: /dashboard');
     }
+
     public function showContactForm()
     {
         return $this->view('new_contact');
