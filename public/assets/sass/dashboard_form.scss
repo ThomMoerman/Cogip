@@ -21,7 +21,7 @@ $light_blue:rgb(241, 255, 255);
         border: none;
         border-radius: 5px;   
     }
-    button{
+    button, #edit_submit{
         margin-top: 15px;
         padding: 5px 10px;
         width: 70vw;
@@ -29,6 +29,7 @@ $light_blue:rgb(241, 255, 255);
         color: white;
         border: none;
         text-align: left;
+        font-weight: 400;
         
     }
 }

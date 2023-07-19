@@ -27,7 +27,7 @@
   border: none;
   border-radius: 5px;
 }
-#form_section button {
+#form_section button, #form_section #edit_submit {
   margin-top: 15px;
   padding: 5px 10px;
   width: 70vw;
@@ -35,4 +35,5 @@
   color: white;
   border: none;
   text-align: left;
+  font-weight: 400;
 }/*# sourceMappingURL=dashboard_form.css.map */

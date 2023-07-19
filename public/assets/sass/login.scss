@@ -17,13 +17,13 @@ html{
                 color: $title_color ; 
                 text-transform: uppercase ;
                 font-size: 45px;
-                font-family: $impact;
+                font-family: $inter_police;
                 margin: 20px 0 20px 0;
+                font-weight: 900;
             }
             form{
                 background-color: $yellow;
                 padding: 40px 20px 40px 20px;
-                border: black solid 1px;
                 @media (min-width:900px){
                     padding: 50px 80px 50px 80px;
                 }
@@ -32,13 +32,14 @@ html{
                     flex-direction: column;
                     margin-bottom: 20px;
                     label{
-                        font-family: $text;
+                        font-family: $inter_police;
                         margin-bottom: 10px;
                     }
                 }
                 button{
                     background-color: $yellow;
                     border: black solid 1px;
+                    align-self: center;
                     &:hover{
                         background-color: $white;
                         cursor: pointer;

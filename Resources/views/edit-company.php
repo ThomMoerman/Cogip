@@ -14,24 +14,25 @@
 
 <body>
     <?php require '../Resources/Include/navbar_dashboard.php';?>
-    <?php require '../Resources/Include/header_dashboard.php';?>
     <main>
+        <?php require '../Resources/Include/header_dashboard.php';?>
         <div id="form_section">
             <h3>Edit Company</h3>
             <hr>
             <form action="/edit-company/<?php echo $_GET['id'] ?>" method="POST">
                 <!-- <label for="name">Name:</label> -->
                 <input type="text" id="name" name="name" required value="<?php echo $_GET['name'] ?>"><br><br>
-        <label for='type_id'>Type:</label>
-        <input type="number" id="type_id" name="type_id" required value="<?php echo $_GET['type_id'] ?>">
-        <input type="submit" name="send" value="send">
-    </form>
-    <?php if (isset($errors) && !empty($errors)): ?>
-    <div class="error-messages">
-        <?php foreach ($errors as $error): ?>
-            <p><?php echo $error; ?></p>
-        <?php endforeach; ?>
-    </div>
-    <?php endif; ?>
+                <label for='type_id'>Type:</label>
+                <input type="number" id="type_id" name="type_id" required value="<?php echo $_GET['type_id'] ?>">
+                <input type="submit" name="send" value="send" id="edit_submit">
+            </form>
+            <?php if (isset($errors) && !empty($errors)): ?>
+            <div class="error-messages">
+                <?php foreach ($errors as $error): ?>
+                    <p><?php echo $error; ?></p>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+    </main>
 </body>
 </html>

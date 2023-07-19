@@ -7,9 +7,8 @@
 main{
     display: flex;
     flex-direction: column;
-   // margin: 50px 30px 80px 30px;
     @media (min-width : 900px){
-      //  margin: 50px 50px 80px 50px;
+        margin: 20px 30px 0 30px; 
     }
     font-family: $inter_police;
     .section{
@@ -58,15 +57,17 @@ main{
             color: $title_color; 
             font-size: 60px;
             font-weight: 900;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         table{
             min-width: 80vw;
             font-size: 12px;
             
             @media (min-width : 900px){
-                font-size: 20px;
+                // font-size: 20px;
+                font-size: 16px;
                 min-width: 85vw;
+                margin-bottom: 50px;
             }
             th{
                 background-color: $yellow;
@@ -74,16 +75,15 @@ main{
                 text-align: left;
                 font-weight: 600;
                 padding: 10px;
-              //  width: 900px;
             }
             tr{
 
                 background-color: $row;
-              
                 td{
                     color : $title_color;
                     font-weight: 600;
-                    padding: 20px 10px 20px 10px;
+                    // padding: 20px 10px 20px 10px;
+                    padding: 10px 5px 10px 5px;
                     max-width: 30px;
                     white-space: nowrap;
                     overflow: hidden;
@@ -114,8 +114,10 @@ main{
             display: flex;
             justify-content: center;
             margin-top: 50px;
+            @media (min-width:900px) {
+                margin-bottom: 100px;
+            }
             a{
-                //font-size: 0.8em;
                 @include pagination(10px);
                 &:hover{
                     color : $yellow; 
@@ -123,7 +125,6 @@ main{
                     cursor: pointer;
                     text-decoration: none;
                 }
-               
             }
             .current-page{
                 @include pagination(10px); 
@@ -135,13 +136,10 @@ main{
                 @include pagination(5px); 
                 font-weight: 700;
                 color: $yellow; 
-               
-
             }
         }
     }
 }
-
 .color__band_company{
     min-width: 250px;
     transform: translate(50px, -50px);

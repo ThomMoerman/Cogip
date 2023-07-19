@@ -105,6 +105,16 @@
     filter: saturate(1);
   }
 }
+#dashboard__navbar .navbar__buttons a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+}
+#dashboard__navbar .navbar__buttons a:hover {
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+}
 #dashboard__navbar .navbar__buttons .nav {
   border: 0;
   padding: 30px 5px 0 5px;

@@ -63,6 +63,16 @@ $light_blue:rgb(241, 255, 255);
         .btn_contacts{
             @include buttonLogo("../img/contacts_logo.svg");
           }
+          a{
+            text-decoration: none;
+            color: #000000;
+            font-weight: 400;
+            &:hover{
+                font-weight: 600;
+                color: #000000;
+                cursor: pointer;
+            }
+          }
         .nav{
             border: 0;
             padding: 30px 5px 0 5px;
