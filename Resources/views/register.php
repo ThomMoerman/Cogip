@@ -35,6 +35,7 @@
                     <div class="form__button submit">
                         <button type="submit">Register</button>
                     </div>
+                    <a href="/" style="display: block; text-align: center; text-decoration: none; color: #000; font-weight: bold; margin-top: 25px;"><= Back to Homepage</a>
                 </form>
         </section>
     <?php if (isset($errorMessages) && count($errorMessages) > 0): ?>

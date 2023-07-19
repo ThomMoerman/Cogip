@@ -17,7 +17,7 @@
                 // Vérifier si l'utilisateur est connecté
                 if (isset($_SESSION['user_id'])) {
                     // Vérifier le rôle de l'utilisateur (supposons que le rôle 2 correspond à un utilisateur connecté)
-                    if ($_SESSION['user_role'] == 1) {
+                    if ($_SESSION['user_role'] == 1 || $_SESSION['user_role'] == 3) {
                         // Afficher le lien de déconnexion
                         echo '
                         <div class="log header__log">
@@ -32,16 +32,20 @@
                     // Afficher le bloc de connexion
                     echo '
                     <div class="log header__log">
-                        <a type="link" href="/register" class="btn log__signup_btn signup_link">Sign up</a>
-                        <a type="link" href="/login" class="btn log__login_btn login_link">Login</a>
+                        <a type="link" href="/register" class="btn log__signup_btn signup_link">SIGN UP</a>
+                        <a type="link" href="/login" class="btn log__login_btn login_link">LOGIN</a>
                     </div>';
                 }
             ?>
             </div>
     </section>
     <section class="header_bottom">
+                <?php if (isset($_SESSION['user_name'])): ?>
+                    <h3>Welcome 
+                        <?php echo $_SESSION['user_name'] ?>!
+                    </h3>
+                <?php endif ?>
         <div id="headline">
-            <!-- <img src="assets/img/background_effect_hp.svg" alt="background_effect" class="headline_bg"> -->
             <h2 class="headline_text">MANAGE YOUR CUSTOMERS AND INVOICES EASLY</h2>
             <img src="assets/img/header_illustration.svg" alt="cogip logo" class="headline_illustration">
         </div>

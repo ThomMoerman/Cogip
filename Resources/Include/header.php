@@ -20,8 +20,8 @@
                 session_start();
                 // Vérifier si l'utilisateur est connecté
                 if (isset($_SESSION['user_id'])) {
-                    // Vérifier le rôle de l'utilisateur (supposons que le rôle 2 correspond à un utilisateur connecté)
-                    if ($_SESSION['user_role'] == 1) {
+
+                    if ($_SESSION['user_role'] == 1 || $_SESSION['user_role'] == 3) {
                         // Afficher le lien de déconnexion
                         echo '
                         <div class="header__log">
@@ -35,7 +35,7 @@
                     // Afficher le bloc de connexion
                     echo '
                     <div class="log header__log">
-                        <a type="link"  class="btn log__signup_btn signup_link">SIGN UP</a>
+                        <a type="link" href="/register" class="btn log__signup_btn signup_link">SIGN UP</a>
                         <a type="link" href="/login" class="btn log__login_btn login_link">LOGIN</a>
                     </div>';
                 }

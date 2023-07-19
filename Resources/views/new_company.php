@@ -25,17 +25,14 @@
     <h3>New Company</h3>
     <hr class="form_hr">
     <form action="/companies_add" method="POST">
-     <!--    <label for="name">Name:</label> -->
         <input type="text" name="name" id="name" placeholder="Name" required><br>
-        <label for="type_id">Type:</label>
+        
         <select name="type_id" id="type_id" required>
             <option value="1">Client</option>
             <option value="2">Supplier</option>
         </select><br>
-    <!--     <label for="country">Country:</label> -->
         <input type="text" name="country" id="country" placeholder="Country" required><br>
 
-    <!--     <label for="tva">TVA:</label> -->
         <input type="text" name="tva" id="tva" placeholder="TVA" required><br>
 
         <button type="submit">Save</button>

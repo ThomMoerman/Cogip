@@ -92,16 +92,13 @@ class ContactController extends Controller
 
         if ($company) {
             $company_id = $company['id'];
-            $contactModel->newContact($name, $company_id, $email, $phone);
-        } else {
-
-        }
-
-        $errors = $contactModel->editContact($id, $name, $company_id, $email, $phone);
+            $contactModel->editContact($id, $name, $company_id, $email, $phone);
+            $errors = $contactModel->editContact($id, $name, $company_id, $email, $phone);
 
         if ($errors) {
             return $this->view('edit_contact', ['errors' => $errors]);
         }
+        } 
 
         header('Location: /dashboard');
     }

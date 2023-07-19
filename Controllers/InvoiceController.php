@@ -82,9 +82,9 @@ class InvoiceController extends Controller
     {
         $invoiceModel = new Invoice();
         $ref = $_POST['ref'];
-        $id_company = $_POST['id_company'];
+        $company_name = $_POST['company_name'];
 
-        $errors = $invoiceModel->editInvoice($ref, $id_company, $id);
+        $errors = $invoiceModel->editInvoice($ref, $company_name, $id);
 
         if ($errors) {
             return $this->view('edit_invoice', ['errors' => $errors]);

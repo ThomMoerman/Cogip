@@ -23,6 +23,7 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">Se connecter</button>
+            <a href="/" style="display: block; text-align: center; text-decoration: none; color: #000; font-weight: bold;"><= Back to Homepage</a>
         </form>
         <?php if (isset($_GET['error']) && $_GET['error'] == 1): ?>
             <div class="error-messages">

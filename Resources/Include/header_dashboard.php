@@ -2,11 +2,11 @@
     <section class="header__section">
         <div class="section__page__name">
             <h1>Dashboard</h1>
-            <p>dashbord/</p>
+            <p>dashboard/</p>
         </div>
         <div class="section__welcome__client">
             <div class="welcome__client__text">
-                <?php session_start();
+                <?php 
                 if (isset($_SESSION['user_name'])): ?>
                     <h2>Welcome back
                         <?php echo $_SESSION['user_name'] ?>!

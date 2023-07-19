@@ -24,7 +24,7 @@
                 <input type="text" id="name" name="name" required value="<?php echo $_GET['name'] ?>"><br><br>
 
                 <!-- <label for='company_id'>Company id:</label> -->
-                <input type="text" id="company_id" name="company_id" required value="<?php echo $_GET['company_id'] ?>">
+                <input type="text" id="company_name" name="company_name" required value="<?php echo $_GET['company_name'] ?>">
 
                 <!-- <label for='email'>Mail:</label> -->
                 <input type="mail" id="email" name="email" required value="<?php echo $_GET['email'] ?>">
@@ -32,7 +32,7 @@
                 <!-- <label for='phone'>Phone:</label> -->
                 <input type="tel" id="phone" name="phone" required value="<?php echo $_GET['phone'] ?>">
 
-                <input type="submit" name="send" value="send" id="edit_submit">
+                <input type="submit" name="send" value="Send" id="edit_submit">
             </form>
         </div>
         <?php if (isset($errors) && !empty($errors)): ?>
