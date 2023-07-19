@@ -7,20 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="assets/css/login.css" rel="stylesheet" type="text/css">
+     <script src="assets/js/validation_sanytising.js" defer></script>
     <title>Login</title>
 </head>
 
 <body>
     <main>
         <h1>Login</h1>
-        <form method="POST" action="/login">
-            <div class="email">
+        <form method="POST" action="/login" class="section__form js-form">
+            <div class="email form__email">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" class="js-email-input"  id="email" name="Email" required>
+                <div class="field--error"></div>         
             </div>
-            <div class="password">
+            <div class="password form__password">
                 <label for="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" class="js-password-input"  id="password" name="Password" required>
+                <div class="field--error"></div>
             </div>
             <button type="submit">Se connecter</button>
         </form>

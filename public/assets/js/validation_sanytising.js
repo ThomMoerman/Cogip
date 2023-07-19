@@ -1,36 +1,58 @@
 "use strict";
-/* document.addEventListener("DOMContentLoaded", () => { */
-const $form = document.querySelector('.js-form');
-const $firstNameInput = document.querySelector('.js-firstname-input');
-const $lastNameInput = document.querySelector('.js-lastname-input');
-const $mailInput = document.querySelector('.js-email-input');
-const $passwordInput = document.querySelector('.js-password-input');
-const highlightError = ($input, errorMessage) => {
-    var _a, _b;
-    (_a = $input.parentElement) === null || _a === void 0 ? void 0 : _a.classList.add("form__field--error");
-    (_b = $input.nextElementSibling) === null || _b === void 0 ? void 0 : _b.textContent = errorMessage;
+// Reusable form validation function
+const validateForm = (form) => {
+    const inputs = form.querySelectorAll("input");
+    const isEmail = (email) => {
+        return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email);
+    };
+    const isName = (name) => {
+        return /^[a-zA-Z -]+$/.test(name);
+    };
+    const highlightError = ($input, errorMessage) => {
+        var _a, _b;
+        (_a = $input.parentElement) === null || _a === void 0 ? void 0 : _a.classList.add("form__field--error");
+        (_b = $input.nextElementSibling) === null || _b === void 0 ? void 0 : _b.innerText = errorMessage;
+    };
+    const clearError = ($input) => {
+        var _a, _b;
+        (_a = $input.parentElement) === null || _a === void 0 ? void 0 : _a.classList.remove("form__field--error");
+        (_b = $input.nextElementSibling) === null || _b === void 0 ? void 0 : _b.innerText = "";
+    };
+    const validateInput = ($input) => {
+        const inputValue = $input.value.trim();
+        clearError($input);
+        switch ($input.type) {
+            case "text":
+                if (!inputValue) {
+                    highlightError($input, `${$input.name} can't be blank`);
+                }
+                else if (!isName(inputValue)) {
+                    highlightError($input, `${$input.name} can't contain special characters or numbers`);
+                }
+                break;
+            case "email":
+                if (!inputValue) {
+                    highlightError($input, `${$input.name} can't be blank`);
+                }
+                else if (!isEmail(inputValue)) {
+                    highlightError($input, `${$input.name} is not valid`);
+                }
+                break;
+            case "password":
+                if (!inputValue) {
+                    highlightError($input, `${$input.name} can't be blank`);
+                }
+                break;
+            default:
+                break;
+        }
+    };
+    inputs.forEach((input) => validateInput(input));
 };
-const validate = () => {
-    const firstNameValue = $firstNameInput.value.trim();
-    const lastNameValue = $lastNameInput.value.trim();
-    const mailValue = $mailInput.value.trim();
-    const passwordValue = $passwordInput.value.trim();
-    console.log('validate', firstNameValue, lastNameValue, $firstNameInput, $lastNameInput);
-    if (!firstNameValue) {
-        highlightError($firstNameInput, "First Name can't be blank");
-    }
-    if (!lastNameValue) {
-        highlightError($lastNameInput, "Last Name can't be blank");
-    }
-    if (!mailValue) {
-        highlightError($mailInput, "Email can't be blank");
-    }
-    if (!passwordValue) {
-        highlightError($passwordInput, "Password can't be blank");
-    }
-};
-$form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    validate();
+document.addEventListener("DOMContentLoaded", () => {
+    const $form = document.querySelector(".js-form");
+    $form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        validateForm($form);
+    });
 });
-/* }) */ 

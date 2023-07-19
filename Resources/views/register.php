@@ -19,22 +19,22 @@
                 <form method="POST" action="/register" class="section__form js-form">
                     <div class="form__firstname">
                         <label for="firstName">First Name:</label>
-                        <input type="text" class="js-firstname-input" id="firstName"  name="firstName" require>
+                        <input type="text" class="js-firstname-input" id="firstName"  name="First name" >
                         <div class="field--error"></div>
                     </div>
                     <div class="form__lastname">
                         <label for="lastName">Last Name:</label>
-                        <input type="text" class="js-lastname-input" id="lastName" name="lastName"  require>
+                        <input type="text" class="js-lastname-input" id="lastName" name="Last name" >
                         <div class="field--error"></div>
                     </div>
                     <div class="form__email">
                         <label for="email">Email:</label>
-                        <input type="email" class="js-email-input" id="email" name="email" require>
+                        <input type="email" class="js-email-input" id="email" name="Email" >
                         <div class="field--error"></div>
                     </div>
                     <div class="form__password">
                         <label for="password">Mot de passe:</label>
-                        <input type="password" class="js-password-input" id="password" name="password" require>
+                        <input type="password" class="js-password-input" id="password" name="Password" >
                         <div class="field--error"></div>
                     </div>
                     <div class="form__button submit">
@@ -42,7 +42,10 @@
                     </div>
                 </form>
         </section>
-    <?php if (isset($errorMessages) && count($errorMessages) > 0): ?>
+   
+    </main>
+</body>
+ <?php if (isset($errorMessages) && count($errorMessages) > 0): ?>
         <div class="error-messages">
             <?php foreach ($errorMessages as $errorMessage): ?>
                 <p>
@@ -51,7 +54,4 @@
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-    </main>
-</body>
-
 </html>
